@@ -1,0 +1,101 @@
+<section class="content-section bg-primary text-white text-center">
+  <div >
+    <div class="content-section-heading">
+      <!-- <h3 class="text-secondary mb-0">Filter Options</h3> -->
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <form action="/viz_attr_selection/" method="post">
+          {%csrf_token%}
+          <input type="hidden" name="source" value="china_import">
+          {% for attr,chk in attr_dict.items %}
+              <div class="form-check">
+              <input
+                      class="form-check-input"
+                      type="checkbox" value="True"
+                      id="defaultCheck" name="{{ attr }}"
+                      {% if chk %} checked {% endif %}
+              >
+              <label class="form-check-label" for="defaultCheck">
+                {{ attr }}
+              </label>
+              </div>
+          {% endfor %}
+          <div class="form-check">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+<!--        <div class="btn-group custom_btn_grp">-->
+<!--          <button type="button" class="btn btn-danger">Action 1</button>-->
+<!--          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--            <span class="sr-only">Toggle Dropdown</span>-->
+<!--          </button>-->
+<!--          <div class="dropdown-menu">-->
+<!--            <a class="dropdown-item" href="#">Action</a>-->
+<!--            <a class="dropdown-item" href="#">Another action</a>-->
+<!--            <a class="dropdown-item" href="#">Something else here</a>-->
+<!--            <div class="dropdown-divider"></div>-->
+<!--            <a class="dropdown-item" href="#">Separated link</a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="btn-group custom_btn_grp">-->
+<!--          <button type="button" class="btn btn-danger">Action 2</button>-->
+<!--          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--            <span class="sr-only">Toggle Dropdown</span>-->
+<!--          </button>-->
+<!--          <div class="dropdown-menu">-->
+<!--            <a class="dropdown-item" href="#">Action</a>-->
+<!--            <a class="dropdown-item" href="#">Another action</a>-->
+<!--            <a class="dropdown-item" href="#">Something else here</a>-->
+<!--            <div class="dropdown-divider"></div>-->
+<!--            <a class="dropdown-item" href="#">Separated link</a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="btn-group custom_btn_grp">-->
+<!--          <button type="button" class="btn btn-danger">Action 3</button>-->
+<!--          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--            <span class="sr-only">Toggle Dropdown</span>-->
+<!--          </button>-->
+<!--          <div class="dropdown-menu">-->
+<!--            <a class="dropdown-item" href="#">Action</a>-->
+<!--            <a class="dropdown-item" href="#">Another action</a>-->
+<!--            <a class="dropdown-item" href="#">Something else here</a>-->
+<!--            <div class="dropdown-divider"></div>-->
+<!--            <a class="dropdown-item" href="#">Separated link</a>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+    <div>
+
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+    <div>
+        <a href="#" class=" text-secondary btn btn-xl btn-dark">Generate</a>
+    </div>
+    <br>
+    <br>
+<!--    <div class="progress">-->
+<!--      <div-->
+<!--          class="progress-bar progress-bar-striped progress-bar-animated"-->
+<!--          role="progressbar" aria-valuenow="75"-->
+<!--          aria-valuemin="0"-->
+<!--          aria-valuemax="100"-->
+<!--          style="width: 75%">-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="spinner-grow text-info" role="status">
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
+  </div>
+</section>

@@ -19,6 +19,12 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.HomeView.as_view(), name='home'),
+    url(r'^home$', views.home, name='data_home'),
+    url(r'^$', views.home, name='data_home'),
     url(r'^admin/', admin.site.urls),
+    url(r'^track$', views.data_home, name='track'),
+]
+
+urlpatterns += [
+    path('viz_attr_selection/', views.viz_attr_selection, name='viz_attr_selection'),
 ]

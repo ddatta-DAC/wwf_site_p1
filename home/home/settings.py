@@ -26,7 +26,7 @@ SECRET_KEY = '33&%6e^^c$x$pw(my91)l#*935_n*9y@m%sf6-94y#$7ow_q&n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dac-wwf.cs.vt.edu']
 
 
 # Application definition

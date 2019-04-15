@@ -8,19 +8,19 @@
         <a class="js-scroll-trigger" href="#"></a>
       </li>
       <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="/home"> Home </a>
+        <a class="js-scroll-trigger" href="{% url 'data_home' %}"> Home </a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="/track?source=china_import">China Import</a>
+        <a class="js-scroll-trigger" href="{% url 'track' 'china_import' %}">China Import</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="/track?source=china_export">China Export</a>
+        <a class="js-scroll-trigger" href="{% url 'track' 'china_export' %}">China Export</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="/track?source=us_import">US Import</a>
+        <a class="js-scroll-trigger" href="{% url 'track' 'us_import' %}">US Import</a>
       </li>
       <li class="sidebar-nav-item">
-        <a class="js-scroll-trigger" href="/track?source=peru_export">Peru Export</a>
+        <a class="js-scroll-trigger" href="{% url 'track' 'peru_export' %}">Peru Export</a>
       </li>
     </ul>
   </nav>

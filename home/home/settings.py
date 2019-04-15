@@ -27,6 +27,7 @@ SECRET_KEY = '33&%6e^^c$x$pw(my91)l#*935_n*9y@m%sf6-94y#$7ow_q&n'
 DEBUG = True
 
 ALLOWED_HOSTS = ['dac-wwf.cs.vt.edu']
+INTERNAL_IPS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'home'
+    'debug_toolbar',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'home.urls'

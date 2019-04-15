@@ -1,6 +1,6 @@
 from django.views.generic.base import TemplateView
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 from django.shortcuts import render
@@ -28,8 +28,9 @@ def home(request):
 # DATA
 # -----------------
 
-def data_home(request, route=None):
-    route = request.GET.get('source')
+def data_home(request, track_name):
+    # track_name will be one of {china_import, china_export, us_import, peru_export}
+    # see home/templates/navigation.html
     attr_list = ['a', 'b']
 
     print(request)
@@ -37,12 +38,11 @@ def data_home(request, route=None):
     # valid list of pages
     valid_list = ['china_import']
 
-    if route not in valid_list:
-        # Redirect to home
-        response = redirect('/home')
-        return response
+    if track_name not in valid_list:
+        # Better to actually send 404s when there is no such page
+        raise Http404
 
-    elif route == 'china_import':
+    elif track_name == 'china_import':
         tmpl_data = processor_1.format_china_import()
         return render(
             request,

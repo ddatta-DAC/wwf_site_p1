@@ -11,23 +11,30 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CURRENT_PATH = os.path.abspath(os.path.dirname(__file__))
 
+ROOT_DIR = environ.Path(__file__) - 2
+
+env = environ.Env()
+env.read_env(ROOT_DIR('.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '33&%6e^^c$x$pw(my91)l#*935_n*9y@m%sf6-94y#$7ow_q&n'
+SECRET_KEY = env.str('DJANGO_SECRET_KEY', '33&%6e^^c$x$pw(my91)l#*935_n*9y@m%sf6-94y#$7ow_q&n')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DJANGO_DEBUG', False)
 
-ALLOWED_HOSTS = ['dac-wwf.cs.vt.edu']
-INTERNAL_IPS = ['127.0.0.1']
+SITE_ID = 1
+
+# ALLOWED_HOSTS = ['dac-wwf.cs.vt.edu']
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['dac-wwf.cs.vt.edu'])
 
 
 # Application definition
@@ -51,8 +58,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
+
+if DEBUG:
+    MIDDLEWARE += ['debug_toolbar.middleware.DebugToolbarMiddleware', ]
+    INTERNAL_IPS = ['127.0.0.1']
 
 ROOT_URLCONF = 'home.urls'
 

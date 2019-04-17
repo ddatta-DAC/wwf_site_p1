@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-57x57.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-60x60.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-72x72.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-76x76.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-114x114.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-120x120.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-144x144.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-152x152.png?v2">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-180x180.png?v2">
+  <link rel="icon" type="image/png" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/favicon-16x16.png?v2" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/favicon-32x32.png?v2" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/favicon-96x96.png?v2" sizes="96x96">
+  <meta name="application-name" content="VT Discovery Analytics Center">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-square70x70logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-70x70.png?v2">
+  <meta name="msapplication-TileImage" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-144x144.png?v2">
+  <meta name="msapplication-square150x150logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-150x150.png?v2">
+  <meta name="msapplication-wide310x150logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-310x150.png?v2">
+  <meta name="msapplication-square310x310logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-310x310.png?v2">
+
+  <title>
+    {% block title_block %}
+      WWF-VT Project Homepage
+    {% endblock title_block %}
+  </title>
+
+  <link rel="stylesheet" type="text/css" href="{% static "bootstrap/css/bootstrap.min.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+  {% block head %}
+    
+  {% endblock head %}
+</head>
+<body>
+
+
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">WWF-VT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="form-inline my-2 my-lg-0 mr-auto">
+      </form>
+      {% if user.is_authenticated %}
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ user.username }}
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
+            </div>
+          </li>
+        </ul>
+      {% endif %}
+    </div>
+  </nav>
+
+{% block container %}
+  <div class="container-fluid">
+    {% block content %}
+    {% endblock content %}
+  </div>
+{% endblock container %}
+
+
+</body>
+</html>

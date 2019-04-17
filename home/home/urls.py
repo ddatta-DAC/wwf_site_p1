@@ -23,6 +23,7 @@ urlpatterns = [
     path('home', views.home, name='data_home'),
     path('', views.home, name='data_home'),
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('track/<slug:track_name>', views.data_home, name='track'),
 ]
 

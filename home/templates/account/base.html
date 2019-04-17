@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{% block head_title %}{% endblock head_title %}{% endblock title %}
+
+{% block css %}
+    {{ block.super }}
+    <link rel="stylesheet" href='{% static 'css/accounts.css' %}'></link>
+
+    <style type="text/css">
+        #logo.navbar-brand {
+            border: solid .166667em #3E3E46;
+            font-weight: bolder;
+            font-size: 1.5em;
+            line-height: 0.8;
+            color: #3E3E46;
+        }
+
+        #logo:hover {
+            background-color: white;
+        }
+    </style>
+{% endblock %}
+
+{% block pre_container %}
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a id="logo" class="navbar-brand" href="/">EMBERS</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      {% if user.is_authenticated %}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            {{ user.username }} <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/">Back to Map</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'account_profile' %}">My Account</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'account_logout' %}">Logout</a></li>
+          </ul>
+        </li>
+      {% else %}
+        <li id="login"><a href="{% url 'account_login' %}">Login</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>
+{% endblock pre_container %}
+
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    {% block inner %}{% endblock %}
+  </div>
+</div>
+{% endblock %}

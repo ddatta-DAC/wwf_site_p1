@@ -2,3 +2,5 @@ Django
 pandas
 django-debug-toolbar
 django-environ
+django-allauth
+django-crispy-forms

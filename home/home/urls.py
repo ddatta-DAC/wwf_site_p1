@@ -28,7 +28,7 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path('viz_attr_selection/', views.viz_attr_selection, name='viz_attr_selection'),
+    path('viz_attr_selection', views.viz_attr_selection, name='viz_attr_selection'),
 ]
 
 if settings.DEBUG:

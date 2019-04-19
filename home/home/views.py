@@ -1,6 +1,6 @@
 from django.views.generic.base import TemplateView
 from django.shortcuts import render_to_response
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, JsonResponse
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 from django.shortcuts import render
@@ -56,23 +56,28 @@ def data_home(request, track_name):
 #
 # ----------------
 def viz_attr_selection(request):
-
-    if request.method == 'POST':
-        source = request.POST['source']
+    if request.method == 'GET':
+        # source = request.POST['source']
         # get the attributes
-        print(request.POST)
+        print(request.GET)
 
-        _dict = models.raw_data_model.attr_dict[source]
-        post_keys = request.POST.keys()
-        for k in _dict.keys():
-            if k not in post_keys:
-                _dict[k] = False
-        print(_dict)
-        # save _dict
-        with open('viz_attr_dict.pkl','wb') as fh:
-            pickle.dump(_dict,fh,pickle.HIGHEST_PROTOCOL)
+        data = []
+        # TODO get the real data for the requested attrs
+        for attr in request.GET.getlist('attrs[]'):
+            data.append([attr, 'foo', 'bar', 'baz']) # idk how this should be formatted
 
-        response = redirect('/track?source='+source)
-        return response
+        # _dict = models.raw_data_model.attr_dict[source]
+        # post_keys = request.POST.keys()
+        # for k in _dict.keys():
+        #     if k not in post_keys:
+        #         _dict[k] = False
+        # print(_dict)
+        # # save _dict
+        # with open('viz_attr_dict.pkl','wb') as fh:
+        #     pickle.dump(_dict,fh,pickle.HIGHEST_PROTOCOL)
+
+        # response = redirect('/track?source='+source)
+        # return response
+        return JsonResponse({'data': data})
     return
 

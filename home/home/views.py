@@ -4,6 +4,8 @@ from django.http import HttpResponse, Http404
 from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 from django.shortcuts import render
+from django.apps import apps
+
 import sys
 import os
 sys.path.append('./../..')
@@ -31,24 +33,24 @@ def home(request):
 def data_home(request, track_name):
     # track_name will be one of {china_import, china_export, us_import, peru_export}
     # see home/templates/navigation.html
-    attr_list = ['a', 'b']
 
-    print(request)
-
-    # valid list of pages
-    valid_list = ['china_import']
-
-    if track_name not in valid_list:
-        # Better to actually send 404s when there is no such page
+    home_config = apps.get_app_config('home')
+    attrs = home_config.get_attrs(track_name)
+    if not attrs:
         raise Http404
 
-    elif track_name == 'china_import':
-        tmpl_data = processor_1.format_china_import()
-        return render(
-            request,
-            "data_page.html",
-            tmpl_data
-        )
+    context = {
+        'attrs': attrs,
+        'chk': True
+    }
+
+    # elif track_name == 'china_import':
+    #     tmpl_data = processor_1.format_china_import()
+    return render(
+        request,
+        "data_page.html",
+        context
+    )
 
 # ----------------
 #

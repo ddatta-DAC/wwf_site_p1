@@ -8,15 +8,15 @@
         <form action="/viz_attr_selection/" method="post">
           {%csrf_token%}
           <input type="hidden" name="source" value="china_import">
-          {% for attr,chk in attr_dict.items %}
+          {% for attr in attrs %}
               <div class="form-check">
               <input
                       class="form-check-input"
                       type="checkbox" value="True"
-                      id="defaultCheck" name="{{ attr }}"
+                      id="id-{{ attr }}" name="{{ attr }}"
                       {% if chk %} checked {% endif %}
               >
-              <label class="form-check-label" for="defaultCheck">
+              <label class="form-check-label" for="id-{{ attr }}">
                 {{ attr }}
               </label>
               </div>

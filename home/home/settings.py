@@ -155,3 +155,38 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(CURRENT_PATH, 'static'),)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'django_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/django.log'),
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['django_file'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
+        'home': {
+            'handlers': ['django_file'],
+            'propagate': True,
+            'level': 'DEBUG',
+        }
+    }
+}

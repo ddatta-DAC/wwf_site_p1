@@ -8,6 +8,10 @@ def get_results(request, track_name):
     ids = [160531980, 160531984, 160532111, 160532115, 160532119, 160532120, 160532127, 160532347, 160532348, 160532349]
     model_cls = ChinaImport
     fields = ['shipmentmonth', 'consigneename', 'consigneecity', 'consigneecountry', 'consigneepanjivaid', 'shipmentorigin', 'province', 'countryofsale', 'transportmethod', 'iscontainerized', 'valueofgoodsusd', 'hscode', 'hscodekeywords', 'adminregion', 'tradetype']
+    show_fields = ['shipmentmonth', 'consigneecountry', 'consigneepanjivaid', 'shipmentorigin', 'countryofsale', 'valueofgoodsusd', 'hscode'];
+    expand_fields = ['consigneename', 'consigneecity', 'province', 'transportmethod', 'iscontainerized', 'hscodekeywords', 'adminregion', 'tradetype'];
+
+    # fields = ['shipmentmonth', 'consigneecountry', 'consigneepanjivaid', 'shipmentorigin', 'countryofsale', 'valueofgoodsusd', 'hscode']
 
     data = []
     for pajiva_id in ids:
@@ -18,5 +22,8 @@ def get_results(request, track_name):
         ])
 
     return JsonResponse({
+        'columns': fields,
+        'main': show_fields,
+        'expand': expand_fields,
         'data': data
     })

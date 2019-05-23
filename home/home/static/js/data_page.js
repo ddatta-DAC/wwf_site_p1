@@ -1,3 +1,22 @@
+var prettyName = {
+  'score': 'Score',
+  'shipmentmonth': 'Month Shipped',
+  'consigneename': 'Consignee Name',
+  'consigneecity': 'Consignee City',
+  'consigneepanjivaid': 'Consignee',
+  'consigneecountry': 'Consignee Country',
+  'shipmentorigin': 'Shipment Origin',
+  'province': 'Province',
+  'countryofsale': 'Country of Sale',
+  'transportmethod': 'Transport Method',
+  'iscontainerized': 'Containerized',
+  'valueofgoodsusd': 'Value',
+  'hscode': 'HS Code',
+  'hscodekeywords': 'HS Code Keywords',
+  'adminregion': 'Admin Region',
+  'tradetype': 'Trade Type'
+}
+
 $('#options-form').submit(function (evt) {
   evt.preventDefault();
   console.log("Need to AJAX this thing");
@@ -40,7 +59,7 @@ $(document).ready(function () {
 function buildTable(data) {
   var columns = data.columns.map(function (title, i) {
     return {
-      title,
+      title: prettyName[title],
       data: i
     };
   });
@@ -69,7 +88,8 @@ function buildTable(data) {
     columnDefs: [{
       targets: hiddenColumns,
       visible: false
-    }]
+    }],
+    order: [[ 1, "desc" ]]
   });
 
   $('#analysis_table tbody').on('click', 'td.details-control', function () {
@@ -92,11 +112,11 @@ function buildTable(data) {
   
   function format(row) {
     console.log(row);
-    return row.reduce(function (prev, d, i) {
+    return '<div class="expanded-row"><dl>' + row.reduce(function (prev, d, i) {
       if (hiddenColumns.indexOf(i + 1) != -1) {
-        return prev + "<div>" + data.columns[i] + ": " + d;
+        return prev + "<dt>" + prettyName[data.columns[i]] + "</dt><dd>" + d + "</dd>";
       }
       return prev;
-    }, '');
+    }, '') + '</dl><textarea></textarea></div>';
   }
 }

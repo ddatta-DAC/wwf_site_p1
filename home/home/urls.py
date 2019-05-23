@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path,include
-from django.conf.urls import url
+from django.urls import path, include
+
 from . import views
+from trade.views import get_results
+
 
 urlpatterns = [
     path('home', views.home, name='data_home'),
@@ -25,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('track/<slug:track_name>', views.data_home, name='track'),
+    path('api/<slug:track_name>', get_results, name='results')
 ]
 
 urlpatterns += [

@@ -22,3 +22,81 @@ $('#options-form').submit(function (evt) {
     }
   });
 });
+
+$(document).ready(function () {
+  // send ajax query to fill in table
+  $.ajax({
+    url: '/api/china_import', 
+    method: 'GET',
+    success: function (data) {
+      buildTable(data);
+    },
+    error: function (error) {
+      console.error(error);
+    }
+  });
+});
+
+function buildTable(data) {
+  var columns = data.columns.map(function (title, i) {
+    return {
+      title,
+      data: i
+    };
+  });
+  columns.unshift({
+      "className":      'details-control',
+      "orderable":      false,
+      "data":           null,
+      "defaultContent": ''
+  });
+  console.log(columns);
+
+  var hiddenColumns = data.columns.map(function (title, i) {
+    return {
+      title,
+      i
+    };
+  }).filter(function (d) {
+    return data.main.indexOf(d.title) == -1;
+  }).map(function (d) {
+    return d.i + 1;
+  });
+  console.log(hiddenColumns);
+
+  var table = $('#analysis_table').DataTable({
+    columns: columns,
+    columnDefs: [{
+      targets: hiddenColumns,
+      visible: false
+    }]
+  });
+
+  $('#analysis_table tbody').on('click', 'td.details-control', function () {
+      var tr = $(this).closest('tr');
+      var row = table.row( tr );
+  
+      if ( row.child.isShown() ) {
+          // This row is already open - close it
+          row.child.hide();
+          tr.removeClass('shown');
+      }
+      else {
+          // Open this row
+          row.child( format(row.data()) ).show();
+          tr.addClass('shown');
+      }
+  });
+
+  table.rows.add(data.data).draw();
+  
+  function format(row) {
+    console.log(row);
+    return row.reduce(function (prev, d, i) {
+      if (hiddenColumns.indexOf(i + 1) != -1) {
+        return prev + "<div>" + data.columns[i] + ": " + d;
+      }
+      return prev;
+    }, '');
+  }
+}

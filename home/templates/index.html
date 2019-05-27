@@ -55,7 +55,53 @@
           rel="stylesheet" type="text/css">
     <link href="{% static '/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
     <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
+    <style>
 
+    .team_member:hover {
+      transform: scale(1.2);
+    }
+
+    .team_link {
+        font-size:1.25vw;
+    }
+    .team_link a{
+        color:#212529;
+     }
+    .team_link img{
+        max-height:4vw;
+    }
+    .team_link:hover{
+      transform: scale(1.05);
+    }
+    .name{
+        font-size:1.1vw
+    }
+    .intro_text{
+        color:white;
+        background-color:green;
+        font-size:1.0vw;
+        opacity:0.75;
+        padding:2%;
+    }
+    #jumbotron_bg {
+        position:absolute;
+         top:0;
+         left:0;
+         right:0;
+         bottom:0;
+         background-image:url('/static/img/panda.jpg');
+         filter: blur(20px);
+         z-index:-10;
+         opacity:0.5;
+         }
+    #jumbotron{
+         position:relative;
+         border:5%;
+         padding-top:7.5%;
+         padding-bottom:7.5%;
+     }
+
+    </style>
 </head>
 
 
@@ -67,9 +113,11 @@
 <!-- Header -->
 <header class="masthead d-flex">
     <div class="container text-center my-auto">
-        <h3 class="mb-4">Detecting Illegal Timber Trade</h3>
+        <h2 class="mb-4">Detecting Illegal Timber Trade</h2>
         <h5 class="mb-5">
+            <em>
             A collaboration between Discovery Analytics Center, Virginia Tech & World Wildlife Fund
+            </em>
         </h5>
 
         <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
@@ -77,17 +125,49 @@
     <div class="overlay"></div>
 </header>
 
-
-<section class="content-section bg-light" id="about">
+<section class="content-section bg-light" id="Intro_1">
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <h2>About</h2>
+                <h2>Background</h2>
+                <p class="lead mb-5">
+                    Conservation of biodiversity is key to ecological sustainability and long-term growth.
+                    The world today is threatened by an impending mass extinction brought upon by unchecked growth,
+                    corporate greed, complicity and negligence coupled with
+                    burgeoning expansion of human population.
+                    With each passing year, the growing demand for wood based products keep on increasing.
+                    The forests and their ecosystems are continuously enroached upon to feed the economic systems that have seen exponential growth in the last century.
+                    The vast expanse of these forests are in remote areas,
+                    removed from direct surviellance.
+                    The limits of the law enforcemnt agencies, especially in developing countries where
+                    these endangered flora and fauna are found, are stretched
+                    in its effort to enforce local and international laws enacted for preservation.
+                    What complicates matters is that these vulnerable species are economically valuable leading to unfair trade practices.
+                    This is true in countries where the governance structure is not capable or willing to enforce the rules required for global conservation efforts.
+
+                    Illegal timber trade ranks among the top categories in illegal trade,
+                    prevention of which is important to national security among other aspects.
+                    Such trade adversely impacts biodiversity and increases extinction risk for
+                    commercially valuable timber species.
+                    There has been significant efforst to curb deforestation,
+                    but of late reports suggest the success of these measures have been plateauing.
+                    Deforestations in critical parts of South America, Africa and Asia have been monitored, yet the paractice of illegal trade remains persistent.
+                    <br>
+                    Thus it is imperative to take more innotive approaches to detect and track illegal trade patterns,
+                    which would lead to a more targeted approach in curbing this problem.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2>Proposed Framework</h2>
                 <p class="lead mb-5">
                     An integrated framework to tackle the challenge of detecting illegal timber trade through
                     systematically highlighting patterns of illegal timber trade
                     Our system is merges disparate data from a multitude of sources to gather targeted domain knowledge
-                    on timber trade.
+                    on timber trade.<br/>
                     We apply <b>Machine Learning</b> methods on trade data records along with domain knowledge to
                     highlight suspicous trade instances in an interactive interface that allows domain experts to track,
                     analyze and understand illegal timber trade better.
@@ -97,53 +177,167 @@
     </div>
 </section>
 
-<section class="content-section bg-light" id="about">
+
+<div class="container text-center" >
+
+    <div class="container"
+         id="jumbotron">
+
+        <div id="jumbotron_bg"></div>
+
+        <div class="intro_text"
+           >
+            <span style="font-size: 2vw">&ldquo;</span>
+            <em>
+            As a result of weak forest governance, illegal timber accounts over 70% of some countries’ timber exports, such as Peru, Bolivia and the DRC.
+            </em>
+            <span style="font-size: 2vw">&rdquo;</span>
+            <br/>
+                - <b> Global Forest Atlas </b>
+
+        </div>
+
+        <div class="intro_text">
+            <span style="font-size: 2vw">&ldquo;</span>
+            <em>
+                ..particularly those (countries) in Africa and South America, between 50 and 90% of timber is harvested and traded illegally.
+            </em>
+            <span style="font-size: 2vw">&rdquo;</span>
+            <br/>
+            - <b>TRAFFIC Report</b>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<section class="content-section bg-light" id="team">
     <div class="container text-center">
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <h2>Team</h2>
                 <p class="lead mb-5">
-                <h4>Discovery Analytics Center, Virginia Tech</h4>
+
+                <div class="team_link">
+                   <a  href="https://dac.cs.vt.edu/"> Discovery Analytics Center, Virginia Tech <img class="team_logo" src="{% static 'img/DAC_logo.png' %}"/> </a>
+                </div>
+                <br>
+                <br>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm">
-                            Debanjan Datta <br>
-                            Discovery Analytics Center <br> Virginia Tech
+                        <div class="col-sm team_member">
+                            <span class="name">
+                                <b><a href="http://people.cs.vt.edu/~ddatta">Debanjan Datta</a></b>
+                            </span>
+                            <br>
+                            Discovery Analytics Center
+                            <br>
+                            Virginia Tech
                         </div>
-                        <div class="col-sm">
-                            Nathan Self<br>
-                            Discovery Analytics Center <br> Virginia Tech
+                        <div class="col-sm team_member">
+                            <span class="name">
+                                <b><a href="https://dac.cs.vt.edu/person/nathan-self">Nathan Self</a></b>
+                            </span>
+                            <br>
+                            Discovery Analytics Center
+                            <br>
+                            Virginia Tech
                         </div>
-                        <div class="col-sm">
-                            Dr. Naren Ramkrishnan <br>
-                            Discovery Analytics Center <br> Virginia Tech
+                        <div class="col-sm team_member">
+
+                            <span class="name">
+                                <b><a href="https://dac.cs.vt.edu/person/naren-ramakrishnan/"> Dr. Naren Ramkrishnan</a></b>
+                            </span>
+                            <br>
+                            Discovery Analytics Center
+                            <br> Virginia Tech
                         </div>
                     </div>
                 </div>
                 </p>
+                <br/>
+                <br/>
 
                 <p class="lead mb-5">
-                <h4>World WildLife Fund</h4>
+
+                <div class="team_link">
+                <a href="https://www.worldwildlife.org/"> World WildLife Fund
+                    <img class="team_logo" src="{% static 'img/panda.jpg' %}"/>
+                </a>
+                </div>
+                <br>
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm">
-                            Linda Walker <br>
+                        <div class="col-sm team_member">
+                            <span class="name">
+                                <b>Amelia Meadows</b>
+                            </span>
+                            <br>
+                            World WildLife Fund
+
                         </div>
-                        <div class="col-sm">
-                            Amelia Meadows<br>
+
+                        <div class="col-sm team_member">
+                            <span class="name">
+                                <b>Linda Walker</b>
+                            </span>
+                            <br>
+                            World WildLife Fund
                         </div>
-                        <div class="col-sm">
-                            John Simeone <br>
+
+                        <div class="col-sm team_member">
+                            <span class="name">
+                                <b>Amy Smith</b>
+                            </span>
+                            <br>
+                           World WildLife Fund
                         </div>
+
+<!--                        <div class="col-sm team_member">-->
+<!--                             <br>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm team_member">-->
+<!--                            <br>-->
+<!--                        </div>-->
+<!--                        <div class="col-sm team_member">-->
+<!--                            John Simeone <br>-->
+<!--                        </div>-->
                     </div>
+                    <br/>
+                    <br/>
+
                     <div class="row">
-                        <div class="col-sm">
-                          Hin Keon  Chen <br>
-                        </div>
-                        <div class="col-sm">
-                            Amy
-                        </div>
+
+                     <div class="col-sm team_member">
+                        <span class="name">
+                            <b>Willow Outhwaite</b>
+                        </span>
+                        <br>
+                       TRAFFIC
                     </div>
+
+                     <div class="col-sm team_member">
+                        <span class="name">
+                            <b>Hin Keon Chen</b>
+                        </span>
+                        <br>
+                      TRAFFIC
+                    </div>
+
+                     <div class="col-sm team_member">
+                        <span class="name">
+                            <b>John Simeone</b>
+                        </span>
+                        <br>
+                        World WildLife Fund
+                    </div>
+
+                </div>
                 </div>
                 </p>
 

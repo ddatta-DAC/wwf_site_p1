@@ -408,12 +408,3 @@ a:hover, a:focus, a:active {
   margin-left: 30%;
 }
 
-#inroduction{
-filter: blur(5px);
-background-image:url("/static/img/trees_1.jpg")
-}
-
-#intro_text{
-color:green;
-filter: blur(0.1px);
-}

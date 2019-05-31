@@ -24,6 +24,9 @@ $('#options-form').submit(function (evt) {
   });
 });
 
+var table = null;
+var primaryIndex = 0;
+
 $(document).ready(function () {
   // send ajax query to fill in table
   $.ajax({
@@ -39,7 +42,9 @@ $(document).ready(function () {
 });
 
 function buildTable(data) {
-  var table = $('#analysis_table').DataTable({
+  primaryIndex = data.id_index;
+
+    table = $('#analysis_table').DataTable({
     columns: data.columns,
     columnDefs: [{
       targets: data.hidden_cols,
@@ -79,7 +84,7 @@ function buildTable(data) {
           .text('Loading...');
    
       $.ajax({
-          url: expandRowUrl + '/' + row[data.id_index],
+          url: expandRowUrl + '/' + row[primaryIndex],
           dataType: 'json',
           success: function (json) {
               div
@@ -108,6 +113,20 @@ function setThumbs(panjivarecordid) {
     },
     success: function (data) {
       console.log(data);
+      var rowIndexes = [];
+      table.rows( function (idx, row, node) {
+        if(row[primaryIndex] == panjivarecordid){
+          rowIndexes.push(idx);                  
+        }
+        return false;
+      });
+
+      if (rowIndexes.length > 0) {
+        table.cell(rowIndexes[0], primaryIndex+3).data(data.thumbs)
+      } else {
+        console.error('Cannot find row with id', panjivarecordid);
+      }
+
       $('#thumbs-spin-' + panjivarecordid).addClass('hidden');
       $('#thumbs-check-' + panjivarecordid).removeClass('hidden');
     },
@@ -135,6 +154,21 @@ function submitComment(panjivarecordid) {
     },
     success: function (data) {
       console.log(data);
+
+      var rowIndexes = [];
+      table.rows( function (idx, row, node) {
+        if(row[primaryIndex] == panjivarecordid){
+          rowIndexes.push(idx);                  
+        }
+        return false;
+      });
+
+      if (rowIndexes.length > 0) {
+        table.cell(rowIndexes[0], primaryIndex+2).data(data.comment)
+      } else {
+        console.error('Cannot find row with id', panjivarecordid);
+      }
+
       $('#spin-' + panjivarecordid).addClass('hidden');
       $('#check-' + panjivarecordid).removeClass('hidden');
     },

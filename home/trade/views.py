@@ -91,7 +91,8 @@ class BaseUpdateView(View):
             }
             object_cls.objects.create(**kwargs)
         return JsonResponse({
-            'status': 'ok'
+            'status': 'ok',
+            self.value_attr: request.POST[self.value_key]
         })
 
 

@@ -18,6 +18,12 @@
   <link href="{% static 'css/stylish-portfolio.css' %}" rel="stylesheet">
   <link href="{% static 'css/data_page.css' %}" rel="stylesheet">
 
+  <script type="text/javascript">
+    var commentUrl = "{% url 'submit_comment' track_name=track_name %}";
+    var thumbsUrl = "{% url 'submit_thumbs' track_name=track_name %}";
+    var expandRowUrl = "{% url 'expand_row' track_name=track_name %}";
+    var csrfToken = "{{ csrf_token }}";
+  </script>
 </head>
 
 

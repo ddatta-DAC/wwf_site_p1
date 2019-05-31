@@ -1,21 +1,3 @@
-var prettyName = {
-  'score': 'Score',
-  'shipmentmonth': 'Month Shipped',
-  'consigneename': 'Consignee Name',
-  'consigneecity': 'Consignee City',
-  'consigneepanjivaid': 'Consignee',
-  'consigneecountry': 'Consignee Country',
-  'shipmentorigin': 'Shipment Origin',
-  'province': 'Province',
-  'countryofsale': 'Country of Sale',
-  'transportmethod': 'Transport Method',
-  'iscontainerized': 'Containerized',
-  'valueofgoodsusd': 'Value',
-  'hscode': 'HS Code',
-  'hscodekeywords': 'HS Code Keywords',
-  'adminregion': 'Admin Region',
-  'tradetype': 'Trade Type'
-}
 
 $('#options-form').submit(function (evt) {
   evt.preventDefault();
@@ -57,36 +39,10 @@ $(document).ready(function () {
 });
 
 function buildTable(data) {
-  var columns = data.columns.map(function (title, i) {
-    return {
-      title: prettyName[title],
-      data: i
-    };
-  });
-  columns.unshift({
-      "className":      'details-control',
-      "orderable":      false,
-      "data":           null,
-      "defaultContent": ''
-  });
-  console.log(columns);
-
-  var hiddenColumns = data.columns.map(function (title, i) {
-    return {
-      title,
-      i
-    };
-  }).filter(function (d) {
-    return data.main.indexOf(d.title) == -1;
-  }).map(function (d) {
-    return d.i + 1;
-  });
-  console.log(hiddenColumns);
-
   var table = $('#analysis_table').DataTable({
-    columns: columns,
+    columns: data.columns,
     columnDefs: [{
-      targets: hiddenColumns,
+      targets: data.hidden_cols,
       visible: false
     }],
     order: [[ 1, "desc" ]]
@@ -110,13 +66,83 @@ function buildTable(data) {
 
   table.rows.add(data.data).draw();
   
-  function format(row) {
-    console.log(row);
-    return '<div class="expanded-row"><dl>' + row.reduce(function (prev, d, i) {
-      if (hiddenColumns.indexOf(i + 1) != -1) {
-        return prev + "<dt>" + prettyName[data.columns[i]] + "</dt><dd>" + d + "</dd>";
-      }
-      return prev;
-    }, '') + '</dl><textarea></textarea></div>';
+  function getComment(pid) {
+    if (pid in data.comment_data) {
+      return data.comment_data[pid];
+    }
+    return '';
   }
+
+  function format (row) {
+      var div = $('<div/>')
+          .addClass('loading')
+          .text('Loading...');
+   
+      $.ajax({
+          url: expandRowUrl + '/' + row[data.id_index],
+          dataType: 'json',
+          success: function (json) {
+              div
+                  .html(json.html)
+                  .removeClass('loading');
+          }
+      });
+      return div;
+  }
+}
+
+function setThumbs(panjivarecordid) {
+  var value = $('#thumbs-' + panjivarecordid + ' input:checked').val()
+  console.log("Need to set value of", panjivarecordid, "to", value);
+  $('#thumbs-spin-' + panjivarecordid).removeClass('hidden');
+  $('#thumbs-check-' + panjivarecordid).addClass('hidden')
+  $('#thumbs-error-' + panjivarecordid).addClass('hidden')
+
+  $.ajax({
+    url: thumbsUrl, 
+    method: 'POST',
+    data: {
+      panjivarecordid,
+      value,
+      csrfmiddlewaretoken: csrfToken,
+    },
+    success: function (data) {
+      console.log(data);
+      $('#thumbs-spin-' + panjivarecordid).addClass('hidden');
+      $('#thumbs-check-' + panjivarecordid).removeClass('hidden');
+    },
+    error: function (error) {
+      console.error(error);
+      $('#thumbs-spin-' + panjivarecordid).addClass('hidden');
+      $('#thumbs-error-' + panjivarecordid).removeClass('hidden');
+    }
+  });
+}
+
+function submitComment(panjivarecordid) {
+  console.log(panjivarecordid);
+  $('#spin-' + panjivarecordid).removeClass('hidden');
+  $('#check-' + panjivarecordid).addClass('hidden')
+  $('#error-' + panjivarecordid).addClass('hidden')
+
+  $.ajax({
+    url: commentUrl, 
+    method: 'POST',
+    data: {
+      panjivarecordid,
+      comment: $('#comments-text-area-' + panjivarecordid).val(),
+      csrfmiddlewaretoken: csrfToken,
+    },
+    success: function (data) {
+      console.log(data);
+      $('#spin-' + panjivarecordid).addClass('hidden');
+      $('#check-' + panjivarecordid).removeClass('hidden');
+    },
+    error: function (error) {
+      console.error(error);
+      $('#spin-' + panjivarecordid).addClass('hidden');
+      $('#error-' + panjivarecordid).removeClass('hidden');
+    }
+  });
+
 }

@@ -106,3 +106,62 @@ class UsImport(models.Model):
     class Meta:
         managed = False
         db_table = 'us_import'
+
+
+class ChinaExportComment(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    comment = models.TextField()
+
+
+class ChinaImportComment(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    comment = models.TextField()
+
+
+class PeruExportComment(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    comment = models.TextField()
+
+
+class UsImportComment(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    comment = models.TextField()
+
+
+THUMBS_CHOICES = (
+    ('yes', 'Yes'),
+    ('no', 'No'),
+    ('clear', 'Clear'),
+)
+
+
+class ChinaExportThumbs(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    thumbs = models.CharField(
+        max_length=5,
+        choices=THUMBS_CHOICES,
+        default="clear")
+
+
+class ChinaImportThumbs(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    thumbs = models.CharField(
+        max_length=5,
+        choices=THUMBS_CHOICES,
+        default="clear")
+
+
+class PeruExportThumbs(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    thumbs = models.CharField(
+        max_length=5,
+        choices=THUMBS_CHOICES,
+        default="clear")
+
+
+class UsImportThumbs(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    thumbs = models.CharField(
+        max_length=5,
+        choices=THUMBS_CHOICES,
+        default="clear")

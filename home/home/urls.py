@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from . import views
-from trade.views import get_results
+from trade.views import get_results, SubmitThumbsView, SubmitCommentView, ChinaImportExpandRowView, DefaultExpandRowView
 
 
 urlpatterns = [
@@ -27,7 +27,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('track/<slug:track_name>', views.data_home, name='track'),
-    path('api/<slug:track_name>', get_results, name='results')
+    path('api/<slug:track_name>', get_results, name='results'),
+    path('api/comment/<slug:track_name>', SubmitCommentView.as_view(), name='submit_comment'),
+    path('api/thumbs/<slug:track_name>', SubmitThumbsView.as_view(), name='submit_thumbs'),
+    path('api/expand_row/china_import/<slug:panjivarecordid>', ChinaImportExpandRowView.as_view()),
+    path('api/expand_row/<slug:track_name>', DefaultExpandRowView.as_view(), name='expand_row'),
 ]
 
 urlpatterns += [

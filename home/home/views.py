@@ -41,7 +41,8 @@ def data_home(request, track_name):
 
     context = {
         'attrs': attrs,
-        'chk': True
+        'chk': True,
+        'track_name': track_name
     }
 
     # elif track_name == 'china_import':

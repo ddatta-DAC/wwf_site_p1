@@ -1,0 +1,64 @@
+<div class="expanded-row row">
+  <div class="col">
+    <dl>
+      <dt>Consignee Name</dt>
+      <dd>{{ object.consigneename }}</dd>
+      <dt>Consignee City</dt>
+      <dd>{{ object.consigneecity }}</dd>
+      <dt>Province</dt>
+      <dd>{{ object.province }}</dd>
+      <dt>Transport Method</dt>
+      <dd>{{ object.transportmethod }}</dd>
+      <dt>Containerized</dt>
+      <dd>{{ object.iscontainerized }}</dd>
+      <dt>Admin Region</dt>
+      <dd>{{ object.adminregion }}</dd>
+      <dt>Trade Type</dt>
+      <dd>{{ object.tradetype }}</dd>
+    </dl>
+  </div>
+  <div class="col">
+    <dl>
+      <dt>HS Code Keywords</dt>
+      <dd>{{ object.hscodekeywords }}</dd>
+      <dt>panjivarecordid</dt>
+      <dd> {{ object.panjivarecordid }}</dd>
+    </dl>
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <div>
+        <label class="mr-2">
+          <strong>Valid Anomaly?</strong>
+        </label>
+        <i id="thumbs-spin-{{ object.panjivarecordid }}" class="fas fa-spinner fa-pulse hidden"></i>
+        <i id="thumbs-check-{{ object.panjivarecordid }}" class="fas fa-check hidden"></i>
+        <i id="thumbs-error-{{ object.panjivarecordid }}" class="fas fa-times hidden"></i>
+      </div>
+      <div id="thumbs-{{ object.panjivarecordid }}" class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-outline-dark radio-btn-check {% if thumbs == 'yes' %}active{% endif %}">
+          <input onchange="setThumbs('{{ object.panjivarecordid }}')" type="radio" name="options" value="yes" id="option1" autocomplete="off" {% if thumbs == 'yes' %}checked{% endif %}>
+          <i class="fas fa-check"></i> Yes
+        </label>
+        <label class="btn btn-outline-dark radio-btn-times {% if thumbs == 'no' %}active{% endif %}">
+          <input onchange="setThumbs('{{ object.panjivarecordid }}')" type="radio" name="options" value="no" id="option2" autocomplete="off" {% if thumbs == 'no' %}checked{% endif %}>
+          <i class="fas fa-times"></i> No
+        </label>
+        <label class="btn btn-outline-dark {% if thumbs == 'clear' %}active{% endif %}">
+          <input onchange="setThumbs('{{ object.panjivarecordid }}')" type="radio" name="options" value="clear" id="option3" autocomplete="off" {% if thumbs == 'clear' %}checked{% endif %}>
+          <i class="fas fa-ban"></i> Clear
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="comments-text-area-{{ object.panjivarecordid }}">
+        <strong>Comments</strong>
+      </label>
+      <textarea class="form-control" id="comments-text-area-{{ object.panjivarecordid }}" rows="3">{{ comment }}</textarea>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="submitComment('{{ object.panjivarecordid }}')">Submit comment</button>
+    <i id="spin-{{ object.panjivarecordid }}" class="fas fa-spinner fa-pulse hidden"></i>
+    <i id="check-{{ object.panjivarecordid }}" class="fas fa-check hidden"></i>
+    <i id="error-{{ object.panjivarecordid }}" class="fas fa-times hidden"></i>
+  </div>
+</div>

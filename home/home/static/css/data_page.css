@@ -1,11 +1,28 @@
 td.details-control {
-  background: url('https://dac-wwf.cs.vt.edu/static/datatables/DataTables-1.10.18/details_open.png') no-repeat center center;
+  background: url('/static/datatables/DataTables-1.10.18/images/details_open.png') no-repeat center center;
   cursor: pointer;
 }
 tr.shown td.details-control {
-  background: url('https://dac-wwf.cs.vt.edu/static/datatables/DataTables-1.10.18/resources/details_close.png') no-repeat center center;
+  background: url('/static/datatables/DataTables-1.10.18/images/details_close.png') no-repeat center center;
 }
 
-td > div.expanded-row {
+td div.expanded-row {
   text-align: left;
+}
+
+.hidden {
+  display: none;
+}
+
+.expanded-row .fa-check,
+.expanded-row .fa-spin {
+  color: #1D809F;
+}
+
+.expanded-row .fa-times {
+  color: #dc3545;
+}
+
+.expanded-row .btn-primary {
+  margin-right: .5em;
 }

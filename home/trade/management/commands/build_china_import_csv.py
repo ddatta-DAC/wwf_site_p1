@@ -89,7 +89,7 @@ class Command(BaseCommand):
         data = []
         for instance in model_cls.objects.using('wwf').filter(panjivarecordid__in=ids):
             data.append([
-                scores[instance.panjivarecordid][2] if instance.panjivarecordid in scores else 0.0,
+                '{:.3f}'.format(float(scores[str(instance.panjivarecordid)][1])),
             ] + [
                 custom_format(instance, field) for field in show_fields
             ] + [

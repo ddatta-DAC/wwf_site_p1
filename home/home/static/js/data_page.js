@@ -30,7 +30,7 @@ var primaryIndex = 0;
 $(document).ready(function () {
   // send ajax query to fill in table
   $.ajax({
-    url: '/api/china_import', 
+    url: '/static/china_import.json', 
     method: 'GET',
     success: function (data) {
       buildTable(data);

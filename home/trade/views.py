@@ -1,3 +1,4 @@
+from django.apps import apps
 from django.http import JsonResponse, HttpResponseNotAllowed, Http404
 from django.views import View
 from django.views.generic.detail import DetailView
@@ -92,7 +93,7 @@ class BaseUpdateView(View):
             object_cls.objects.create(**kwargs)
         return JsonResponse({
             'status': 'ok',
-            self.value_attr: request.POST[self.value_key]
+            self.value_attr: request.POST[self.value_key]  # this would need to prepend thumbs- if we care
         })
 
 
@@ -140,8 +141,15 @@ pretty_name = {
 
 
 def get_results(request, track_name):
+    print("Getting results")
     # all of these based on track_name
-    ids = [160531980, 160531984, 160532111, 160532115, 160532119, 160532120, 160532127, 160532347, 160532348, 160532349]
+    trade_config = apps.get_app_config('trade')
+    scores = trade_config.get_china_import()
+
+    # ids = [160531980, 160531984, 160532111, 160532115, 160532119, 160532120, 160532127, 160532347, 160532348, 160532349]
+    ids = [row[0] for row in scores][:1000]
+    print("Came up with {} ids".format(len(scores)))
+
     model_cls = ChinaImport
     comment_cls = ChinaImportComment
     thumbs_cls = ChinaImportThumbs
@@ -150,27 +158,31 @@ def get_results(request, track_name):
 
     scores = {pajiva_id: 1.0 for pajiva_id in ids}
 
+    print("Got ids")
+
     comments = comment_cls.objects.filter(panjivarecordid__in=ids)
     comment_data = {comment.panjivarecordid: comment.comment for comment in comments}
+    print("Massaged comments")
 
     thumbs = thumbs_cls.objects.filter(panjivarecordid__in=ids)
     thumbs_data = {thumb.panjivarecordid: thumb.thumbs for thumb in thumbs}
+    print("Massaged thumbs")
 
     data = []
-    for pajiva_id in ids:
-        instance = model_cls.objects.using('wwf').get(panjivarecordid=pajiva_id)
-
+    for instance in model_cls.objects.using('wwf').filter(panjivarecordid__in=ids):
         data.append([
-            scores[pajiva_id]
+            scores[instance.panjivarecordid]
         ] + [
             format(instance, field) for field in show_fields
         ] + [
             format(instance, field) for field in hidden_fields
         ] + [
-            comment_data[pajiva_id] if pajiva_id in comment_data else ''
+            comment_data[instance.panjivarecordid] if instance.panjivarecordid in comment_data else ''
         ] + [
-            'thumbs-' + thumbs_data[pajiva_id] if pajiva_id in thumbs_data else ''
+            'thumbs-' + thumbs_data[instance.panjivarecordid] if instance.panjivarecordid in thumbs_data else ''
         ])
+
+    print("Computed data")
 
     fields = ['score'] + show_fields + hidden_fields + ['comment', 'thumbs']
     id_index = len(fields) - 3  # the most magic of numbers
@@ -185,6 +197,7 @@ def get_results(request, track_name):
         'data': i
     } for i, field in enumerate(fields)]
 
+    print("Sent")
     return JsonResponse({
         'columns': columns,
         'id_index': id_index,

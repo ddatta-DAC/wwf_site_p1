@@ -78,14 +78,15 @@
     }
     .intro_text{
         color:white;
-        background-color:green;
+        background-color:#212529 !important;
         font-size:1.0vw;
-        opacity:0.75;
+        opacity:0.85;
         padding:2%;
         font-size: 1.25rem;
     }
+
     #jumbotron_bg {
-        position:absolute;
+         position:absolute;
          top:0;
          left:0;
          right:0;
@@ -93,16 +94,43 @@
          background-image:url("{% static 'img/trees_2.jpg' %}");
          filter: blur(5px);
          z-index:-10;
-         opacity:0.7;
+         opacity:0.35;
          max-width: 100% !important;
          }
+
     #jumbotron{
          position:relative;
          border:5%;
-         padding-top:7.5%;
-         padding-bottom:7.5%;
+         % padding-top:7.5%;
+         % padding-bottom:7.5%;
          max-width: 100% !important;
      }
+
+    #intro_1{
+     position:relative;
+     border:5%;
+     max-width: 100% !important;
+    }
+
+  #intro_1_bg {
+    position:absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     background-image:url("{% static 'img/trade_3.jpg' %}");
+     filter: blur(5px);
+     z-index: 7;
+     opacity: 0.2275;
+     max-width: 100% !important;
+   }
+
+   .intro_container{
+        background: #212529 !important;
+        opacity: 3 !important;
+        color: #f8f9fa !important;
+        padding: 3%;
+    }
 
     </style>
 </head>
@@ -128,51 +156,55 @@
     <div class="overlay"></div>
 </header>
 
-<section class="content-section bg-light" id="Intro_1">
-    <div class="container text-center">
+<section class="content-section bg-light">
+    <div class="container" id="intro_1">
+    <div id="intro_1_bg"></div>
+    <div class="container-fluid text-center intro_container">
         <div class="row">
-            <div class="col-lg-10 mx-auto">
+            <div class="col-sm-2">
                 <h2>Background</h2>
+            </div>
+                <div class="col-sm-10">
                 <p class="lead mb-5">
                     Wildlife crime alone is estimated to be worth $15 to $20 billion annually. 
-                    It is recognized as the fourth largest global illegal trade preceeded only by narcaotics, human trafficking and weapons trade.
+                    It is recognized as the fourth largest global illegal trade preceded only by narcotics, human trafficking and weapons trade.
                     Conservation of biodiversity is key to ecological sustainability and long-term growth.
                     The world today is threatened by an impending mass extinction brought upon by unchecked growth,
                     corporate greed, complicity and negligence coupled with
                     burgeoning expansion of human population.
                     With each passing year, the growing demand for wood based products keep on increasing.
-                    The forests and their ecosystems are continuously enroached upon to feed the economic systems that have seen exponential growth in the last century.
+                    The forests and their ecosystems are continuously encroached upon to feed the economic systems that have seen exponential growth in the last century.
                     The vast expanse of these forests are in remote areas,
-                    removed from direct surviellance.
-                    The limits of the law enforcemnt agencies, especially in developing countries where
+                    removed from direct surveillance.
+                    The limits of the law enforcement agencies, especially in developing countries where
                     these endangered flora and fauna are found, are stretched
                     in its effort to enforce local and international laws enacted for preservation.
                     What complicates matters is that these vulnerable species are economically valuable leading to unfair trade practices.
                     This is true in countries where the governance structure is not capable or willing to enforce the rules required for global conservation efforts.
-
                     Illegal timber trade ranks among the top categories in illegal trade,
                     prevention of which is important to national security among other aspects.
                     Such trade adversely impacts biodiversity and increases extinction risk for
                     commercially valuable timber species.
-                    There has been significant efforst to curb deforestation,
+                    There has been significant efforts to curb deforestation,
                     but of late reports suggest the success of these measures have been plateauing.
-                    Deforestations in critical parts of South America, Africa and Asia have been monitored, yet the paractice of illegal trade remains persistent.
-                    <br>
+                    Deforestation in critical parts of South America, Africa and Asia have been monitored, yet the practice of illegal trade remains persistent.
+
                     Thus it is imperative to take more innotive approaches to detect and track illegal trade patterns,
                     which would lead to a more targeted approach in curbing this problem.
                 </p>
             </div>
         </div>
     </div>
-    <div class="container text-center">
+    <div class="container-fluid text-center intro_container">
         <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <h2>Proposed Framework</h2>
+            <div class="col-sm-2">
+                <h2>Proposed Framework</h2></div>
+             <div class="col-sm-10">
                 <p class="lead mb-5">
                     An integrated framework to tackle the challenge of detecting illegal timber trade through
                     systematically highlighting patterns of illegal timber trade
                     Our system is merges disparate data from a multitude of sources to gather targeted domain knowledge
-                    on timber trade.<br/>
+                    on timber trade.
                     We apply <b>Machine Learning</b> methods on trade data records along with domain knowledge to
                     highlight suspicous trade instances in an interactive interface that allows domain experts to track,
                     analyze and understand illegal timber trade better.
@@ -180,12 +212,13 @@
             </div>
         </div>
     </div>
+    </div>
 </section>
 
 
 
 
-    <div class="container"
+<div class="container"
          id="jumbotron">
 
         <div id="jumbotron_bg"></div>

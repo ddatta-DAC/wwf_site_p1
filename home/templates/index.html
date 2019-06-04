@@ -60,6 +60,9 @@
     .team_member:hover {
       transform: scale(1.2);
     }
+    .masthead{
+        background: -webkit-linear-gradient(45deg, rgba(76,76,76,1) 0%,rgba(89,89,89,0.9) 12%,rgba(102,102,102,0.8) 25%,rgba(71,71,71,0.85) 39%,rgba(44,44,44,0.89) 50%,rgba(0,0,0,0.89) 51%,rgba(17,17,17,0.92) 60%,rgba(43,43,43,0.98) 76%,rgba(38,38,38,1) 81%,rgba(30,30,30,1) 89%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%), url(/static/img/logs_2.jpg);
+    }
 
     .team_link {
         font-size:1.25vw;
@@ -76,13 +79,44 @@
     .name{
         font-size:1.1vw
     }
+
+    #intro_1{
+     position:relative;
+     padding : 0 ;
+     max-width: 100% !important;
+
+    }
+
+    #intro_1_bg {
+         position : absolute;
+         top:0;
+         left:0;
+         right:0;
+         bottom:0;
+         background-image:url("{% static 'img/trade_4.jpg' %}");
+         filter: blur(5px);
+         z-index: 7;
+         opacity: 0.2275;
+         max-width: 100% !important;
+    }
+
+    .intro_container{
+        background: #212529 !important;
+        opacity: 3 !important;
+        color: #f8f9fa !important;
+        padding: 3%;
+    }
     .intro_text{
         color:white;
         background-color:#212529 !important;
         font-size:1.0vw;
         opacity:0.85;
         padding:2%;
-        font-size: 1.25rem;
+        font-size: 1.05rem;
+        padding-right: 20%;
+        padding-left: 20%;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
     #jumbotron_bg {
@@ -91,45 +125,40 @@
          left:0;
          right:0;
          bottom:0;
-         background-image:url("{% static 'img/trees_2.jpg' %}");
+         background-image:url("{% static 'img/logs_1.jpg' %}");
          filter: blur(5px);
          z-index:-10;
-         opacity:0.35;
+         opacity:0.85;
          max-width: 100% !important;
-         }
+    }
 
     #jumbotron{
          position:relative;
          border:5%;
-         % padding-top:7.5%;
-         % padding-bottom:7.5%;
+         padding : 0 ;
          max-width: 100% !important;
-     }
-
-    #intro_1{
-     position:relative;
-     border:5%;
-     max-width: 100% !important;
     }
 
-  #intro_1_bg {
-    position:absolute;
-     top:0;
-     left:0;
-     right:0;
-     bottom:0;
-     background-image:url("{% static 'img/trade_3.jpg' %}");
-     filter: blur(5px);
-     z-index: 7;
-     opacity: 0.2275;
-     max-width: 100% !important;
-   }
+    .col_left {
+        max-width: inherit;
+    }
 
-   .intro_container{
-        background: #212529 !important;
-        opacity: 3 !important;
-        color: #f8f9fa !important;
-        padding: 3%;
+    .content_row{
+        margin-left: 15% !important;
+        margin-right: 17.5% !important;
+        max-width: 65%;
+        text-align: left;
+    }
+
+    .content-section-hp {
+        padding-top:0 !important;
+        padding-bottom:0 !important;
+    }
+    .topbar_row {
+        text-align: center;
+        padding : 1%;
+        font-size: 1.25rem;
+        background: #495a6b36
     }
 
     </style>
@@ -139,7 +168,7 @@
 <body id="page-top">
 
 <!-- Navigation -->
-{% include "navigation.html" %}
+<!--{% include "navigation.html" %}-->
 
 <!-- Header -->
 <header class="masthead d-flex">
@@ -147,7 +176,7 @@
         <h2 class="mb-4">Detecting Illegal Timber Trade</h2>
         <h5 class="mb-5">
             <em>
-            A collaboration between Discovery Analytics Center, Virginia Tech & World Wildlife Fund
+                A collaboration between Discovery Analytics Center, Virginia Tech & World Wildlife Fund
             </em>
         </h5>
 
@@ -156,100 +185,125 @@
     <div class="overlay"></div>
 </header>
 
-<section class="content-section bg-light">
-    <div class="container" id="intro_1">
-    <div id="intro_1_bg"></div>
-    <div class="container-fluid text-center intro_container">
-        <div class="row">
-            <div class="col-sm-2">
-                <h2>Background</h2>
-            </div>
-                <div class="col-sm-10">
-                <p class="lead mb-5">
-                    Wildlife crime alone is estimated to be worth $15 to $20 billion annually. 
-                    It is recognized as the fourth largest global illegal trade preceded only by narcotics, human trafficking and weapons trade.
-                    Conservation of biodiversity is key to ecological sustainability and long-term growth.
-                    The world today is threatened by an impending mass extinction brought upon by unchecked growth,
-                    corporate greed, complicity and negligence coupled with
-                    burgeoning expansion of human population.
-                    With each passing year, the growing demand for wood based products keep on increasing.
-                    The forests and their ecosystems are continuously encroached upon to feed the economic systems that have seen exponential growth in the last century.
-                    The vast expanse of these forests are in remote areas,
-                    removed from direct surveillance.
-                    The limits of the law enforcement agencies, especially in developing countries where
-                    these endangered flora and fauna are found, are stretched
-                    in its effort to enforce local and international laws enacted for preservation.
-                    What complicates matters is that these vulnerable species are economically valuable leading to unfair trade practices.
-                    This is true in countries where the governance structure is not capable or willing to enforce the rules required for global conservation efforts.
-                    Illegal timber trade ranks among the top categories in illegal trade,
-                    prevention of which is important to national security among other aspects.
-                    Such trade adversely impacts biodiversity and increases extinction risk for
-                    commercially valuable timber species.
-                    There has been significant efforts to curb deforestation,
-                    but of late reports suggest the success of these measures have been plateauing.
-                    Deforestation in critical parts of South America, Africa and Asia have been monitored, yet the practice of illegal trade remains persistent.
+<div class="container-fluid">
+    <div class="row topbar_row">
+       <div class="col-sm-3">
+        <a class="js-scroll-trigger" href="{% url 'track' 'china_import' %}">China Import</a>
+       </div>
+        <div class="col-sm-3">
+        <a class="js-scroll-trigger" href="{% url 'track' 'china_export' %}">China Export</a>
+       </div>
+        <div class="col-sm-3">
+            <a class="js-scroll-trigger" href="{% url 'track' 'us_import' %}">US Import</a>
+       </div>
+        <div class="col-sm-3">
+            <a class="js-scroll-trigger" href="{% url 'track' 'peru_export' %}">Peru Export</a>
+       </div>
+    </div>
+</div>
 
-                    Thus it is imperative to take more innotive approaches to detect and track illegal trade patterns,
-                    which would lead to a more targeted approach in curbing this problem.
-                </p>
+<section class="content-section bg-light content-section-hp">
+    <div class="container" id="intro_1">
+        <div id="intro_1_bg"></div>
+        <div class="container-fluid text-center intro_container">
+            <div class="row content_row">
+                <div class="col-sm-2 col_left">
+                    <h3>Background</h3>
+                </div>
+                <div class="col-sm-10 ">
+                    <p class="lead mb-5">
+                        Wildlife crime alone is estimated to be worth $15 to $20 billion annually.
+                        It is recognized as the fourth largest global illegal trade preceded only by narcotics, human
+                        trafficking and weapons trade.
+                        Conservation of biodiversity is key to ecological sustainability and long-term growth.
+                        The world today is threatened by an impending mass extinction brought upon by unchecked growth,
+                        corporate greed, complicity and negligence coupled with
+                        burgeoning expansion of human population.
+                        With each passing year, the growing demand for wood based products keep on increasing.
+                        The forests and their ecosystems are continuously encroached upon to feed the economic systems
+                        that have seen exponential growth in the last century.
+                        The vast expanse of these forests are in remote areas,
+                        removed from direct surveillance.
+                        The limits of the law enforcement agencies, especially in developing countries where
+                        these endangered flora and fauna are found, are stretched
+                        in its effort to enforce local and international laws enacted for preservation.
+                        What complicates matters is that these vulnerable species are economically valuable leading to
+                        unfair trade practices.
+                        This is true in countries where the governance structure is not capable or willing to enforce
+                        the rules required for global conservation efforts.
+                        Illegal timber trade ranks among the top categories in illegal trade,
+                        prevention of which is important to national security among other aspects.
+                        Such trade adversely impacts biodiversity and increases extinction risk for
+                        commercially valuable timber species.
+                        There has been significant efforts to curb deforestation,
+                        but of late reports suggest the success of these measures have been plateauing.
+                        Deforestation in critical parts of South America, Africa and Asia have been monitored, yet the
+                        practice of illegal trade remains persistent.
+
+                        Thus it is imperative to take more innovative approaches to detect and track illegal trade
+                        patterns,
+                        which would lead to a more targeted approach in curbing this problem.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid text-center intro_container">
-        <div class="row">
-            <div class="col-sm-2">
-                <h2>Proposed Framework</h2></div>
-             <div class="col-sm-10">
-                <p class="lead mb-5">
-                    An integrated framework to tackle the challenge of detecting illegal timber trade through
-                    systematically highlighting patterns of illegal timber trade
-                    Our system is merges disparate data from a multitude of sources to gather targeted domain knowledge
-                    on timber trade.
-                    We apply <b>Machine Learning</b> methods on trade data records along with domain knowledge to
-                    highlight suspicous trade instances in an interactive interface that allows domain experts to track,
-                    analyze and understand illegal timber trade better.
-                </p>
+        <div class="container-fluid text-center intro_container">
+            <div class="row content_row">
+                <div class="col-sm-2 col_left">
+                    <h3>Proposed Framework</h3></div>
+                <div class="col-sm-10">
+                    <p class="lead mb-5">
+                        An integrated framework to tackle the challenge of detecting illegal timber trade through
+                        systematically highlighting patterns of illegal timber trade
+                        Our system is merges disparate data from a multitude of sources to gather targeted domain
+                        knowledge
+                        on timber trade.
+                        We apply <b>Machine Learning</b> methods on trade data records along with domain knowledge to
+                        highlight suspicous trade instances in an interactive interface that allows domain experts to
+                        track,
+                        analyze and understand illegal timber trade better.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 
 
-
-
 <div class="container"
-         id="jumbotron">
+     id="jumbotron">
 
-        <div id="jumbotron_bg"></div>
+    <div id="jumbotron_bg"></div>
 
-        <div class="intro_text">
-            <span style="font-size: 2.5rem">&ldquo;</span>
-            <em>
-             Studies indicate that the 
-             illegal trade in wildlife and timber may help finance terrorism and organized crime across the world.   
-            </em>
-            <span style="font-size: 2.5rem">&rdquo;</span>
-            - <b> UN Report </b>
-            <br/>
-            
-            <span style="font-size: 2.5rem">&ldquo;</span>
-            <em>
-            As a result of weak forest governance, illegal timber accounts over 70% of some countries’ timber exports, such as Peru, Bolivia and the DRC.
-            <span style="font-size: 2.5rem">&rdquo;</span>
-            </em>
-                - <b> Global Forest Atlas </b>
-            <br/>
-         
-            <span style="font-size: 2.5rem">&ldquo;</span>
-            <em>
-                ..particularly those (countries) in Africa and South America, between 50 and 90% of timber is harvested and traded illegally.
-            </em>
-            <span style="font-size: 2.5rem">&rdquo;</span>
-            - <b>TRAFFIC Report</b>
+    <div class="intro_text">
+        <span style="font-size: 2.5rem">&ldquo;</span>
+        <em>
+            Studies indicate that the
+            illegal trade in wildlife and timber may help finance terrorism and organized crime across the world.
+        </em>
+        <span style="font-size: 2.5rem">&rdquo;</span>
+        - <b> UN Report </b>
+        <br/>
 
-        </div>
+        <span style="font-size: 2.5rem">&ldquo;</span>
+        <em>
+            As a result of weak forest governance, illegal timber accounts over 70% of some countries’ timber exports,
+            such as Peru, Bolivia and the DRC.
+            <span style="font-size: 2.5rem">&rdquo;</span>
+        </em>
+        - <b> Global Forest Atlas </b>
+        <br/>
+
+        <span style="font-size: 2.5rem">&ldquo;</span>
+        <em>
+            ..particularly those (countries) in Africa and South America, between 50 and 90% of timber is harvested and
+            traded illegally.
+        </em>
+        <span style="font-size: 2.5rem">&rdquo;</span>
+        - <b>TRAFFIC Report</b>
+
     </div>
+</div>
 
 <section class="content-section bg-light" id="team">
     <div class="container text-center">
@@ -259,7 +313,9 @@
                 <p class="lead mb-5">
 
                 <div class="team_link">
-                   <a  href="https://dac.cs.vt.edu/"> Discovery Analytics Center, Virginia Tech <img class="team_logo" src="{% static 'img/DAC_logo.png' %}"/> </a>
+                    <a href="https://dac.cs.vt.edu/"> Discovery Analytics Center, Virginia Tech <img class="team_logo"
+                                                                                                     src="{% static 'img/DAC_logo.png' %}"/>
+                    </a>
                 </div>
                 <br>
                 <br>
@@ -301,9 +357,9 @@
                 <p class="lead mb-5">
 
                 <div class="team_link">
-                <a href="https://www.worldwildlife.org/"> World WildLife Fund
-                    <img class="team_logo" src="{% static 'img/panda.jpg' %}"/>
-                </a>
+                    <a href="https://www.worldwildlife.org/"> World WildLife Fund
+                        <img class="team_logo" src="{% static 'img/panda.jpg' %}"/>
+                    </a>
                 </div>
                 <br>
                 <div class="container">
@@ -330,49 +386,49 @@
                                 <b>Amy Smith</b>
                             </span>
                             <br>
-                           World WildLife Fund
+                            World WildLife Fund
                         </div>
 
-<!--                        <div class="col-sm team_member">-->
-<!--                             <br>-->
-<!--                        </div>-->
-<!--                        <div class="col-sm team_member">-->
-<!--                            <br>-->
-<!--                        </div>-->
-<!--                        <div class="col-sm team_member">-->
-<!--                            John Simeone <br>-->
-<!--                        </div>-->
+                        <!--                        <div class="col-sm team_member">-->
+                        <!--                             <br>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="col-sm team_member">-->
+                        <!--                            <br>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="col-sm team_member">-->
+                        <!--                            John Simeone <br>-->
+                        <!--                        </div>-->
                     </div>
                     <br/>
                     <br/>
 
                     <div class="row">
 
-                     <div class="col-sm team_member">
+                        <div class="col-sm team_member">
                         <span class="name">
                             <b>Willow Outhwaite</b>
                         </span>
-                        <br>
-                       TRAFFIC
-                    </div>
+                            <br>
+                            TRAFFIC
+                        </div>
 
-                     <div class="col-sm team_member">
+                        <div class="col-sm team_member">
                         <span class="name">
                             <b>Hin Keon Chen</b>
                         </span>
-                        <br>
-                      TRAFFIC
-                    </div>
+                            <br>
+                            TRAFFIC
+                        </div>
 
-                     <div class="col-sm team_member">
+                        <div class="col-sm team_member">
                         <span class="name">
                             <b>John Simeone</b>
                         </span>
-                        <br>
-                        World WildLife Fund
-                    </div>
+                            <br>
+                            World WildLife Fund
+                        </div>
 
-                </div>
+                    </div>
                 </div>
                 </p>
 

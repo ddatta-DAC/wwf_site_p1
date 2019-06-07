@@ -115,9 +115,17 @@
         font-size: 1.05rem;
         padding-right: 20%;
         padding-left: 20%;
-        padding-top: 5%;
-        padding-bottom: 5%;
+<!--        padding-top: 5%;-->
+<!--        padding-bottom: 5%;-->
     }
+
+    #jumbotron{
+         position:relative;
+         border:5%;
+         padding : 0 ;
+         max-width: 100% !important;
+    }
+
 
     #jumbotron_bg {
          position:absolute;
@@ -132,12 +140,6 @@
          max-width: 100% !important;
     }
 
-    #jumbotron{
-         position:relative;
-         border:5%;
-         padding : 0 ;
-         max-width: 100% !important;
-    }
 
     .col_left {
         max-width: inherit;
@@ -162,7 +164,41 @@
         margin-right: -15px;
         margin-left: -15px;
     }
+    .col_quote{
+        line-height: 0.95;
+    }
 
+    #platform{
+         position:relative;
+         border:5%;
+         padding : 0 ;
+         max-width: 100% !important;
+    }
+
+
+    #platform_bg {
+         position:absolute;
+         top:0;
+         left:0;
+         right:0;
+         bottom:0;
+         background-image:url("{% static 'img/analyticsPic.jpg' %}");
+         filter: blur(3px);
+         z-index:-5;
+         opacity:0.95;
+         max-width: 100% !important;
+    }
+
+    #platform_container{
+        background: #white !important;
+        opacity: 3 !important;
+        color: white !important;
+        padding: 3%;
+    }
+
+    .into_list{
+         font-size: 1.25rem;
+    }
     </style>
 </head>
 
@@ -187,8 +223,15 @@
     <div class="overlay"></div>
 </header>
 
+
 <div class="container-fluid">
+     <div class="row topbar_row">
+        <div class="col-sm-12 ">
+          Visualizations by Origin
+        </div>
+     </div>
     <div class="row topbar_row">
+
        <div class="col-sm-3">
         <a class="js-scroll-trigger" href="{% url 'track' 'china_import' %}">China Import</a>
        </div>
@@ -208,32 +251,55 @@
      id="jumbotron">
     <div id="jumbotron_bg"></div>
     <div class="intro_text">
-        <span style="font-size: 2.5rem">&ldquo;</span>
-        <em>
-            Studies indicate that the
-            illegal trade in wildlife and timber may help finance terrorism and organized crime across the world.
-        </em>
-        <span style="font-size: 2.5rem">&rdquo;</span>
-        - <b> UN Report </b>
+
+
+        <div class="row content_row">
+
+            <div class="col-sm-10 col__quote">
+<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
+<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
+                    <em>
+                        "Studies indicate that the
+                        illegal trade in wildlife and
+                        timber may help finance terrorism and organized crime across the world."
+                    </em>
+            </div>
+        <div class="col-sm-2">
+             - UN Report
+        </div>
+        </div>
         <br/>
+         <div class="row content_row">
 
-        <span style="font-size: 2.5rem">&ldquo;</span>
-        <em>
-            As a result of weak forest governance, illegal timber accounts over 70% of some countries’ timber exports,
-            such as Peru, Bolivia and the DRC.
-            <span style="font-size: 2.5rem">&rdquo;</span>
-        </em>
-        - <b> Global Forest Atlas </b>
-        <br/>
+            <div class="col-sm-10 col__quote">
+<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
+<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
+                    <em>
+                        "As a result of weak forest governance,
+                        illegal timber accounts over 70% of some countries’ timber exports,
+                        such as Peru, Bolivia and the DRC."
+                    </em>
+            </div>
+         <div class="col-sm-2">
+               - Global Forest Atlas
+         </div>
+         </div>
+         <br/>
+         <div class="row content_row">
+            <div class="col-sm-10 col__quote">
+<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
+<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
+                    <em>
+                        "..particularly those (countries) in Africa and South America, between 50 and 90% of timber is harvested and traded illegally."
+                    </em>
 
-        <span style="font-size: 2.5rem">&ldquo;</span>
-        <em>
-            ..particularly those (countries) in Africa and South America, between 50 and 90% of timber is harvested and
-            traded illegally.
-        </em>
-        <span style="font-size: 2.5rem">&rdquo;</span>
-        - <b>TRAFFIC Report</b>
 
+
+            </div>
+         <div class="col-sm-2">
+              - TRAFFIC Report
+         </div>
+         </div>
     </div>
 </div>
 <section class="content-section bg-light content-section-hp">
@@ -242,25 +308,19 @@
         <div class="container-fluid text-center intro_container">
             <div class="row content_row">
                 <div class="col-sm-2 col_left">
-                    <h5> Why & How is illegal timber trade is critical ? </h5>
+                    <h5> Why illegal timber trade is critical ? </h5>
                 </div>
                 <div class="col-sm-10 ">
                     <p class="lead mb-5">
-                        Wildlife crime alone is estimated to be worth $15 to $20 billion annually.
-                        It is recognized as the fourth largest global illegal trade preceded only by narcotics, human
-                        trafficking and weapons trade.
+
                         Conservation of biodiversity is key to ecological sustainability and long-term growth.
                         The world today is threatened by an impending mass extinction brought upon by unchecked growth,
-                        corporate greed, complicity and negligence coupled with
-                        burgeoning expansion of human population.
-                        With each passing year, the growing demand for wood based products keep on increasing.
-                        The forests and their ecosystems are continuously encroached upon to feed the economic systems
-                        that have seen exponential growth in the last century.
-                        The vast expanse of these forests are in remote areas,
-                        removed from direct surveillance.
+                        corporate greed, complicity and negligence coupled with  burgeoning expansion of human population.
+                        With each passing year, the growing demand for wood based products keep on increasing. The forests and their ecosystems are continuously encroached upon to feed the economic systems
+                        that have seen exponential growth in the last century.<br/>
+                        The vast expanse of these forests are in remote areas, removed from direct surveillance.
                         The limits of the law enforcement agencies, especially in developing countries where
-                        these endangered flora and fauna are found, are stretched
-                        in its effort to enforce local and international laws enacted for preservation.
+                        these endangered flora and fauna are found, are stretched in its effort to enforce local and international laws enacted for preservation.
                         What complicates matters is that these vulnerable species are economically valuable leading to
                         unfair trade practices.
                         This is true in countries where the governance structure is not capable or willing to enforce
@@ -269,44 +329,71 @@
                         prevention of which is important to national security among other aspects.
                         Such trade adversely impacts biodiversity and increases extinction risk for
                         commercially valuable timber species.
-                        There has been significant efforts to curb deforestation,
-                        but of late reports suggest the success of these measures have been plateauing.
-                        Deforestation in critical parts of South America, Africa and Asia have been monitored, yet the
-                        practice of illegal trade remains persistent.
-
+                        <br/>
                         Thus it is imperative to take more innovative approaches to detect and track illegal trade
                         patterns, which could lead to a more targeted approach in curbing this problem.
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid text-center intro_container">
+
             <div class="row content_row">
                 <div class="col-sm-2 col_left">
-                    <h4>Proposed Framework</h4></div>
-                <div class="col-sm-10">
-                    <p class="lead mb-5">
-                        An integrated framework to tackle the challenge of detecting illegal timber trade through
-                        systematically highlighting patterns of illegal timber trade
-                        Our system is merges disparate data from a multitude of sources to gather targeted domain
-                        knowledge
-                        on timber trade.
-                        We apply <b>Machine Learning</b> methods on trade data records along with domain knowledge to
-                        highlight suspicous trade instances in an interactive interface that allows domain experts to
-                        track,
-                        analyze and understand illegal timber trade better.
-                    </p>
+                    <h5> How critical is illegal timber trade ? </h5>
+                </div>
+                <div class="col-sm-10 ">
+
+                    <ul class="into_list">
+                        <li>
+                         Wildlife crime alone is estimated to be worth $15 to $20 billion annually.
+                        </li>
+                        <li>
+                            Recognized as the fourth largest global illegal trade preceded only by narcotics, human
+                    trafficking and weapons trade.
+                        </li>
+                        <li>
+                            Significant efforts and progress made over last decades yet effectiveness of measures have been plateauing.
+                        </li>
+                        <li>Deforestation in critical parts of South America, Africa and Asia have been monitored, yet the
+                    practice of illegal trade remains persistent.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
+<div class="container-fluid text-center" id = "platform">
+    <div id="platform_bg"></div>
+     <div class="container-fluid text-center" id="platform_container">
+        <div class="row content_row">
+            <div class="col-sm-2 col_left">
+                <h4>Framework</h4></div>
+            <div class="col-sm-10">
+                <p class="lead mb-5">
+                    <span style="background-color: black">
+                        The integrated framework we build is aimed at detecting suspicious illegal timber trade.
+                        <br/>
+                        Our system is merges disparate data from a multitude of sources to gather targeted domain
+                    knowledge on timber trade. The trade data is obtained from Panjiva Inc. We further curate data from a variety of sources including IUCN Redlist and CITES among others.
+                        <br/>
+                          We apply <b>Machine Learning</b> algorithms on trade data records along with domain knowledge to
+                    highlight suspicous trade instances in an interactive interface that allows domain experts to
+                    track, analyze and understand illegal timber trade better.
+
+                    </span>
+
+                </p>
+            </div>
+        </div>
+     </div>
+</div>
 
 
 
 <section class="content-section bg-light" id="team">
-</div>
+
     <div class="container text-center">
         <h2>Team</h2>
         <div class="container">

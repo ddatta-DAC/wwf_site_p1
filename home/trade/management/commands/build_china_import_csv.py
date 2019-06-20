@@ -64,9 +64,9 @@ def process_score_rows(iterable):
 
 
 def process_scores(scores):
-    print(scores)
+    # print(scores)
     ids = list(scores.keys())[:10000]
-    print("Came up with {} ids".format(len(scores.keys())))
+    # print("Came up with {} ids".format(len(scores.keys())))
 
     model_cls = ChinaImport
     comment_cls = ChinaImportComment
@@ -115,7 +115,7 @@ def process_scores(scores):
         ])
 
     print("Computed data")
-    print(data)
+    # print(data)
 
     fields = ['score'] + show_fields + hidden_fields + ['comment', 'thumbs']
     id_index = len(fields) - 3  # the most magic of numbers

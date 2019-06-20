@@ -32,7 +32,9 @@ $(document).ready(function () {
     url: '/static/china_import.json', 
     method: 'GET',
     success: function (data) {
-      buildTable(data);
+      buildTable({
+        data
+      });
     },
     error: function (error) {
       console.error(error);

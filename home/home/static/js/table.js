@@ -1,15 +1,31 @@
 
-function buildTable(data, tableId = '#analysis_table', hide = false) {
+function buildTable(attrs) {
+  var data = attrs.data;
+  var tableId = '#analysis_table';
+  if (attrs.selector) {
+    tableId = attrs.selector;
+  }
+  var hide = false;
+  if (attrs.hide) {
+    hide = attrs.hide;
+  }
+
   var primaryIndex = data.id_index;
 
-  var table = $(tableId).DataTable({
+  var settings = {
     columns: data.columns,
     columnDefs: [{
       targets: data.hidden_cols,
       visible: false
     }],
     order: [[ 1, "desc" ]]
-  });
+  };
+
+  if (attrs.datatablesSettings) {
+    Object.assign(settings, attrs.datatablesSettings);
+  }
+
+  var table = $(tableId).DataTable(settings);
 
   $(tableId + ' tbody').on('click', 'td.details-control', function () {
       var tr = $(this).closest('tr');

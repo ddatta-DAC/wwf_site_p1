@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  buildTable(anomalyData, '#anomaly_table');
+  buildTable(anomalyData, '#anomaly_table', true);
 
   // send ajax query to fill in table
   $.ajax({

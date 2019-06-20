@@ -1,5 +1,5 @@
 
-function buildTable(data, tableId = '#analysis_table') {
+function buildTable(data, tableId = '#analysis_table', hide = false) {
   var primaryIndex = data.id_index;
 
   var table = $(tableId).DataTable({
@@ -41,11 +41,13 @@ function buildTable(data, tableId = '#analysis_table') {
           .addClass('loading')
           .text('Loading...');
    
+      var data = {};
+      if (hide) {
+        data.hide = true;
+      }
       $.ajax({
           url: expandRowUrl + '/' + row[primaryIndex],
-          data: {
-            hide: true,
-          },
+          data: data,
           dataType: 'json',
           success: function (json) {
               div

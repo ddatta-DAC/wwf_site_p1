@@ -7,25 +7,27 @@
       <dd>{{ object.consigneecity }}</dd>
       <dt>Province</dt>
       <dd>{{ object.province }}</dd>
-      <dt>Transport Method</dt>
-      <dd>{{ object.transportmethod }}</dd>
-      <dt>Containerized</dt>
-      <dd>{{ object.iscontainerized }}</dd>
       <dt>Admin Region</dt>
       <dd>{{ object.adminregion }}</dd>
-      <dt>Trade Type</dt>
-      <dd>{{ object.tradetype }}</dd>
-    </dl>
-  </div>
-  <div class="col">
-    <dl>
-      <dt>HS Code Keywords</dt>
-      <dd>{{ object.hscodekeywords }}</dd>
       <dt>panjivarecordid</dt>
       <dd> {{ object.panjivarecordid }}</dd>
     </dl>
   </div>
   <div class="col">
+    <dl>
+      <dt>Transport Method</dt>
+      <dd>{{ object.transportmethod }}</dd>
+      <dt>Containerized</dt>
+      <dd>{{ object.iscontainerized }}</dd>
+      <dt>Trade Type</dt>
+      <dd>{{ object.tradetype }}</dd>
+      <dt>HS Code Keywords</dt>
+      <dd>{{ object.hscodekeywords }}</dd>
+    </dl>
+  </div>
+  <div class="col">
+    {% if not hide_compare %}
+      <a class="btn btn-outline-info mb-3" href="{% url 'anomaly' track_name=track_name panjivarecordid=object.panjivarecordid %}" role="button" target="_blank" rel="noopener">Compare with Constrasting Transactions</a>
     <div class="form-group">
       <div>
         <label class="mr-2">
@@ -50,13 +52,14 @@
         </label>
       </div>
     </div>
+    {% endif %}
     <div class="form-group">
       <label for="comments-text-area-{{ object.panjivarecordid }}">
         <strong>Comments</strong>
       </label>
       <textarea class="form-control" id="comments-text-area-{{ object.panjivarecordid }}" rows="3">{{ comment }}</textarea>
     </div>
-    <button type="button" class="btn btn-primary" onclick="submitComment('{{ object.panjivarecordid }}')">Submit comment</button>
+    <button type="button" class="btn btn-primary mb-3" onclick="submitComment('{{ object.panjivarecordid }}')">Submit comment</button>
     <i id="spin-{{ object.panjivarecordid }}" class="fas fa-spinner fa-pulse hidden"></i>
     <i id="check-{{ object.panjivarecordid }}" class="fas fa-check hidden"></i>
     <i id="error-{{ object.panjivarecordid }}" class="fas fa-times hidden"></i>

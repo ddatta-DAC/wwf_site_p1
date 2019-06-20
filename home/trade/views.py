@@ -1,8 +1,11 @@
+import json
+
 from django.apps import apps
 from django.http import JsonResponse, HttpResponseNotAllowed, Http404
 from django.views import View
-from django.views.generic.detail import DetailView
+from django.views.generic.detail import DetailView, BaseDetailView
 
+from .management.commands.build_china_import_csv import process_score_rows
 from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs
 
 
@@ -18,6 +21,56 @@ def format(instance, field):
 class DefaultExpandRowView(DetailView):
     def get(self, request):
         raise Http404
+
+
+class AnomalyApiView(BaseDetailView):
+    template_name = 'anomaly.html'
+    slug_field = 'panjivarecordid'
+    slug_url_kwarg = 'panjivarecordid'
+
+    def get_queryset(self):
+        if self.kwargs['track_name'] == 'china_import':
+            return ChinaImport.objects.using('wwf').all()
+        return None
+
+    def render_to_response(self, context, *args, **kwargs):
+        trade_config = apps.get_app_config('trade')
+        scores = trade_config.get_china_import()
+
+        record = None
+        for row in scores:
+            if row[0] == self.kwargs['panjivarecordid']:
+                record = row
+                break
+
+        if record is None:
+            return JsonResponse({
+                'status': '404'
+            })
+
+        output = process_score_rows([[pid, 0] for pid in record[4].split(';')])
+        return JsonResponse(output)
+
+
+class AnomalyView(DetailView):
+    template_name = 'anomaly.html'
+    slug_field = 'panjivarecordid'
+    slug_url_kwarg = 'panjivarecordid'
+
+    def get_queryset(self):
+        if self.kwargs['track_name'] == 'china_import':
+            return ChinaImport.objects.using('wwf').all()
+        return None
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        output = process_score_rows([[self.kwargs['panjivarecordid'], 0]])
+        anomaly_data = json.dumps(output)
+
+        context['track_name'] = self.kwargs['track_name']
+        context['anomaly'] = anomaly_data
+        return context
 
 
 class BaseExpandedRowView(DetailView):
@@ -46,9 +99,11 @@ class BaseExpandedRowView(DetailView):
         except self.thumbs_cls.DoesNotExist:
             pass
 
+        context['hide_compare'] = 'hide' in self.request.GET
         context['comment'] = comment
         context['thumbs'] = thumbs
-
+        context['track_name'] = self.track_name
+        print('hide' in self.request.GET)
         return context
 
     def render_to_response(self, context, *args, **kwargs):
@@ -63,6 +118,7 @@ class ChinaImportExpandRowView(BaseExpandedRowView):
     transaction_cls = ChinaImport
     comment_cls = ChinaImportComment
     thumbs_cls = ChinaImportThumbs
+    track_name = 'china_import'
 
 
 class BaseUpdateView(View):

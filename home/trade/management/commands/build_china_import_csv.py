@@ -2,9 +2,9 @@ import csv
 import json
 
 from django.conf import settings
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 
-from trade.models import *
+from trade.models import ChinaImport, ChinaImportComment, ChinaImportThumbs
 
 
 pretty_name = {
@@ -44,95 +44,97 @@ class Command(BaseCommand):
         parser.add_argument('path', type=str)
 
     def handle(self, *args, **options):
-        scores = {}
         with open(options['path']) as csvfile:
             reader = csv.reader(csvfile)
             next(reader)
-            for row in reader:
-                scores[row[0]] = row
+            output = process_score_rows(reader)
 
-        ids = list(scores.keys())[:10000]
-        print("Came up with {} ids".format(len(scores.keys())))
+            outfilepath = settings.ROOT_DIR + 'home' + settings.STATIC_ROOT + 'china_import.json'
+            with open(outfilepath, 'w') as outfile:
+                json.dump(output, outfile)
 
-        model_cls = ChinaImport
-        comment_cls = ChinaImportComment
-        thumbs_cls = ChinaImportThumbs
-        show_fields = ['shipmentmonth', 'consigneecountry', 'consigneepanjivaid', 'shipmentorigin', 'countryofsale', 'valueofgoodsusd', 'hscode']
-        hidden_fields = ['consigneename', 'consigneecity', 'province', 'transportmethod', 'iscontainerized', 'adminregion', 'tradetype', 'hscodekeywords', 'panjivarecordid']
+            self.stdout.write(self.style.SUCCESS('Successfully wrote to file "%s"' % outfilepath))
 
-        # scores = {pajiva_id: 1.0 for pajiva_id in ids}
 
-        print("Got ids")
+def process_score_rows(iterable):
+    scores = {}
+    for row in iterable:
+        scores[row[0]] = row
+    return process_scores(scores)
 
-        # comment_data = {}
-        # for panjivarecordid in ids:
-        #     comments = comment_cls.objects.filter(panjivarecordid=panjivarecordid)
-        #     if comments.exists():
-        #         comment_data[panjivarecordid] = comments[0].comment
-        # print("Massaged comments")
 
-        # thumbs_data = {}
-        # for panjivarecordid in ids:
-        #     thumbs = thumbs_cls.objects.filter(panjivarecordid=panjivarecordid)
-        #     if thumbs.exists():
-        #         thumbs_data[panjivarecordid] = thumbs[0].thumbs
-        # print("Massaged comments")
+def process_scores(scores):
+    print(scores)
+    ids = list(scores.keys())[:10000]
+    print("Came up with {} ids".format(len(scores.keys())))
 
-        comments = comment_cls.objects.filter(panjivarecordid__in=ids)
-        comment_data = {comment.panjivarecordid: comment.comment for comment in comments}
-        print("Massaged comments")
+    model_cls = ChinaImport
+    comment_cls = ChinaImportComment
+    thumbs_cls = ChinaImportThumbs
+    show_fields = ['shipmentmonth', 'consigneecountry', 'consigneepanjivaid', 'shipmentorigin', 'countryofsale', 'hscode', 'valueofgoodsusd']
+    hidden_fields = ['consigneename', 'consigneecity', 'province', 'transportmethod', 'iscontainerized', 'adminregion', 'tradetype', 'hscodekeywords', 'panjivarecordid']
 
-        thumbs = thumbs_cls.objects.filter(panjivarecordid__in=ids)
-        thumbs_data = {thumb.panjivarecordid: thumb.thumbs for thumb in thumbs}
-        print("Massaged thumbs")
+    # scores = {pajiva_id: 1.0 for pajiva_id in ids}
 
-        data = []
-        for instance in model_cls.objects.using('wwf').filter(panjivarecordid__in=ids):
-            data.append([
-                '{:.3f}'.format(float(scores[str(instance.panjivarecordid)][1])),
-            ] + [
-                custom_format(instance, field) for field in show_fields
-            ] + [
-                custom_format(instance, field) for field in hidden_fields
-            ] + [
-                comment_data[instance.panjivarecordid] if instance.panjivarecordid in comment_data else ''
-            ] + [
-                'thumbs-' + thumbs_data[instance.panjivarecordid] if instance.panjivarecordid in thumbs_data else ''
-            ])
+    print("Got ids")
 
-        print("Computed data")
+    # comment_data = {}
+    # for panjivarecordid in ids:
+    #     comments = comment_cls.objects.filter(panjivarecordid=panjivarecordid)
+    #     if comments.exists():
+    #         comment_data[panjivarecordid] = comments[0].comment
+    # print("Massaged comments")
 
-        fields = ['score'] + show_fields + hidden_fields + ['comment', 'thumbs']
-        id_index = len(fields) - 3  # the most magic of numbers
+    # thumbs_data = {}
+    # for panjivarecordid in ids:
+    #     thumbs = thumbs_cls.objects.filter(panjivarecordid=panjivarecordid)
+    #     if thumbs.exists():
+    #         thumbs_data[panjivarecordid] = thumbs[0].thumbs
+    # print("Massaged comments")
 
-        columns = [{
-            'className': "details-control",
-            'orderable': False,
-            'data': None,
-            'defaultContent': ""
-        }] + [{
-            'title': pretty_name[field] if field in pretty_name else field,
-            'data': i
-        } for i, field in enumerate(fields)]
+    comments = comment_cls.objects.filter(panjivarecordid__in=ids)
+    comment_data = {comment.panjivarecordid: comment.comment for comment in comments}
+    print("Massaged comments")
 
-        output = {
-            'columns': columns,
-            'id_index': id_index,
-            'hidden_cols': list(range(len(show_fields) + 1, len(fields) + 1)),
-            'data': data,
-        }
+    thumbs = thumbs_cls.objects.filter(panjivarecordid__in=ids)
+    thumbs_data = {thumb.panjivarecordid: thumb.thumbs for thumb in thumbs}
+    print("Massaged thumbs")
 
-        outfilepath = settings.ROOT_DIR + 'home' + settings.STATIC_ROOT + 'china_import.json'
-        with open(outfilepath, 'w') as outfile:
-            json.dump(output, outfile)
+    data = []
+    for instance in model_cls.objects.using('wwf').filter(panjivarecordid__in=ids):
+        data.append([
+            '{:.3f}'.format(float(scores[str(instance.panjivarecordid)][1])),
+        ] + [
+            custom_format(instance, field) for field in show_fields
+        ] + [
+            custom_format(instance, field) for field in hidden_fields
+        ] + [
+            comment_data[instance.panjivarecordid] if instance.panjivarecordid in comment_data else ''
+        ] + [
+            'thumbs-' + thumbs_data[instance.panjivarecordid] if instance.panjivarecordid in thumbs_data else ''
+        ])
 
-        self.stdout.write(self.style.SUCCESS('Successfully wrote to file "%s"' % outfilepath))
-        #     try:
-        #         poll = Poll.objects.get(pk=poll_id)
-        #     except Poll.DoesNotExist:
-        #         raise CommandError('Poll "%s" does not exist' % poll_id)
+    print("Computed data")
+    print(data)
 
-        #     poll.opened = False
-        #     poll.save()
+    fields = ['score'] + show_fields + hidden_fields + ['comment', 'thumbs']
+    id_index = len(fields) - 3  # the most magic of numbers
 
-        #     self.stdout.write(self.style.SUCCESS('Successfully closed poll "%s"' % poll_id))
+    columns = [{
+        'className': "details-control",
+        'orderable': False,
+        'data': None,
+        'defaultContent': ""
+    }] + [{
+        'title': pretty_name[field] if field in pretty_name else field,
+        'data': i
+    } for i, field in enumerate(fields)]
+
+    output = {
+        'columns': columns,
+        'id_index': id_index,
+        'hidden_cols': list(range(len(show_fields) + 2, len(fields) + 1)),
+        'data': data,
+    }
+
+    return output

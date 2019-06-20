@@ -103,7 +103,6 @@ class BaseExpandedRowView(DetailView):
         context['comment'] = comment
         context['thumbs'] = thumbs
         context['track_name'] = self.track_name
-        print('hide' in self.request.GET)
         return context
 
     def render_to_response(self, context, *args, **kwargs):

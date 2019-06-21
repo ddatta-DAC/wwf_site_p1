@@ -1,0 +1,30 @@
+  <div class="col">
+    <dl>
+      <dt>Shipper Name</dt>
+      <dd>{{ object.shippername }}</dd>
+      <dt>Shipper Location</dt>
+      <dd>{{ object.shippercity }}{% if object.shippercity and object.shipperstateregion %}, {% endif %}{{ object.shipperstateregion }}{% if object.shipperstateregion and object.shippercountry %}, {% endif %}{{ object.shippercountry }}</dd>
+      <dt>Shipper Parent Name</dt>
+      <dd>{{ object.shipperultimateparentname }}</dd>
+      <dt>Port of Unlading</dt>
+      <dd>{{ object.portofunlading }}{% if object.portofunlading and object.portofunladingcountry %}, {% endif %}{{ object.portofunladingcountry }}</dd>
+      <dt>Goods Shipped</dt>
+      <dd>{{ object.goodsshipped }}</dd>
+      <dt>panjivarecordid</dt>
+      <dd> {{ object.panjivarecordid }}</dd>
+    </dl>
+  </div>
+  <div class="col">
+    <dl>
+      <dt>Item Quantity</dt>
+      <dd>{{ object.itemquantity }}</dd>
+      <dt>Gross Weight</dt>
+      <dd>{{ object.grossweightkg }} kg</dd>
+      <dt>Net Weight</dt>
+      <dd>{{ object.netweightkg }} kg</dd>
+      <dt>Transport Method</dt>
+      <dd>{{ object.transportmethod }}</dd>
+      <dt>Containerized</dt>
+      <dd>{{ object.iscontainerized }}</dd>
+    </dl>
+  </div>

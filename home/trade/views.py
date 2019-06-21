@@ -5,7 +5,7 @@ from django.http import JsonResponse, HttpResponseNotAllowed, Http404
 from django.views import View
 from django.views.generic.detail import DetailView, BaseDetailView
 
-from .management.commands.parsers import ChinaImportParser, ChinaExportParser
+from .management.commands.parsers import ChinaImportParser, ChinaExportParser, PeruExportParser, UsImportParser
 from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs
 
 
@@ -44,7 +44,7 @@ class AnomalyApiView(BaseDetailView):
         elif self.kwargs['track_name'] == 'peru_export':
             self.parser_cls = PeruExportParser
             self.scores = trade_config.get_peru_export()
-            self.list_i = 3
+            self.list_i = 4
             return PeruExport.objects.using('wwf').all()
         elif self.kwargs['track_name'] == 'us_import':
             self.parser_cls = UsImportParser

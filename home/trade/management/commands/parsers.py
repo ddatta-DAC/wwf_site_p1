@@ -1,12 +1,14 @@
-from trade.models import ChinaImport, ChinaImportComment, ChinaImportThumbs, ChinaExport, ChinaExportComment, ChinaExportThumbs
+from trade.models import ChinaImport, ChinaImportComment, ChinaImportThumbs, ChinaExport, ChinaExportComment, ChinaExportThumbs, PeruExport, PeruExportComment, PeruExportThumbs, UsImport, UsImportComment, UsImportThumbs
 
 
 def custom_format(instance, field):
     value = getattr(instance, field, '')
-    if field in ['valueofgoodsusd']:
-        return '${:,}'.format(value)
+    if field in ['valueofgoodsusd', 'valueofgoodsfobusd']:
+        return '${:,.0f}'.format(value)
     if field in ['shipmentmonth']:
         return value.strftime('%Y/%m')
+    if field in ['receiptdeclarationdate', 'arrivaldate']:
+        return value.strftime('%Y/%m/%d')
     return value
 
 
@@ -30,6 +32,12 @@ pretty_name = {
     'panjivarecordid': 'panjivarecordid',
     'shipperpanjivaid': 'Shipper',
     'shipmentdestination': 'Destination',
+    'valueofgoodsfobusd': 'Value FOB',
+    'volumeteu': 'TEU',
+    'receiptdeclarationdate': 'Declaration',
+    'exportquantity': 'Quantity',
+    'exportunit': 'Unit',
+    'arrivaldate': 'Arrival',
 }
 
 
@@ -49,7 +57,6 @@ class BaseParser(object):
         ids = list(self.scores.keys())[:10000]
 
         print("Got ids")
-        print(ids)
 
         comments = self.comment_cls.objects.filter(panjivarecordid__in=ids)
         comment_data = {comment.panjivarecordid: comment.comment for comment in comments}
@@ -127,5 +134,67 @@ class ChinaExportParser(BaseParser):
         'adminregion',
         'tradetype',
         'hscodekeywords',
+        'panjivarecordid'
+    ]
+
+
+class PeruExportParser(BaseParser):
+    model_cls = PeruExport
+    comment_cls = PeruExportComment
+    thumbs_cls = PeruExportThumbs
+    show_fields = [
+        'receiptdeclarationdate',
+        'shipmentdestination',
+        'hscode',
+        'volumeteu',
+        'valueofgoodsfobusd',
+        'exportquantity',
+        'exportunit'
+    ]
+    hidden_fields = [
+        'shippername',
+        'shippercity',
+        'shipperstateregion',
+        'shippercountry',
+        'shipperultimateparentname',
+        'portofunlading',
+        'portofunladingcountry',
+        'goodsshipped',
+        'itemquantity',
+        'grossweightkg',
+        'netweightkg',
+        'transportmethod',
+        'iscontainerized',
+        'panjivarecordid'
+    ]
+
+
+class UsImportParser(BaseParser):
+    model_cls = UsImport
+    comment_cls = UsImportComment
+    thumbs_cls = UsImportThumbs
+    show_fields = [
+        'arrivaldate',
+        'consigneepanjivaid',
+        'shipperpanjivaid',
+        'shipmentorigin',
+        'shipmentdestination',
+        'hscode',
+        'volumeteu',
+    ]
+    hidden_fields = [
+        'consigneename',
+        'consigneecity',
+        'consigneecountry',
+        'consigneeultimateparentname',
+        'portofunlading',
+        'portoflading',
+        'carrier',
+        'placeofreceipt',
+        'weightkg',
+        'haslcl',
+        'dividedlcl',
+        'containernumbers',
+        'goodsshipped',
         'panjivarecordid'
     ]

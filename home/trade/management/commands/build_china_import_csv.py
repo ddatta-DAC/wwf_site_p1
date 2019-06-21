@@ -4,7 +4,7 @@ import json
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from .parsers import ChinaImportParser, ChinaExportParser
+from .parsers import ChinaImportParser, ChinaExportParser, PeruExportParser, UsImportParser
 
 
 class Command(BaseCommand):
@@ -25,6 +25,10 @@ class Command(BaseCommand):
             parser_cls = ChinaImportParser
         elif options['track'] == 'china_export':
             parser_cls = ChinaExportParser
+        elif options['track'] == 'peru_export':
+            parser_cls = PeruExportParser
+        elif options['track'] == 'us_import':
+            parser_cls = UsImportParser
         else:
             self.stdout.write(self.style.ERROR('Unknown track type {}'.format(options['track'])))
             return

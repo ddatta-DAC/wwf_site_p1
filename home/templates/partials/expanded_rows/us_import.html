@@ -1,0 +1,34 @@
+  <div class="col">
+    <dl>
+      <dt>Consignee Name</dt>
+      <dd>{{ object.consigneename }}</dd>
+      <dt>Consignee Location</dt>
+      <dd>{{ object.consigneecity }}{% if object.consigneecity and object.consigneecountry %}, {% endif %}{{ object.consigneecountry }}</dd>
+      <dt>Consignee Parent</dt>
+      <dd>{{ object.consigneeultimateparentname }}</dd>
+      <dt>Port of Unlading</dt>
+      <dd>{{ object.portofunlading }}</dd>
+      <dt>Port of Lading</dt>
+      <dd>{{ object.portoflading }}</dd>
+      <dt>Carrier</dt>
+      <dd>{{ object.carrier }}</dd>
+      <dt>Place of Receipt</dt>
+      <dd>{{ object.placeofreceipt }}</dd>
+      <dt>panjivarecordid</dt>
+      <dd> {{ object.panjivarecordid }}</dd>
+    </dl>
+  </div>
+  <div class="col">
+    <dl>
+      <dt>Weight</dt>
+      <dd>{{ object.weightkg }} kg</dd>
+      <dt>Has LCL</dt>
+      <dd>{{ object.haslcl }}</dd>
+      <dt>Divided LCL</dt>
+      <dd>{{ object.dividedlcl }}</dd>
+      <dt>Container Numbers</dt>
+      <dd>{{ object.containernumbers }}</dd>
+      <dt>Goods Shipped</dt>
+      <dd>{{ object.goodsshipped }}</dd>
+    </dl>
+  </div>

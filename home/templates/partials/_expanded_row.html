@@ -3,6 +3,10 @@
     {% include "partials/expanded_rows/china_import.html" %}
   {% elif track_name == 'china_export' %}
     {% include "partials/expanded_rows/china_export.html" %}
+  {% elif track_name == 'peru_export' %}
+    {% include "partials/expanded_rows/peru_export.html" %}
+  {% elif track_name == 'us_import' %}
+    {% include "partials/expanded_rows/us_import.html" %}
   {% endif %}
   <div class="col">
     {% if not hide_all %}

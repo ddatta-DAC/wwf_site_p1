@@ -53,7 +53,7 @@ class BaseParser(object):
         for row in iterable:
             self.scores[row[0]] = row
 
-    def process_scores(self):
+    def process_scores(self, skip_scores=False):
         ids = list(self.scores.keys())[:10000]
 
         print("Got ids")
@@ -68,9 +68,11 @@ class BaseParser(object):
 
         data = []
         for instance in self.model_cls.objects.using('wwf').filter(panjivarecordid__in=ids):
-            data.append([
-                '{:.3f}'.format(float(self.scores[str(instance.panjivarecordid)][1])),
-            ] + [
+            score_value = ['{:.3f}'.format(float(self.scores[str(instance.panjivarecordid)][1]))]
+            if skip_scores:
+                score_value = []
+
+            data.append(score_value + [
                 custom_format(instance, field) for field in self.show_fields
             ] + [
                 custom_format(instance, field) for field in self.hidden_fields
@@ -83,7 +85,11 @@ class BaseParser(object):
         print("Computed data")
         # print(data)
 
-        fields = ['score'] + self.show_fields + self.hidden_fields + ['comment', 'thumbs']
+        score_field = ['score']
+        if skip_scores:
+            score_field = []
+
+        fields = score_field + self.show_fields + self.hidden_fields + ['comment', 'thumbs']
         id_index = len(fields) - 3  # the most magic of numbers
 
         columns = [{
@@ -96,10 +102,15 @@ class BaseParser(object):
             'data': i
         } for i, field in enumerate(fields)]
 
+
+        hidden_cols = list(range(len(self.show_fields) + 2, len(fields) + 1))
+        if skip_scores:
+            hidden_cols.insert(0, hidden_cols[0] - 1)
+
         output = {
             'columns': columns,
             'id_index': id_index,
-            'hidden_cols': list(range(len(self.show_fields) + 2, len(fields) + 1)),
+            'hidden_cols': hidden_cols,
             'data': data,
         }
 

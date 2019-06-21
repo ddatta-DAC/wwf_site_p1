@@ -39,10 +39,20 @@ def data_home(request, track_name):
     if not attrs:
         raise Http404
 
+    if track_name == 'china_import':
+        track_type_name ='China Import'
+    elif track_name == 'china_export':
+        track_type_name ='China Export'
+    elif track_name == 'peru_export':
+        track_type_name ='Peru Export'
+    elif track_name == 'us_import':
+        track_type_name ='US Import'
+
     context = {
         'attrs': attrs,
         'chk': True,
-        'track_name': track_name
+        'track_name': track_name,
+        'track_type_name': track_type_name
     }
 
     # elif track_name == 'china_import':

@@ -66,7 +66,7 @@ class AnomalyApiView(BaseDetailView):
             })
 
         parser = self.parser_cls([[pid, 0] for pid in record[self.list_i].split(';')])
-        output = parser.process_scores()
+        output = parser.process_scores(skip_scores=True)
         return JsonResponse(output)
 
 
@@ -95,8 +95,17 @@ class AnomalyView(DetailView):
 
         fake_iterable = [[self.kwargs['panjivarecordid'], 0]]
         parser = self.parser_cls(fake_iterable)
-        output = parser.process_scores()
+        output = parser.process_scores(skip_scores=True)
         anomaly_data = json.dumps(output)
+
+        if self.kwargs['track_name'] == 'china_import':
+            context['track_type_name'] ='China Import'
+        elif self.kwargs['track_name'] == 'china_export':
+            context['track_type_name'] ='China Export'
+        elif self.kwargs['track_name'] == 'peru_export':
+            context['track_type_name'] ='Peru Export'
+        elif self.kwargs['track_name'] == 'us_import':
+            context['track_type_name'] ='US Import'
 
         context['track_name'] = self.kwargs['track_name']
         context['anomaly'] = anomaly_data

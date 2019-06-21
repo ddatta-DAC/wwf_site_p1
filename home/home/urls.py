@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from . import views
-from trade.views import get_results, AnomalyView, AnomalyApiView, SubmitThumbsView, SubmitCommentView, ChinaImportExpandRowView, DefaultExpandRowView
+from trade.views import get_results, AnomalyView, AnomalyApiView, SubmitThumbsView, SubmitCommentView, ChinaImportExpandRowView, ChinaExportExpandRowView, PeruExportExpandRowView, UsImportExpandRowView, DefaultExpandRowView
 
 
 urlpatterns = [
@@ -33,6 +33,9 @@ urlpatterns = [
     path('api/comment/<slug:track_name>', SubmitCommentView.as_view(), name='submit_comment'),
     path('api/thumbs/<slug:track_name>', SubmitThumbsView.as_view(), name='submit_thumbs'),
     path('api/expand_row/china_import/<slug:panjivarecordid>', ChinaImportExpandRowView.as_view()),
+    path('api/expand_row/china_export/<slug:panjivarecordid>', ChinaExportExpandRowView.as_view()),
+    path('api/expand_row/peru_export/<slug:panjivarecordid>', PeruExportExpandRowView.as_view()),
+    path('api/expand_row/us_import/<slug:panjivarecordid>', UsImportExpandRowView.as_view()),
     path('api/expand_row/<slug:track_name>', DefaultExpandRowView.as_view(), name='expand_row'),
 ]
 

@@ -1,33 +1,14 @@
 <div class="expanded-row row">
+  {% if track_name == 'china_import' %}
+    {% include "partials/expanded_rows/china_import.html" %}
+  {% elif track_name == 'china_export' %}
+    {% include "partials/expanded_rows/china_export.html" %}
+  {% endif %}
   <div class="col">
-    <dl>
-      <dt>Consignee Name</dt>
-      <dd>{{ object.consigneename }}</dd>
-      <dt>Consignee City</dt>
-      <dd>{{ object.consigneecity }}</dd>
-      <dt>Province</dt>
-      <dd>{{ object.province }}</dd>
-      <dt>Admin Region</dt>
-      <dd>{{ object.adminregion }}</dd>
-      <dt>panjivarecordid</dt>
-      <dd> {{ object.panjivarecordid }}</dd>
-    </dl>
-  </div>
-  <div class="col">
-    <dl>
-      <dt>Transport Method</dt>
-      <dd>{{ object.transportmethod }}</dd>
-      <dt>Containerized</dt>
-      <dd>{{ object.iscontainerized }}</dd>
-      <dt>Trade Type</dt>
-      <dd>{{ object.tradetype }}</dd>
-      <dt>HS Code Keywords</dt>
-      <dd>{{ object.hscodekeywords }}</dd>
-    </dl>
-  </div>
-  <div class="col">
+    {% if not hide_all %}
     {% if not hide_compare %}
       <a class="btn btn-outline-info mb-3" href="{% url 'anomaly' track_name=track_name panjivarecordid=object.panjivarecordid %}" role="button" target="_blank" rel="noopener">Compare with Constrasting Transactions</a>
+    {% endif %}
     <div class="form-group">
       <div>
         <label class="mr-2">

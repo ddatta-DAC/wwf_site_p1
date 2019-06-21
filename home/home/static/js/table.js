@@ -5,10 +5,6 @@ function buildTable(attrs) {
   if (attrs.selector) {
     tableId = attrs.selector;
   }
-  var hide = false;
-  if (attrs.hide) {
-    hide = attrs.hide;
-  }
 
   var primaryIndex = data.id_index;
 
@@ -57,13 +53,9 @@ function buildTable(attrs) {
           .addClass('loading')
           .text('Loading...');
    
-      var data = {};
-      if (hide) {
-        data.hide = true;
-      }
       $.ajax({
           url: expandRowUrl + '/' + row[primaryIndex],
-          data: data,
+          data: attrs.getData,
           dataType: 'json',
           success: function (json) {
               div

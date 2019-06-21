@@ -24,12 +24,23 @@
     var expandRowUrl = "{% url 'expand_row' track_name=track_name %}";
     var csrfToken = "{{ csrf_token }}";
 
-    var files = [
-      "{% static 'sankey/data/panjiva_china_exports_01_2015_viz.csv' %}",
-      "{% static 'sankey/data/panjiva_china_imports_01_2015_viz.csv' %}",
-      "{% static 'sankey/data/panjiva_peru_exports_01_2015_viz.csv' %}",
-      "{% static 'sankey/data/panjiva_us_imports_01_2015_viz.csv' %}"
-    ];
+    {% if track_name == 'china_import' %}
+    var files = ["{% static 'sankey/data/panjiva_china_imports_01_2015_viz.csv' %}"];
+    var fileSelected = "china_imp";
+    var tableUrl = "{% static 'china_import.json' %}";
+    {% elif track_name == 'china_export' %}
+    var files = ["{% static 'sankey/data/panjiva_china_exports_01_2015_viz.csv' %}"];
+    var fileSelected = "china_exp";
+    var tableUrl = "{% static 'china_export.json' %}";
+    {% elif track_name == 'peru_export' %}
+    var files = ["{% static 'sankey/data/panjiva_peru_exports_01_2015_viz.csv' %}"];
+    var fileSelected = "peru_exp";
+    var tableUrl = "{% static 'peru_export.json' %}";
+    {% else %}
+    var files = ["{% static 'sankey/data/panjiva_us_imports_01_2015_viz.csv' %}"];
+    var fileSelected = "us_imp";
+    var tableUrl = "{% static 'us_import.json' %}";
+    {% endif %}
   </script>
 </head>
 

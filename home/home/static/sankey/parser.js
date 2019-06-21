@@ -16,7 +16,7 @@ var linkOption = "WeightKg";
 
 $(document).ready(function () {
   // Load data asynchronously, then draw the Sankey
-  d3.csv(files[1]).then(
+  d3.csv(files[0]).then(
     function(myData) { 
       loadedData = myData;
       initializeDropdowns();
@@ -29,8 +29,8 @@ $(document).ready(function () {
 
 function newData() {
 
-  var fileSelector = document.getElementById("optFile"); 
-  var fileSelected = fileSelector.value;
+  // var fileSelector = document.getElementById("optFile"); 
+  // var fileSelected = fileSelector.value;
   
   var useFile = 0;
   loadedData = null;
@@ -48,7 +48,7 @@ function newData() {
     useFile = 3;
   } //if-else
 
-  d3.csv(files[useFile]).then(
+  d3.csv(files[0]).then(
     function(myData) { 
       loadedData = myData;
       //addListeners();

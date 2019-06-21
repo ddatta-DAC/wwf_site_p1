@@ -1,0 +1,1351 @@
+ShipmentDate,ShipperCountry,ShipmentDestination,PortOfUnlading,TransportMethod,HSCode,IsContainerized,NetWeightKg,ValueOfGoodsFOBUSD,CustomsCode,LocationCode
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27130.0,23889.0,118,160300
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,23915.0,18739.5,118,120600
+2015-01-27,Peru,Chile,Arica (CL),Truck,940350,Yes,83.41,170.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.08,5.0,235,150132
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,73.93,50.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,2.9,95.52,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.84,27.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,2.6,100.0,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940161,Yes,878.6,600.0,172,230101
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,8.97,201.64,235,150131
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,2.58,80.53,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,3.68,115.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.94,31.25,235,150122
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,4922.42,6700.0,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,176.68,4119.56,118,150101
+2015-01-20,Peru,United States,Houston (US),Maritime,441900,Yes,313.28,2700.0,118,150132
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,3.18,4.0,172,230101
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,61.85,946.38,118,150108
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,5663.27,3518.55,118,150119
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,81540.0,54901.8,118,160300
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,11830.0,10744.65,118,120600
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,29.44,60.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.08,5.0,235,150132
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,88.71,60.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.46,48.0,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.22,40.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.42,16.25,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940161,Yes,175.72,120.0,172,230101
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27130.0,23889.0,118,160300
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,2.8,87.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,1.12,35.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.94,31.25,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940390,Yes,14.72,30.0,172,230101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,230.45,5373.47,118,150101
+2015-01-07,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,27620.0,28062.45,118,250102
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,3615.0,2070.05,118,120600
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,7.94,10.0,172,230101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,3132.08,5364.0,118,250101
+2015-01-14,Peru,United States,Houston (US),Maritime,441400,Yes,45.28,400.0,118,150118
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,30.4,465.14,118,150108
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,1111.47,690.55,118,150119
+2015-01-31,Peru,United States,Houston (US),Maritime,441900,Yes,45.2,150.94,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,1550.66,5178.01,118,150132
+2015-01-06,Peru,Italy,Milano (IT),Maritime,442090,Yes,188.14,897.72,118,150121
+2015-01-16,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,13893.65,10120.0,118,150119
+2015-01-16,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,13893.65,10120.0,118,150119
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,41.46,160.0,118,150101
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940390,Yes,245.44,6371.31,118,150131
+2015-01-23,Peru,United States,Portland (US),Maritime,441300,Yes,2206.74,3599.1,118,250101
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27970.0,21274.85,118,160300
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,19.05,24.0,172,230101
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,29.44,60.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,5.42,25.0,235,150132
+2015-01-02,Peru,Sweden,Göteborg (SE),Maritime,441520,Yes,11932.0,17816.9,118,70101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.83,27.25,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.95,31.25,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,2.87,110.52,235,150122
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,38.13,856.97,235,150131
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,2.96,92.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,1.6,50.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.6,20.0,235,150122
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,4335.52,7425.0,118,250101
+2015-01-11,Peru,United States,Newark (US),Maritime,441879,Yes,18870.0,34387.42,118,150122
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,65.01,994.68,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441400,Yes,3.19,6.62,118,150116
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,75.93,1161.95,118,150108
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440799,Yes,3308.38,10073.15,118,160101
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27230.0,19336.03,118,160300
+2015-01-11,Peru,United States,Long Beach (US),Maritime,441400,Yes,29.4,220.0,118,150132
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,2205.0,1481.0,118,120600
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,58.88,120.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.08,5.0,235,150132
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,73.93,50.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,5.42,25.0,235,150132
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.42,46.76,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,5.69,187.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,2.43,93.75,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,3.6,112.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,0.96,30.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,1.51,50.0,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940390,Yes,68.69,140.0,172,230101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,248.9,5803.47,118,150101
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,3.97,5.0,172,230101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,3584.2,6138.3,118,250101
+2015-01-17,Peru,Dominican Republic,Le Havre (FR),Maritime,440799,Yes,25120.0,44351.86,118,160300
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,9460.91,5878.0,118,150119
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,77.73,300.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,46.64,180.0,118,150101
+2015-01-23,Peru,United States,Portland (US),Maritime,441300,Yes,21643.26,35299.2,118,250101
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24900.0,24414.75,118,120600
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,22.23,28.0,172,230101
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,98.13,200.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.3,6.0,235,150132
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,52480.0,45114.72,118,160300
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.67,22.0,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.53,17.5,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,940169,Yes,1.85,60.94,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.5,19.25,235,150122
+2015-01-20,Peru,Singapore,Singapore (SG),Maritime,940360,Yes,373.38,969.13,118,150131
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,26.92,604.92,235,150131
+2015-01-18,Peru,United States,Newark (US),Maritime,441879,Yes,18480.0,35456.4,118,150122
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,3.6,112.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,1.6,50.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.68,22.5,235,150122
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440799,Yes,25730.0,32951.07,118,160101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,1140.79,1953.72,118,250101
+2015-01-14,Peru,United States,Houston (US),Maritime,940390,Yes,226.4,2000.0,118,150118
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,96.22,1472.34,118,150108
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,2369.65,1472.25,118,150119
+2015-01-15,Peru,Chile,Arica (CL),Truck,940169,Yes,224.16,280.0,172,150101
+2015-01-31,Peru,United States,Houston (US),Maritime,442190,Yes,87.89,280.0,118,150132
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,243820.0,286719.03,118,150101
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440799,Yes,3308.38,10073.15,118,160101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,375.46,2810.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7278.18,7500.48,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940390,Yes,14.72,30.0,172,230101
+2015-01-19,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,12346.3,25810.55,118,250101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.08,5.0,235,150132
+2015-01-13,Peru,,,Truck,441520,Yes,954.0,1020.76,46,200101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,2.27,87.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940161,Yes,2.08,80.0,235,150122
+2015-01-20,Peru,United States,Houston (US),Maritime,940350,Yes,287.37,1560.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940169,Yes,3.4,112.5,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,98.13,200.0,172,230101
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,4.56,162.5,235,150122
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,340.19,943.95,118,250105
+2015-01-28,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,8763.99,17908.93,118,150119
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,0.96,1.99,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940340,Yes,19.12,39.71,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,2382.49,7955.68,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,2382.49,7590.0,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,314.45,118,150132
+2015-01-14,Peru,United States,Wilmington (US),Maritime,440799,Yes,43560.0,47194.6,118,160108
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,77.73,300.0,118,150101
+2015-01-23,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,169015.0,125621.64,118,150122
+2015-01-31,Peru,Spain,Bilbao (ES),Air,442010,Yes,10.88,917.0,235,150114
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.69,26.5,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940340,Yes,84.52,200.0,118,150132
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,10005.0,8750.3,118,120600
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,5.52,182.5,235,150122
+2015-01-25,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,10866.7,19205.0,118,250101
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940350,Yes,220.87,2000.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940350,Yes,93.23,190.0,172,230101
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,24.04,49.0,172,230101
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,5094.36,4175.6,118,250105
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,19850.0,15580.5,118,120600
+2015-01-17,Peru,United States,Miami (US),Air,940161,Yes,3.15,112.5,235,150122
+2015-01-30,Peru,China,China (CN),Maritime,440929,Yes,248580.0,256873.28,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,217.65,840.0,118,150101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940330,Yes,15.93,33.09,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,0.96,1.99,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,442190,Yes,87.89,293.49,118,150132
+2015-01-06,Peru,United States,New York (US),Maritime,440721,Yes,37350.0,140235.87,118,150119
+2015-01-11,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,119850.0,115256.86,118,150101
+2015-01-19,Peru,,,Truck,441520,Yes,465.0,547.63,46,200101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.67,25.88,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940161,Yes,1.26,48.44,235,150122
+2015-01-20,Peru,United States,Houston (US),Maritime,940360,Yes,898.94,4880.0,118,150132
+2015-01-30,Peru,Taiwan,Taichung (TW),Maritime,440799,Yes,25340.0,41451.9,118,150119
+2015-01-09,Peru,United States,Houston (US),Maritime,940360,Yes,912.83,2160.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,1.02,33.75,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,49.07,100.0,172,230101
+2015-01-16,Peru,Mexico,Guadalajara (MX),Maritime,440722,Yes,25880.0,26254.6,118,160101
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,2.24,80.0,235,150122
+2015-01-23,Peru,Australia,Brisbane (AU),Maritime,440799,Yes,23750.0,22166.7,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,459.91,423.15,118,250105
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940340,Yes,79.63,137.28,118,70101
+2015-01-14,Peru,United States,Houston (US),Maritime,940169,Yes,81.5,720.0,118,150118
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,3993.43,6412.5,118,150119
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,5734.0,3315.5,118,120600
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940169,Yes,38.87,150.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,41.46,160.0,118,150101
+2015-01-23,Peru,United States,Portland (US),Maritime,441300,Yes,24040.0,40231.2,118,250101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,340.19,943.95,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,8779.12,8072.4,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25340.0,21300.76,118,150119
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,14.72,30.0,172,230101
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,8.97,201.64,235,150131
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.82,60.0,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.61,20.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.26,10.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940360,Yes,4.8,185.0,235,150122
+2015-01-20,Peru,United States,Houston (US),Maritime,940330,Yes,276.31,1500.0,118,150132
+2015-01-21,Peru,United States,Tampa (US),Air,940360,Yes,7.28,624.0,235,150114
+2015-01-09,Peru,United States,Miami (US),Air,940360,Yes,3.44,107.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,2.28,71.25,235,150122
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940360,Yes,841.24,6920.0,118,150118
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.79,26.25,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940169,Yes,0.94,31.25,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,137.39,280.0,172,230101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,3454.75,5916.6,118,250101
+2015-01-23,Peru,United States,Portland (US),Maritime,441300,Yes,21643.26,35299.2,118,250101
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,34.53,110.0,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,1550.66,5178.01,118,150132
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441400,Yes,0.64,1.32,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,1.59,3.31,118,150116
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,460.0,236.55,118,120600
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,41.46,160.0,118,150101
+2015-01-23,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,169015.0,125621.64,118,150122
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24900.0,24414.75,118,120600
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441231,Yes,13874.97,20982.0,118,150119
+2015-01-25,Peru,Germany,München (DE),Air,442010,Yes,0.23,11.0,235,150133
+2015-01-30,Peru,United States,Saint Louis (US),Air,442010,Yes,0.68,58.4,235,70101
+2015-01-30,Peru,China,China (CN),Maritime,440929,Yes,242650.0,294903.87,118,150101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,1.38,53.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.42,16.25,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940360,Yes,655.04,1550.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,2.83,93.75,235,150122
+2015-01-25,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,9767.3,17262.0,118,250101
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,451.68,4090.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940350,Yes,58.88,120.0,172,230101
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,1751.55,1435.66,118,250105
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940190,Yes,60.56,400.0,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,129.56,500.0,118,150101
+2015-01-15,Peru,China,China (CN),Maritime,440929,Yes,242980.0,354205.83,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,64.8,485.0,118,150132
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,1872.63,4879.2,118,250101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,762.97,524.16,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940390,Yes,68.69,140.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.08,5.0,235,150132
+2015-01-13,Peru,,,Truck,441520,Yes,636.0,680.51,46,200101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.62,23.75,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940161,Yes,0.97,37.5,235,150122
+2015-01-20,Peru,United States,Houston (US),Maritime,940350,Yes,872.6,4737.0,118,150132
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,1.2,37.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,2.42,80.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940169,Yes,3.78,125.0,235,150122
+2015-01-30,Peru,United States,Portland (US),Maritime,441300,Yes,24244.0,19317.65,118,250101
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,58.88,120.0,172,230101
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,4.56,162.5,235,150122
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,4359.63,1958.4,118,250105
+2015-01-28,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,6088.69,12442.04,118,150119
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,200.9,670.83,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,217.65,840.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,57.0,220.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940169,Yes,46.64,180.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940390,Yes,301.31,2255.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,4359.63,1958.4,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,459.91,423.15,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,29.44,60.0,172,230101
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,26.92,604.92,235,150131
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.4,46.25,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.82,60.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.71,27.38,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940360,Yes,2.08,80.0,235,150122
+2015-01-11,Peru,United States,Denver (US),Air,940360,Yes,0.78,50.0,235,150108
+2015-01-02,Peru,France,Fos-sur-Mer (FR),Maritime,440929,Yes,24220.0,40944.75,118,150119
+2015-01-03,Peru,United States,Charleston (US),Maritime,441300,Yes,24480.0,40748.4,118,250101
+2015-01-27,Peru,United States,New York (US),Maritime,440799,Yes,11177.35,19246.02,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,940360,Yes,1.4,43.75,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,3.8,118.75,235,150122
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940360,Yes,705.57,5804.0,118,150118
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,3.59,118.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940169,Yes,3.02,100.0,235,150122
+2015-01-25,Peru,France,,Maritime,440799,Yes,25030.0,21261.03,118,150119
+2015-01-27,Peru,France,Fos-sur-Mer (FR),Maritime,440799,Yes,24557.5,43683.75,118,250101
+2015-01-21,Peru,Chile,Arica (CL),Truck,940360,Yes,40.17,40.0,172,230101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,1051.04,1800.0,118,250101
+2015-01-23,Peru,United States,Portland (US),Maritime,441300,Yes,2206.74,3599.1,118,250101
+2015-01-27,Peru,United States,Miami (US),Maritime,940190,Yes,3.06,59.46,118,150101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,48.18,120.78,172,230101
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,5582.91,8098.56,118,250101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940390,Yes,6.37,13.24,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940340,Yes,19.12,39.71,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,300.0,118,150132
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,24250.0,17252.53,118,120600
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,23403.0,18761.3,118,120600
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,460.0,236.55,118,120600
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,14.8,487.5,235,150122
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,442190,Yes,2638.09,68481.53,118,150131
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.32,10.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,441900,Yes,1.89,62.5,235,150122
+2015-01-08,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,1412.56,1722.84,118,250105
+2015-01-30,Peru,France,Fos-sur-Mer (FR),Maritime,440929,Yes,22790.0,39627.5,118,150119
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,1.49,53.13,235,150122
+2015-01-08,Peru,China,China (CN),Maritime,440929,Yes,4311.49,3856.68,118,250105
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,6506.68,12420.0,118,150143
+2015-01-09,Peru,Ecuador,Huaquillas (EC),Truck,442190,Yes,1.48,6.48,19,200104
+2015-01-14,Peru,United States,Houston (US),Maritime,940360,Yes,419.98,3710.0,118,150118
+2015-01-15,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,66470.82,73086.54,118,170303
+2015-01-21,Peru,Netherlands,Sint Maarten (NL),Air,441400,Yes,2.94,150.0,235,150101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,74.94,187.88,172,230101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442010,Yes,0.96,1.99,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,1.59,3.31,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940169,Yes,4.78,9.93,118,150116
+2015-01-23,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,169015.0,125621.64,118,150122
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940350,Yes,2656.22,21850.0,118,150118
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,94.42,6050.0,235,150108
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,840.82,1654.9,118,150132
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.91,35.0,235,150122
+2015-01-01,Peru,China,China (CN),Maritime,440929,Yes,699.11,539.4,118,250105
+2015-01-13,Peru,Germany,Bremerhaven (DE),Maritime,441879,Yes,15700.0,25227.5,118,150101
+2015-01-27,Peru,United States,New York (US),Maritime,440929,Yes,8652.65,14898.8,118,150119
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940390,Yes,245.44,6371.31,118,150131
+2015-01-30,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,3241.51,6523.83,118,250101
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,0.04,1.25,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,442010,Yes,12.15,110.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,0.54,19.38,235,150122
+2015-01-22,Peru,Chile,Arica (CL),Truck,442010,Yes,7.75,13.0,172,230101
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,300.0,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,2382.49,7955.68,118,150132
+2015-01-03,Peru,United States,Charleston (US),Maritime,441300,Yes,21472.48,35244.0,118,250101
+2015-01-16,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,14686.35,10697.4,118,150119
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,217.65,840.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,57.0,220.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940390,Yes,146.98,1100.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7278.18,7500.48,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,49.07,100.0,172,230101
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,44.86,1008.19,235,150131
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27160.0,25479.4,118,160300
+2015-01-05,Peru,United States,Oakland (US),Maritime,441879,Yes,36000.0,63852.64,118,150122
+2015-01-21,Peru,United States,Austin (US),Air,442010,Yes,14.89,975.0,235,150132
+2015-01-11,Peru,Saint Lucia,Hewanorra Intl  Apt (LC),Air,441900,Yes,130.01,775.2,235,150130
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.38,12.5,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.14,37.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,1.38,53.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940360,Yes,0.88,33.75,235,150122
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,44.86,1008.19,235,150131
+2015-01-09,Peru,United States,Miami (US),Air,940360,Yes,5.2,162.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,0.72,22.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,1.17,38.75,235,150122
+2015-01-16,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,14686.35,10697.4,118,150119
+2015-01-23,Peru,United States,Jacksonville (US),Air,441400,Yes,63.1,2426.14,235,150140
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,1305.04,2235.0,118,250101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,50.85,127.49,172,230101
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,34.53,110.0,118,150132
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,441860,Yes,8485.46,25836.0,118,160101
+2015-01-17,Peru,Belgium,Antwerpen (BE),Maritime,440929,Yes,23530.0,41535.57,118,150133
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,28140.0,28956.15,118,250102
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940350,Yes,359.83,2960.0,118,150118
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,1145.92,2255.4,118,150132
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,3.89,150.0,235,150122
+2015-01-30,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,4245.24,8543.94,118,250101
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,6.42,212.5,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,442010,Yes,44.17,400.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,1.35,48.0,235,150122
+2015-01-24,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,20440.0,79532.7,118,150119
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,51.03,780.89,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,1.59,3.31,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,24250.0,17252.53,118,120600
+2015-01-20,Peru,South Korea,Incheon Intl Apt/Seoul (KR),Maritime,440929,Yes,12910.34,17852.76,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,102.22,2383.53,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,851.14,19846.06,118,150101
+2015-01-23,Peru,Japan,Nagasaki (JP),Maritime,441860,Yes,1417.0,808.6,118,160600
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,137.39,280.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.3,10.0,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.76,25.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.26,10.0,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940350,Yes,146.43,100.0,172,230101
+2015-01-14,Peru,Singapore,Hong Kong (HK),Maritime,442090,Yes,367.86,5888.0,118,150115
+2015-01-16,Peru,Spain,Bilbao (ES),Maritime,440929,Yes,1373.51,2340.0,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,16.55,517.5,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,2.2,68.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.68,22.5,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,576.03,13431.17,118,150101
+2015-01-20,Peru,United States,Houston (US),Maritime,940169,Yes,125.31,1080.0,118,150132
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,26830.0,26576.64,118,250105
+2015-01-17,Peru,United States,Miami (US),Air,441900,Yes,0.88,31.25,235,150122
+2015-01-30,Peru,China,China (CN),Maritime,440799,Yes,517530.0,462560.6,118,250101
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441231,Yes,13874.97,20982.0,118,150119
+2015-01-13,Peru,Cuba,Mariel (CU),Maritime,440799,Yes,28590.0,15915.2,118,160101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940390,Yes,6.37,13.24,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,314.45,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,57.0,220.0,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.52,20.0,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940350,Yes,591.65,1400.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,5.25,173.75,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,325.78,2950.0,118,150117
+2015-01-11,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,119850.0,115256.86,118,150101
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940350,Yes,537.43,3550.0,118,150132
+2015-01-23,Peru,Mexico,Altamira (MX),Maritime,441231,Yes,3291.06,6030.0,118,150119
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441900,Yes,0.78,12.0,235,150120
+2015-01-14,Peru,United States,Houston (US),Maritime,940350,Yes,400.73,3540.0,118,150118
+2015-01-14,Peru,United States,Houston (US),Maritime,940161,Yes,181.12,1600.0,118,150118
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,25384.51,40320.0,118,150125
+2015-01-15,Peru,Chile,Arica (CL),Truck,940161,Yes,108.88,136.0,172,150101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,25.49,52.95,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,314.45,118,150132
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,28000.0,19905.0,118,120600
+2015-01-31,Peru,United States,Miami (US),Air,940161,Yes,2.2,72.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,1.02,39.26,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940360,Yes,418.38,990.0,118,150132
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,11830.0,10744.65,118,120600
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,22914.0,16136.25,118,120600
+2015-01-13,Peru,China,China (CN),Maritime,440929,Yes,247600.0,237116.29,118,150101
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940350,Yes,528.81,4350.0,118,150118
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,3.78,125.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940169,Yes,237.44,2150.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,14.72,30.0,172,230101
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,143188.93,117365.11,118,250105
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,2.63,93.75,235,150122
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940350,Yes,399.67,2640.0,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,77.73,300.0,118,150101
+2015-01-06,Peru,Mexico,Manzanillo (MX),Maritime,440929,Yes,157108.26,220735.43,118,150119
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442010,Yes,0.96,1.99,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,25.49,52.95,118,150116
+2015-01-27,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,2100.0,2151.82,19,150142
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,77.73,300.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,187.06,1400.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,340.19,943.95,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,8779.12,8072.4,118,250105
+2015-01-30,Peru,United States,Portland (US),Maritime,441300,Yes,24270.0,40354.8,118,250101
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,157.5,321.0,172,230101
+2015-01-18,Peru,United States,Newark (US),Maritime,440929,Yes,19350.0,34736.45,118,150119
+2015-01-13,Peru,,,Truck,441520,Yes,1049.0,1122.84,46,200101
+2015-01-06,Peru,Panama,"Panamá, Ciudad de (PA)",Air,442010,Yes,122.9,380.0,235,150101
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.33,43.75,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.26,10.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940360,Yes,3.77,145.31,235,150122
+2015-01-25,Peru,Mexico,Guaymas (MX),Maritime,440890,Yes,28050.0,49500.0,118,150125
+2015-01-20,Peru,United States,Houston (US),Maritime,940169,Yes,221.05,1200.0,118,150132
+2015-01-30,Peru,China,Yantian Pt (CN),Maritime,440799,Yes,24280.0,33756.71,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,940360,Yes,1.6,50.0,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,4.16,130.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,1.21,40.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940169,Yes,3.02,100.0,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,127.57,260.0,172,230101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7278.18,7500.48,118,250105
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,1258.03,2154.5,118,250101
+2015-01-20,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,1630.0,1594.56,19,150142
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,38.87,150.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,450.96,3375.0,118,150132
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,18381.37,47893.32,118,250101
+2015-01-23,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,169015.0,125621.64,118,150122
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,4359.63,1958.4,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,459.91,423.15,118,250105
+2015-01-30,Peru,United States,Portland (US),Maritime,441300,Yes,23860.0,40354.8,118,250101
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,24.04,49.0,172,230101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.3,6.0,235,150132
+2015-01-13,Peru,,,Truck,441520,Yes,310.0,368.39,46,200101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.23,8.75,235,150122
+2015-01-20,Peru,United States,Houston (US),Maritime,940161,Yes,464.76,2523.0,118,150132
+2015-01-09,Peru,United States,Miami (US),Air,940360,Yes,3.8,118.75,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,0.56,17.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.53,17.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940169,Yes,1.7,56.38,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,29.44,60.0,172,230101
+2015-01-28,Peru,Germany,Frankfurt am Main (DE),Air,442090,Yes,4.3,12.5,235,150113
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,762.97,524.16,118,250105
+2015-01-27,Peru,United States,Miami (US),Maritime,940190,Yes,1.44,27.97,118,150101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940161,Yes,124.46,312.02,172,230101
+2015-01-31,Peru,United States,Houston (US),Maritime,441900,Yes,45.2,144.0,118,150132
+2015-01-14,Peru,United States,Wilmington (US),Maritime,440799,Yes,43560.0,47194.6,118,160108
+2015-01-17,Peru,Belgium,Antwerpen (BE),Maritime,440929,Yes,23530.0,41535.57,118,150133
+2015-01-30,Peru,Mexico,Monterrey (MX),Maritime,441232,Yes,14438.77,19000.0,118,250101
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,27230.0,17099.0,118,250102
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940360,Yes,705.57,5804.0,118,150118
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-09,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,26310.0,27571.0,118,160300
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,441820,Yes,426.05,11059.63,118,150131
+2015-01-11,Peru,United States,San Pedro (US),Maritime,441900,Yes,26.5,240.0,118,150117
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,677.05,15786.64,118,150101
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,0.74,26.38,235,150122
+2015-01-08,Peru,China,China (CN),Maritime,440929,Yes,19687.26,17610.48,118,250105
+2015-01-21,Peru,Chile,Arica (CL),Truck,940340,Yes,502.14,500.0,172,230101
+2015-01-20,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,18635.64,11542.5,118,170303
+2015-01-22,Peru,Spain,Madrid (ES),Air,442010,Yes,44.78,90.0,235,150131
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441900,Yes,5.12,79.2,235,150120
+2015-01-15,Peru,Chile,Arica (CL),Truck,940161,Yes,83.26,104.0,172,150101
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,200.9,670.83,118,150132
+2015-01-06,Peru,Italy,Milano (IT),Maritime,442090,Yes,188.14,897.72,118,150121
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24190.0,17170.25,118,160300
+2015-01-17,Peru,Belgium,Antwerpen (BE),Maritime,440929,Yes,23530.0,41535.57,118,150133
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,118720.0,177166.94,118,150101
+2015-01-19,Peru,,,Truck,441520,Yes,1590.0,1686.02,46,200101
+2015-01-31,Peru,United States,Miami (US),Air,940161,Yes,2.28,75.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,1.86,71.64,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940360,Yes,511.36,1210.0,118,150132
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,2205.0,1481.0,118,120600
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,4386.0,2347.45,118,120600
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940350,Yes,2656.22,21850.0,118,150118
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,1.51,50.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,265.05,2400.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,29.44,60.0,172,230101
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,7.01,250.0,235,150122
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940360,Yes,72.67,480.0,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940169,Yes,38.87,150.0,118,150101
+2015-01-06,Peru,Mexico,Manzanillo (MX),Maritime,440722,Yes,74118.36,104135.51,118,150119
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,7286.25,11700.0,118,150119
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,375.46,2810.0,118,150132
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940350,Yes,46.84,117.43,172,230101
+2015-01-02,Peru,United States,Houston (US),Maritime,442090,Yes,9.47,144.91,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,1.59,3.31,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940390,Yes,6.37,13.24,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,2.55,5.29,118,150116
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940340,Yes,79.63,137.28,118,70101
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440799,Yes,3308.38,10073.15,118,160101
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,59.43,1542.74,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,176.68,4119.56,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,340.19,943.95,118,250105
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,22.23,28.0,172,230101
+2015-01-17,Peru,Curacao,Curaçao (CW),Air,442010,Yes,8.58,30.0,235,150105
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,28170.0,18949.7,118,250102
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,5.55,182.81,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.83,26.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.3,10.0,235,150122
+2015-01-14,Peru,United States,Houston (US),Maritime,940161,Yes,524.16,4014.0,118,150132
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,1.4,50.0,235,150122
+2015-01-09,Peru,Mexico,Progreso (MX),Maritime,441231,Yes,9373.0,17064.0,118,150119
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,3262.19,3164.4,118,250105
+2015-01-09,Peru,Ecuador,Huaquillas (EC),Truck,442190,Yes,44.22,194.0,19,200104
+2015-01-14,Peru,Sweden,Norrköping (SE),Maritime,440929,Yes,25480.0,50145.61,118,150119
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,31.22,477.66,118,150108
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,441820,Yes,426.05,11059.63,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,150.45,3508.14,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,576.03,13431.17,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-06,Peru,Panama,"Panamá, Ciudad de (PA)",Air,441400,Yes,1.87,9.6,235,150137
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440799,Yes,3308.38,10073.15,118,160101
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,1256.17,3824.7,118,160101
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,5349.0,7271.19,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.0,32.88,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,441900,Yes,1.66,63.75,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940390,Yes,23.43,16.0,172,230101
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,54.97,120.0,172,230101
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,5774.58,4155.3,118,170303
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.72,22.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.8,26.5,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,66.2,1543.58,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,187.06,1400.0,118,150132
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940350,Yes,42.82,107.36,172,230101
+2015-01-02,Peru,United States,Houston (US),Maritime,442090,Yes,8.89,135.96,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940390,Yes,6.37,13.24,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,442190,Yes,87.89,293.49,118,150132
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940340,Yes,1.81,3.12,118,70101
+2015-01-14,Peru,United States,Wilmington (US),Maritime,440799,Yes,43560.0,47194.6,118,160108
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,529.08,13734.37,118,150131
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,49438.18,47956.16,118,250105
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,230.45,5373.47,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,8779.12,8072.4,118,250105
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,3.97,5.0,172,230101
+2015-01-30,Peru,United States,Saint Louis (US),Air,442010,Yes,0.68,58.4,235,70101
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,2.7,88.75,235,150122
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,28140.0,28956.15,118,250102
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.44,13.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.3,10.0,235,150122
+2015-01-31,Peru,Ecuador,Guayaquil (EC),Maritime,440799,Yes,696.63,608.14,118,150119
+2015-01-14,Peru,United States,Houston (US),Maritime,940161,Yes,604.24,4627.2,118,150132
+2015-01-23,Peru,France,Le Havre (FR),Maritime,440929,Yes,69010.0,123397.75,118,150101
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,1.75,62.5,235,150122
+2015-01-09,Peru,Ecuador,Huaquillas (EC),Truck,442190,Yes,25.07,110.0,19,200104
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940390,Yes,301.31,2255.0,118,150132
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,441810,Yes,18.73,46.97,172,230101
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,29.87,457.03,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,442090,Yes,5.26,80.5,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442090,Yes,6.69,13.9,118,150116
+2015-01-20,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,8550.0,26975.03,19,150142
+2015-01-05,Peru,China,China (CN),Maritime,440929,Yes,51460.0,50528.04,118,150119
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,28.06,429.36,118,150108
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,442190,Yes,2638.09,68481.53,118,150131
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,118720.0,177166.94,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,836.53,19505.27,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,421.27,9822.8,118,150101
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,27230.0,17099.0,118,250102
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,762.97,524.16,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,8779.12,8072.4,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,1720.0,1100.1,118,120600
+2015-01-05,Peru,United States,Savannah (US),Maritime,940360,Yes,1590.91,7250.0,118,150132
+2015-01-31,Peru,United States,Miami (US),Air,441900,Yes,0.95,31.25,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,5.28,173.75,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,2.65,82.89,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,6.8,225.0,235,150122
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25470.0,22853.0,118,160300
+2015-01-08,Peru,Costa Rica,San José (CR),Air,442010,Yes,42.69,526.47,235,150115
+2015-01-14,Peru,United States,Houston (US),Maritime,940350,Yes,62.68,480.0,118,150132
+2015-01-09,Peru,Mexico,Progreso (MX),Maritime,441231,Yes,2208.0,4020.0,118,150119
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,13189.79,12794.4,118,250105
+2015-01-27,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,2100.0,2151.82,19,150142
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,79.65,165.45,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,95.58,198.54,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,442190,Yes,87.89,280.0,118,150132
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,441860,Yes,8485.46,25836.0,118,160101
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,441860,Yes,8485.46,25836.0,118,160101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,77.73,300.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,46.64,180.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940161,Yes,179.05,1340.0,118,150132
+2015-01-14,Peru,United States,Houston (US),Maritime,940350,Yes,254.7,2250.0,118,150118
+2015-01-23,Peru,Mexico,Altamira (MX),Maritime,441231,Yes,5833.04,10687.5,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940360,Yes,68.13,450.0,118,150132
+2015-01-17,Peru,Curacao,Curaçao (CW),Air,442010,Yes,8.58,30.0,235,150105
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.65,25.0,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940350,Yes,245.11,580.0,118,150132
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,2.8,87.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,5.25,173.75,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,209.83,1900.0,118,150117
+2015-01-13,Peru,Cuba,Mariel (CU),Maritime,440799,Yes,24980.0,16381.4,118,160101
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,0.39,13.75,235,150122
+2015-01-07,Peru,Chile,Arica (CL),Truck,442010,Yes,1.65,6.0,172,230101
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,20966.82,23314.85,118,150134
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441900,Yes,2.5,38.7,235,150120
+2015-01-27,Peru,United States,Miami (US),Maritime,940190,Yes,6.72,130.52,118,150101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940350,Yes,48.18,120.78,172,230101
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,5294.37,7680.0,118,250101
+2015-01-02,Peru,United States,Houston (US),Maritime,442090,Yes,10.52,161.01,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442090,Yes,6.69,13.9,118,150116
+2015-01-20,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,8550.0,26975.03,19,150142
+2015-01-02,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,26460.0,25963.5,118,160108
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,28000.0,19905.0,118,120600
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,3940.54,102291.53,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,248.9,5803.47,118,150101
+2015-01-23,Peru,France,Le Havre (FR),Maritime,440929,Yes,68450.0,122006.5,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,459.91,423.15,118,250105
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,7.94,10.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,3.76,123.75,235,150122
+2015-01-16,Peru,New Zealand,Auckland (NZ),Maritime,440799,Yes,23750.0,41651.4,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,3.4,106.25,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,441900,Yes,0.98,32.5,235,150122
+2015-01-14,Peru,United States,Houston (US),Maritime,940360,Yes,217.06,1662.2,118,150132
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,3.51,125.0,235,150122
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,8277.43,15800.0,118,150143
+2015-01-09,Peru,Ecuador,Huaquillas (EC),Truck,442190,Yes,8.66,38.0,19,200104
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,2.55,5.29,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,200.9,640.0,118,150132
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,28000.0,19905.0,118,120600
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,217.65,840.0,118,150101
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441231,Yes,7975.03,12060.0,118,150119
+2015-01-31,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,3074.41,8216.43,118,150119
+2015-01-25,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,6209.3,10788.75,118,250101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.91,35.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.78,30.0,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940360,Yes,253.57,600.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,4.99,165.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,352.29,3190.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940350,Yes,83.41,170.0,172,230101
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,3064.4,2511.74,118,250105
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,248020.0,238635.59,118,150101
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940330,Yes,139.28,920.0,118,150132
+2015-01-21,Peru,Chile,Arica (CL),Truck,940161,Yes,301.28,300.0,172,230101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,57.0,220.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940390,Yes,146.98,1100.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,7.89,120.76,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,27.12,415.04,118,150108
+2015-01-07,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,27620.0,28062.45,118,250102
+2015-01-16,Peru,Mexico,Guadalajara (MX),Maritime,440722,Yes,25880.0,26254.6,118,160101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940169,Yes,46.64,180.0,118,150101
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,5006.96,8040.0,118,150119
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,19026.94,37449.0,118,150132
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25510.0,21854.64,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,102.22,2383.53,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,171.95,4009.31,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,421.27,9822.8,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,762.97,524.16,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24900.0,24414.75,118,120600
+2015-01-25,Peru,Mexico,Guaymas (MX),Maritime,440890,Yes,25910.0,40700.0,118,150125
+2015-01-02,Peru,Mexico,Veracruz (MX),Maritime,441231,Yes,2409.0,6412.5,118,150119
+2015-01-05,Peru,United States,Savannah (US),Maritime,442010,Yes,438.87,2000.0,118,150132
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,81540.0,54901.8,118,160300
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,23403.0,18761.3,118,120600
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.28,8.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.3,10.0,235,150122
+2015-01-20,Peru,France,Le Havre (FR),Maritime,440799,Yes,25317.5,43531.84,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,214.94,5011.63,118,150101
+2015-01-14,Peru,United States,Houston (US),Maritime,940350,Yes,135.81,1040.0,118,150132
+2015-01-25,Peru,China,China (CN),Maritime,440929,Yes,99970.0,86058.51,118,150119
+2015-01-14,Peru,Angola,Luanda (AO),Air,442010,Yes,131.31,1241.0,235,150101
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,81.43,1246.03,118,150108
+2015-01-16,Peru,Australia,Auckland (NZ),Maritime,440799,Yes,27075.0,22577.4,118,150119
+2015-01-31,Peru,United States,Houston (US),Maritime,441900,Yes,45.2,144.0,118,150132
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442010,Yes,0.96,1.99,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,1.59,3.31,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,23403.0,18761.3,118,120600
+2015-01-23,Peru,Australia,Brisbane (AU),Maritime,440799,Yes,24966.0,35870.4,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,214.94,5011.63,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,171.95,4009.31,118,150101
+2015-01-23,Peru,Japan,Nagasaki (JP),Maritime,442190,Yes,5742.0,8128.13,118,160600
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,5834.57,7931.25,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.3,10.0,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.53,17.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.26,10.0,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940360,Yes,205.01,140.0,172,230101
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,91.62,200.0,172,230101
+2015-01-14,Peru,Singapore,Hong Kong (HK),Maritime,441900,Yes,532.14,8517.6,118,150115
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,2.8,87.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.57,18.75,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,937.12,21850.72,118,150101
+2015-01-20,Peru,United States,Houston (US),Maritime,940360,Yes,772.76,6660.0,118,150132
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441231,Yes,7975.03,12060.0,118,150119
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,187.06,1400.0,118,150132
+2015-01-20,Peru,France,Le Havre (FR),Maritime,440929,Yes,73170.0,122514.0,118,150101
+2015-01-12,Peru,Bolivia,Cochabamba (BO),Truck,442190,Yes,240.0,1310.4,262,150115
+2015-01-19,Peru,,,Truck,441520,Yes,795.0,962.5,46,200101
+2015-01-19,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,8601.21,17981.25,118,250101
+2015-01-30,Peru,Cuba,La Habana (CU),Air,940360,Yes,1.08,5.0,235,150132
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.32,12.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940161,Yes,2.09,80.53,235,150122
+2015-01-20,Peru,United States,Houston (US),Maritime,940360,Yes,678.81,3685.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940190,Yes,1.85,61.25,235,150122
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,29.44,60.0,172,230101
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,5.12,182.5,235,150122
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,8779.12,8072.4,118,250105
+2015-01-23,Peru,Australia,Brisbane (AU),Maritime,440799,Yes,24966.0,35870.4,118,150119
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940340,Yes,1.81,3.12,118,70101
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,53413.18,59394.81,118,150134
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,5313.36,8532.0,118,150119
+2015-01-30,Peru,El Salvador,Acajutla (SV),Maritime,441232,Yes,23710.0,28553.17,118,250101
+2015-01-28,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,13027.32,26620.91,118,150119
+2015-01-27,Peru,United States,Miami (US),Maritime,940190,Yes,7.19,139.62,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940350,Yes,454.3,3400.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,50.97,780.0,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,442090,Yes,7.25,110.92,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442090,Yes,9.56,19.85,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,24350.0,18341.67,118,120600
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,24.32,372.11,118,150108
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,620.55,16108.59,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,851.14,19846.06,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,4359.63,1958.4,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,459.91,423.15,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,10005.0,8750.3,118,120600
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,19.05,24.0,172,230101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,16.06,40.26,172,230101
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,24810.0,25562.25,118,250102
+2015-01-31,Peru,United States,Miami (US),Air,441900,Yes,1.82,60.0,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,5.01,165.0,235,150122
+2015-01-13,Peru,France,Fos-sur-Mer (FR),Maritime,440929,Yes,23840.0,41200.5,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.88,27.38,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,1.89,62.5,235,150122
+2015-01-14,Peru,United States,Houston (US),Maritime,940390,Yes,219.38,1680.0,118,150132
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,1.68,60.0,235,150122
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,243820.0,286719.03,118,150101
+2015-01-09,Peru,Mexico,Progreso (MX),Maritime,441231,Yes,4697.0,8550.0,118,150119
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,7067.05,6855.2,118,250105
+2015-01-09,Peru,Ecuador,Huaquillas (EC),Truck,442190,Yes,20.61,95.3,19,200104
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441900,Yes,2.2,34.1,235,150120
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,45.5,114.07,172,230101
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,6638.64,9630.0,118,250101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,25.49,52.95,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940390,Yes,6.37,13.24,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,25.49,52.95,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,24250.0,17252.53,118,120600
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,23403.0,18761.3,118,120600
+2015-01-20,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,4470.62,2769.0,118,170303
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24900.0,24414.75,118,120600
+2015-01-06,Peru,Bolivia,Cochabamba (BO),Truck,442190,Yes,1.0,464.87,262,150141
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,0.95,31.25,235,150122
+2015-01-20,Peru,South Korea,Incheon Intl Apt/Seoul (KR),Maritime,440929,Yes,10569.66,14616.0,118,250101
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,529.08,13734.37,118,150131
+2015-01-17,Peru,Argentina,Buenos Aires (AR),Maritime,440722,Yes,25600.0,31594.74,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,1.24,38.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,441900,Yes,1.81,60.0,235,150122
+2015-01-08,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,16774.9,20459.65,118,250105
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,0.56,20.0,235,150122
+2015-01-13,Peru,France,Le Havre (FR),Maritime,440799,Yes,26720.0,43521.88,118,250101
+2015-01-08,Peru,China,China (CN),Maritime,440929,Yes,21875.0,19567.44,118,250105
+2015-01-15,Peru,Chile,Arica (CL),Truck,940340,Yes,152.15,180.0,172,150101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,6129.49,11700.0,118,150143
+2015-01-30,Peru,United States,Pittsburgh (US),Air,442190,Yes,8.14,126.0,235,150120
+2015-01-14,Peru,United States,Houston (US),Maritime,940360,Yes,479.97,4240.0,118,150118
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441400,Yes,3.19,6.62,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,101.95,211.78,118,150116
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,217.65,840.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940350,Yes,224.48,1680.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940360,Yes,370.91,2450.0,118,150132
+2015-01-17,Peru,Curacao,Curaçao (CW),Air,442010,Yes,8.58,30.0,235,150105
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,441860,Yes,8485.46,25836.0,118,160101
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.58,22.31,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,5.59,185.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,167.86,1520.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,2.45,87.5,235,150122
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441400,Yes,31.52,487.9,235,150120
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,99.26,1518.85,118,150108
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,21593.63,13415.98,118,150119
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25470.0,22853.0,118,160300
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,836.53,19505.27,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,248.9,5803.47,118,150101
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,9315.15,9732.07,118,150119
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,127.57,260.0,172,230101
+2015-01-21,Peru,United States,Tampa (US),Air,940360,Yes,7.28,624.0,235,150114
+2015-01-06,Peru,Bolivia,Cochabamba (BO),Truck,442190,Yes,1.0,464.87,262,150141
+2015-01-08,Peru,Chile,Arica (CL),Truck,940340,Yes,591.43,400.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.84,27.5,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.75,57.5,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,940190,Yes,2.89,95.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,2.27,87.5,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940161,Yes,702.88,480.0,172,230101
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,7.67,240.0,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,0.64,20.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,1.51,50.0,235,150122
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,3156.23,4296.0,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,851.14,19846.06,118,150101
+2015-01-20,Peru,United States,Houston (US),Maritime,940350,Yes,46.41,400.0,118,150132
+2015-01-14,Peru,Italy,Malpensa Apt/Milano (IT),Air,442010,Yes,3.21,60.0,235,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,25.49,52.95,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,223.02,463.27,118,150116
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,41.46,160.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940350,Yes,517.1,3870.0,118,150132
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940161,Yes,53.45,400.0,118,150132
+2015-01-21,Peru,Germany,Bremerhaven (DE),Maritime,440929,Yes,13220.0,16873.75,118,160300
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940360,Yes,1386.73,9160.0,118,150132
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.49,18.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,2.27,75.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,508.0,4600.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,0.28,10.0,235,150122
+2015-01-23,Peru,Mexico,Altamira (MX),Maritime,441231,Yes,6208.81,11376.0,118,150119
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441900,Yes,4.36,67.5,235,150120
+2015-01-11,Peru,United States,Long Beach (US),Maritime,441400,Yes,29.4,220.0,118,150132
+2015-01-13,Peru,United States,Charleston (US),Maritime,440929,Yes,20300.0,38509.0,118,150119
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,31.8,486.6,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,130.0,1989.36,118,150108
+2015-01-05,Peru,China,China (CN),Maritime,440929,Yes,51460.0,50528.04,118,150119
+2015-01-14,Peru,Singapore,Hong Kong (HK),Maritime,442090,Yes,367.86,5888.0,118,150115
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27130.0,23889.0,118,160300
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,5313.36,8532.0,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,528.05,12312.58,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,677.05,15786.64,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,169.37,3949.17,118,150101
+2015-01-25,Peru,France,,Maritime,440799,Yes,25030.0,21261.03,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7278.18,7500.48,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,340.19,943.95,118,250105
+2015-01-24,Peru,Ecuador,Guayaquil (EC),Maritime,441510,Yes,1.18,8.0,118,150101
+2015-01-29,Peru,Bolivia,Cochabamba (BO),Truck,442190,Yes,156.0,953.76,262,150115
+2015-01-05,Peru,United States,Savannah (US),Maritime,940360,Yes,833.85,3800.0,118,150132
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,3.04,100.0,235,150122
+2015-01-20,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,1630.0,1594.56,19,150142
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,1.08,33.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.68,22.5,235,150122
+2015-01-14,Peru,United States,Houston (US),Maritime,940350,Yes,265.08,2030.0,118,150132
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,51973.72,37294.2,118,250105
+2015-01-09,Peru,Mexico,Progreso (MX),Maritime,441231,Yes,3012.0,7800.0,118,150119
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,6952.79,6744.36,118,250105
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,70.38,1076.97,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442090,Yes,6.69,13.9,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,1917.0,1154.4,118,120600
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,243820.0,286719.03,118,150101
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,441820,Yes,115.77,3005.33,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,150.45,3508.14,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,167.65,3909.07,118,150101
+2015-01-23,Peru,Japan,Nagasaki (JP),Maritime,441090,Yes,10941.0,19972.01,118,160600
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,4057.88,5516.1,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.68,55.26,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.64,21.0,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.91,35.0,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940169,Yes,175.72,120.0,172,230101
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,288.6,630.0,172,230101
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,3787.6,2725.5,118,170303
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.7,22.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,3.02,100.0,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,133.26,3107.21,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940390,Yes,6.37,13.24,118,150116
+2015-01-07,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,27620.0,28062.45,118,250102
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,243820.0,286719.03,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,129.56,500.0,118,150101
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940350,Yes,90.83,600.0,118,150132
+2015-01-31,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,2315.59,6188.46,118,150119
+2015-01-25,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,14413.3,25043.32,118,250101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,1.2,46.25,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,1.3,50.0,235,150122
+2015-01-15,Peru,Panama,"Panamá, Ciudad de (PA)",Air,441400,Yes,12.86,240.0,235,150128
+2015-01-09,Peru,United States,Houston (US),Maritime,940330,Yes,92.97,220.0,118,150132
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,5.33,176.25,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,254.0,2300.0,118,150117
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,10611.47,8697.71,118,250105
+2015-01-11,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,127500.0,133379.13,118,150101
+2015-01-21,Peru,Chile,Arica (CL),Truck,940161,Yes,562.39,560.0,172,230101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940169,Yes,46.64,180.0,118,150101
+2015-01-23,Peru,Mexico,Altamira (MX),Maritime,441231,Yes,4257.09,7800.0,118,150119
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441400,Yes,2.58,40.0,235,150120
+2015-01-15,Peru,Chile,Arica (CL),Truck,940161,Yes,192.14,240.0,172,150101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442090,Yes,9.56,19.85,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,441900,Yes,45.2,150.94,118,150132
+2015-01-11,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,127500.0,133379.13,118,150101
+2015-01-30,Peru,China,Yantian Pt (CN),Maritime,440799,Yes,24280.0,33756.71,118,150119
+2015-01-19,Peru,,,Truck,441520,Yes,636.0,833.72,46,200101
+2015-01-31,Peru,United States,Miami (US),Air,940161,Yes,2.2,72.5,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.71,27.5,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940360,Yes,1014.26,2400.0,118,150132
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940350,Yes,359.83,2960.0,118,150118
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,0.94,31.25,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,397.57,3600.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,176.64,360.0,172,230101
+2015-01-17,Peru,United States,Miami (US),Air,940360,Yes,3.15,112.5,235,150122
+2015-01-17,Peru,Uruguay,Montevideo (UY),Maritime,440722,Yes,26220.0,31230.58,118,150119
+2015-01-06,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,13359.57,18770.05,118,150119
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,5006.96,8040.0,118,150119
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,20276.0,16044.6,118,120600
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,26.07,398.94,118,150108
+2015-01-20,Peru,South Korea,Incheon Intl Apt/Seoul (KR),Maritime,440929,Yes,10569.66,14616.0,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,196.56,4583.14,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,176.68,4119.56,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940350,Yes,93.23,190.0,172,230101
+2015-01-08,Peru,Chile,Arica (CL),Truck,940161,Yes,177.43,120.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.68,22.38,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,1.61,53.13,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.26,10.0,235,150122
+2015-01-27,Peru,France,Fos-sur-Mer (FR),Maritime,440799,Yes,24196.5,42954.45,118,250101
+2015-01-21,Peru,Chile,Arica (CL),Truck,940350,Yes,146.43,100.0,172,230101
+2015-01-16,Peru,Spain,Bilbao (ES),Maritime,440929,Yes,20856.49,35532.37,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,3.2,100.0,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,0.6,18.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.68,22.5,235,150122
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,7507.95,10219.2,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,167.65,3909.07,118,150101
+2015-01-20,Peru,United States,Houston (US),Maritime,940161,Yes,905.04,7800.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,96.45,1475.92,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,2.55,5.29,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940169,Yes,4.78,9.93,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441400,Yes,0.64,1.32,118,150116
+2015-01-06,Peru,Italy,Milano (IT),Maritime,441900,Yes,183.61,876.09,118,150121
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,441820,Yes,108.06,2804.98,118,150131
+2015-01-14,Peru,Denmark,Aarhus (DK),Maritime,440929,Yes,25380.0,49874.77,118,70101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,90.27,2104.89,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,937.12,21850.72,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,2991.24,4066.16,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.39,45.75,235,150122
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,4.58,10.0,172,230101
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,8143.45,5859.9,118,170303
+2015-01-06,Peru,Panama,"Panamá, Ciudad de (PA)",Air,442010,Yes,31.9,85.0,235,150103
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.63,19.63,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.71,23.38,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,60.18,1403.26,118,150101
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940161,Yes,45.5,114.07,172,230101
+2015-01-09,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,77460.0,60058.5,118,160300
+2015-01-08,Peru,China,China (CN),Maritime,440929,Yes,6466.64,5784.48,118,250105
+2015-01-30,Peru,Mexico,Monterrey (MX),Maritime,441232,Yes,7287.78,9590.0,118,250101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940360,Yes,731.83,6020.0,118,150118
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,441820,Yes,108.06,2804.98,118,150131
+2015-01-11,Peru,United States,San Pedro (US),Maritime,442010,Yes,88.35,800.0,118,150117
+2015-01-31,Peru,Ecuador,Guayaquil (EC),Maritime,440929,Yes,19213.37,16772.84,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,169.37,3949.17,118,150101
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,5.57,198.75,235,150122
+2015-01-15,Peru,Chile,Arica (CL),Truck,940360,Yes,16.91,20.0,172,150101
+2015-01-20,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,6113.8,3786.75,118,170303
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940350,Yes,517.1,3870.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,72.78,1113.65,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,95.58,198.54,118,150116
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940390,Yes,4.96,8.55,118,70101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,32.24,751.75,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,66.2,1543.58,118,150101
+2015-01-23,Peru,Australia,Brisbane (AU),Maritime,440799,Yes,23750.0,22166.7,118,150119
+2015-01-26,Peru,China,China (CN),Maritime,440929,Yes,51120.0,50188.8,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,4359.63,1958.4,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,1706.92,1367.1,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-30,Peru,Aruba,Aruba (AW),Air,441900,Yes,4.65,350.0,235,70101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.49,16.25,235,150122
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,36.65,80.0,172,230101
+2015-01-14,Peru,United States,Wilmington (US),Maritime,440799,Yes,43560.0,47194.6,118,160108
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,23963.27,17243.6,118,170303
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,1.28,40.13,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.73,24.0,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,150.45,3508.14,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940390,Yes,4.96,8.55,118,70101
+2015-01-20,Peru,Hong Kong,Hong Kong (HK),Maritime,440799,Yes,22400.0,29353.25,118,150119
+2015-01-23,Peru,Japan,Tokyo (JP),Maritime,440721,Yes,11619.45,53695.57,118,150119
+2015-01-27,Peru,Australia,Brisbane (AU),Maritime,440929,Yes,2991.25,4340.0,118,150119
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940161,Yes,179.05,1340.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,65.18,997.36,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,43.67,668.19,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940330,Yes,15.93,33.09,118,150116
+2015-01-27,Peru,Australia,Brisbane (AU),Maritime,440929,Yes,19183.58,27833.4,118,150119
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,24250.0,17252.53,118,120600
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,243820.0,286719.03,118,150101
+2015-01-14,Peru,United States,Houston (US),Maritime,940330,Yes,226.4,2000.0,118,150118
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,840.82,1654.9,118,150132
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,150.45,3508.14,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,937.12,21850.72,118,150101
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,44969.81,34935.91,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7278.18,7500.48,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-29,Peru,Taiwan,Kaohsiung (TW),Maritime,440929,Yes,122660.0,134079.51,118,150119
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.97,65.0,235,150122
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,114.53,250.0,172,230101
+2015-01-23,Peru,Taiwan,Kaohsiung (TW),Maritime,440799,Yes,24350.0,24942.85,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,1.6,50.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,1.32,43.75,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,196.56,4583.14,118,150131
+2015-01-24,Peru,Ecuador,Guayaquil (EC),Maritime,441510,Yes,3.54,24.0,118,150101
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,28000.0,19905.0,118,120600
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-27,Peru,United States,Baltimore (US),Maritime,440721,Yes,25230.0,105489.16,118,150119
+2015-01-06,Peru,Panama,"Panamá, Ciudad de (PA)",Air,441400,Yes,1.87,9.6,235,150137
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940161,Yes,192.7,483.12,172,230101
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,2382.49,7590.0,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,57.0,220.0,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-11,Peru,United States,Denver (US),Air,940360,Yes,0.78,50.0,235,150108
+2015-01-22,Peru,Spain,Valencia (ES),Maritime,440799,Yes,55810.0,47078.2,118,160300
+2015-01-17,Peru,Belgium,Antwerpen (BE),Maritime,440929,Yes,23340.0,41523.46,118,150133
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,19026.94,37449.0,118,150132
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,2.08,80.0,235,150122
+2015-01-21,Peru,Bolivia,Cochabamba (BO),Truck,441011,Yes,24353.96,18700.34,262,150134
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,5.1,168.75,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940169,Yes,79.51,720.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,2.32,82.89,235,150122
+2015-01-15,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,4351.68,4784.8,118,170303
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940161,Yes,214.11,536.8,172,230101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441400,Yes,3.19,6.62,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,200.9,640.0,118,150132
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,1256.17,3824.7,118,160101
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,1256.17,3824.7,118,160101
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,28170.0,18949.7,118,250102
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940350,Yes,528.81,4350.0,118,150118
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-27,Peru,United States,New Orleans (US),Maritime,440929,Yes,20390.0,38612.0,118,150119
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,3556.33,6999.6,118,150132
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,0.91,35.0,235,150122
+2015-01-01,Peru,China,China (CN),Maritime,440929,Yes,48985.34,37795.0,118,250105
+2015-01-30,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,13365.75,26899.8,118,250101
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,0.11,3.75,235,150122
+2015-01-30,Peru,Aruba,Aruba (AW),Air,441900,Yes,4.65,350.0,235,70101
+2015-01-11,Peru,United States,San Pedro (US),Maritime,442010,Yes,79.51,720.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,0.63,22.5,235,150122
+2015-01-30,Peru,United States,Pittsburgh (US),Air,442190,Yes,0.82,12.75,235,150120
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,29.44,73.81,172,230101
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,1832.51,2658.24,118,250101
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,300.0,118,150132
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,442090,Yes,9.56,19.85,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,1917.0,1154.4,118,120600
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,28000.0,19905.0,118,120600
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,460.0,236.55,118,120600
+2015-01-21,Peru,Germany,Bremerhaven (DE),Maritime,440929,Yes,13220.0,16873.75,118,160300
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,3.18,4.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,3.61,118.75,235,150122
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,3940.54,102291.53,118,150131
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.32,10.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,441900,Yes,0.98,32.5,235,150122
+2015-01-08,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,34302.55,41837.4,118,250105
+2015-01-14,Peru,United States,Houston (US),Maritime,940360,Yes,1052.85,8062.68,118,150132
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,0.88,31.25,235,150122
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,4636.41,8850.0,118,150143
+2015-01-09,Peru,Ecuador,Huaquillas (EC),Truck,442190,Yes,2.62,11.5,19,200104
+2015-01-14,Peru,United States,Houston (US),Maritime,940360,Yes,590.91,5220.0,118,150118
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,187.06,1400.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,135.38,2071.65,118,150108
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,133.26,3107.21,118,150101
+2015-01-21,Peru,Germany,Bremerhaven (DE),Maritime,440929,Yes,13220.0,16873.75,118,160300
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,459.91,423.15,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-11,Peru,Ecuador,Quito (EC),Air,940190,Yes,43.7,754.04,235,150137
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,1832.46,2490.96,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.67,55.0,235,150122
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,94.42,6050.0,235,150108
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,6.87,15.0,172,230101
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,1829.18,1316.25,118,170303
+2015-01-21,Peru,Denmark,Aarhus (DK),Maritime,440929,Yes,24750.0,42296.64,118,150119
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.84,26.38,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.58,19.25,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,32.24,751.75,118,150101
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,300.0,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,34.53,115.3,118,150132
+2015-01-05,Peru,China,China (CN),Maritime,440929,Yes,51460.0,48938.0,118,150119
+2015-01-06,Peru,Italy,Milano (IT),Maritime,441900,Yes,183.61,876.09,118,150121
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,129.56,500.0,118,150101
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,129.56,500.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940390,Yes,166.35,1245.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,762.97,524.16,118,250105
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,176.64,360.0,172,230101
+2015-01-30,Peru,Panama,"Panamá, Ciudad de (PA)",Air,940360,Yes,38.13,856.97,235,150131
+2015-01-05,Peru,United States,Savannah (US),Maritime,940350,Yes,1132.29,5160.0,118,150132
+2015-01-21,Peru,United States,Austin (US),Air,442090,Yes,0.55,36.0,235,150132
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.87,28.75,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,0.87,28.75,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.4,15.25,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,940360,Yes,7.27,280.0,235,150122
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25010.0,12694.0,118,160300
+2015-01-09,Peru,United States,Miami (US),Air,940360,Yes,11.67,365.0,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,1.7,53.13,235,150122
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940360,Yes,731.83,6020.0,118,150118
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.76,25.0,235,150122
+2015-01-13,Peru,France,Le Havre (FR),Maritime,440799,Yes,26790.0,43525.2,118,250101
+2015-01-18,Peru,United States,San Pedro (US),Maritime,441879,Yes,18060.0,35456.4,118,150122
+2015-01-03,Peru,United States,Charleston (US),Maritime,441300,Yes,2337.52,3836.7,118,250101
+2015-01-21,Peru,Chile,Arica (CL),Truck,940360,Yes,100.43,100.0,172,230101
+2015-01-23,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,5296.05,9070.0,118,250101
+2015-01-27,Peru,United States,Miami (US),Maritime,940190,Yes,1.43,27.67,118,150101
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,1550.66,4940.0,118,150132
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441400,Yes,0.64,1.32,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,79.65,165.45,118,150116
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,129.56,500.0,118,150101
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940350,Yes,454.3,3400.0,118,150132
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-21,Peru,United States,Miami (US),Air,442010,Yes,1067.1,29566.0,235,150133
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,9.25,356.25,235,150122
+2015-01-23,Peru,Mexico,Aguascalientes (MX),Maritime,441232,Yes,23100.0,28213.73,118,250101
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,1.51,50.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940360,Yes,115.96,1050.0,118,150117
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,1.19,42.5,235,150122
+2015-01-30,Peru,United States,Pittsburgh (US),Air,441400,Yes,19.45,301.0,235,150120
+2015-01-21,Peru,United States,Miami (US),Air,442010,Yes,1067.1,29566.0,235,150133
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,450.96,3375.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,260.01,3978.8,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,79.65,165.45,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,101.95,211.78,118,150116
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940390,Yes,74.57,128.55,118,70101
+2015-01-20,Peru,United States,New York (US),Maritime,440721,Yes,15770.0,56900.38,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,32.24,751.75,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,66.2,1543.58,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,8779.12,8072.4,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-31,Peru,Spain,Bilbao (ES),Air,442010,Yes,10.88,917.0,235,150114
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,109.17,148.4,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,3.42,112.5,235,150122
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,27.49,60.0,172,230101
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,862.3,620.5,118,170303
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,1170.42,1255.9,118,150132
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,1.7,53.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,1.6,53.0,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,90.27,2104.89,118,150101
+2015-01-27,Peru,Panama,"Panamá, Ciudad de (PA)",Air,442010,Yes,45.71,150.0,235,150137
+2015-01-15,Peru,China,China (CN),Maritime,440929,Yes,26390.0,21637.0,118,250105
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940390,Yes,74.57,128.55,118,70101
+2015-01-23,Peru,Taiwan,Kaohsiung (TW),Maritime,440799,Yes,19953.14,26733.01,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440721,Yes,21340.0,38381.25,118,150119
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940360,Yes,64.8,485.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,64.36,984.84,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,223.02,463.27,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,25.49,52.95,118,150116
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940390,Yes,8.85,15.26,118,70101
+2015-01-14,Peru,Singapore,Hong Kong (HK),Maritime,441900,Yes,532.14,8517.6,118,150115
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,60.18,1403.26,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,60.18,1403.26,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,340.19,943.95,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-30,Peru,Mexico,Guadalajara (MX),Maritime,441232,Yes,3186.19,4331.16,118,250101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,2.66,87.5,235,150122
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,20.62,45.0,172,230101
+2015-01-13,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,8326.61,5991.7,118,170303
+2015-01-13,Peru,United States,Long Beach (US),Maritime,440721,Yes,73460.0,307157.54,118,150119
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,24039.58,25795.2,118,150132
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,3.4,106.25,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,3.21,106.25,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,150.45,3508.14,118,150101
+2015-01-27,Peru,Panama,"Panamá, Ciudad de (PA)",Air,441400,Yes,2.93,9.6,235,150137
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-29,Peru,Chile,San Antonio (CL),Maritime,940390,Yes,8.85,15.26,118,70101
+2015-01-23,Peru,Taiwan,Kaohsiung (TW),Maritime,440929,Yes,5166.86,6922.5,118,150119
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940390,Yes,166.35,1245.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,6.66,101.97,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,34.61,529.54,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940340,Yes,19.12,39.71,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940169,Yes,4.78,9.93,118,150116
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940169,Yes,38.87,150.0,118,150101
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,3993.43,6412.5,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,196.56,4583.14,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,677.05,15786.64,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,169.37,3949.17,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,4359.63,1958.4,118,250105
+2015-01-24,Peru,Ecuador,Guayaquil (EC),Maritime,441510,Yes,3.54,24.0,118,150101
+2015-01-02,Peru,Mexico,Veracruz (MX),Maritime,441231,Yes,14385.0,22752.0,118,150119
+2015-01-05,Peru,United States,Savannah (US),Maritime,940360,Yes,706.58,3220.0,118,150132
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,24250.0,17252.53,118,120600
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,0.32,10.0,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,2.51,82.89,235,150122
+2015-01-14,Peru,United States,Houston (US),Maritime,940360,Yes,406.17,3110.4,118,150132
+2015-01-06,Peru,Bolivia,Cochabamba (BO),Truck,441011,Yes,25989.0,17401.86,262,150101
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,746.28,535.5,118,250105
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,26590.0,23978.25,118,160300
+2015-01-20,Peru,Ecuador,Huaquillas (EC),Truck,440890,Yes,8550.0,26975.03,19,150142
+2015-01-31,Peru,Spain,Bilbao (ES),Air,442010,Yes,10.88,917.0,235,150114
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,12.28,187.84,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,41.27,631.51,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940330,Yes,15.93,33.09,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,1917.0,1154.4,118,120600
+2015-01-01,Peru,Costa Rica,San José (CR),Maritime,442190,Yes,2640.0,12000.15,118,150118
+2015-01-11,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,119850.0,115256.86,118,150101
+2015-01-16,Peru,Mexico,Mazatlan (MX),Maritime,441231,Yes,7286.25,11700.0,118,150119
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,1145.92,2255.4,118,150132
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,214.94,5011.63,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,167.65,3909.07,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7278.18,7500.48,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,10005.0,8750.3,118,120600
+2015-01-22,Peru,United States,New York (US),Air,442010,Yes,131.39,1520.0,235,150122
+2015-01-02,Peru,Mexico,Veracruz (MX),Maritime,441231,Yes,2676.0,9750.0,118,150119
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,44900.52,47736.87,118,150119
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,1917.0,1154.4,118,120600
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.61,20.0,235,150122
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25390.0,17443.61,118,150119
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,82.46,180.0,172,230101
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,1.4,43.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,3.97,131.25,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,836.53,19505.27,118,150131
+2015-01-14,Peru,United States,Houston (US),Maritime,940161,Yes,530.63,4063.5,118,150132
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27230.0,19336.03,118,160300
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-16,Peru,France,Le Havre (FR),Maritime,440929,Yes,50710.0,87406.0,118,150119
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940161,Yes,53.45,400.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,65.18,997.36,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,48.52,742.43,118,150108
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,23403.0,18761.3,118,120600
+2015-01-11,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440929,Yes,127500.0,133379.13,118,150101
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24190.0,17170.25,118,160300
+2015-01-20,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,3556.33,6999.6,118,150132
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,150.45,3508.14,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,576.03,13431.17,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,1720.0,1100.1,118,120600
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,31729.49,33733.83,118,150119
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,0.53,17.5,235,150122
+2015-01-08,Peru,Chile,Arica (CL),Truck,940350,Yes,64.13,140.0,172,230101
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,1.4,43.75,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.79,26.25,235,150122
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,528.05,12312.58,118,150131
+2015-01-14,Peru,United States,Houston (US),Maritime,442090,Yes,78.87,604.0,118,150132
+2015-01-14,Peru,Ecuador,Guayaquil (EC),Maritime,940330,Yes,38.83,80.96,118,150131
+2015-01-16,Peru,Norway,Oslo (NO),Maritime,440929,Yes,23910.0,43146.2,118,150119
+2015-01-14,Peru,Chile,Valparaiso (CL),Maritime,442190,Yes,179.22,1267.2,118,150122
+2015-01-24,Peru,Ecuador,Guayaquil (EC),Maritime,441510,Yes,1.18,8.0,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,52830.0,41373.23,118,150119
+2015-01-22,Peru,United States,New York (US),Air,442010,Yes,131.39,1520.0,235,150122
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,99.26,1518.85,118,150108
+2015-01-02,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,8735.57,5427.35,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,528.05,12312.58,118,150131
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,230.45,5373.47,118,150101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,744.19,1117.8,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,18084.85,18894.29,118,150119
+2015-01-27,Peru,Chile,Arica (CL),Truck,940350,Yes,58.88,120.0,172,230101
+2015-01-06,Peru,Panama,"Panamá, Ciudad de (PA)",Air,441400,Yes,1.87,9.6,235,150137
+2015-01-25,Peru,Germany,München (DE),Air,442010,Yes,0.23,11.0,235,150133
+2015-01-08,Peru,Chile,Arica (CL),Truck,940161,Yes,1035.0,700.0,172,230101
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,1.19,39.26,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,442090,Yes,2.45,80.63,235,150122
+2015-01-31,Peru,United States,Miami (US),Air,940190,Yes,1.86,61.25,235,150122
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,1.69,65.0,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940340,Yes,1317.91,900.0,172,230101
+2015-01-09,Peru,United States,Miami (US),Air,940161,Yes,2.4,75.0,235,150122
+2015-01-09,Peru,United States,Miami (US),Air,442090,Yes,0.72,22.5,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442090,Yes,0.91,30.0,235,150122
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,52090.0,42539.84,118,160300
+2015-01-25,Peru,Germany,München (DE),Air,442010,Yes,0.23,11.0,235,150133
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,4923.9,6702.0,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,171.95,4009.31,118,150101
+2015-01-20,Peru,United States,Houston (US),Maritime,940360,Yes,754.2,6500.0,118,150132
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,45.5,114.07,172,230101
+2015-01-20,Peru,China,Huangpu Pt (CN),Maritime,440799,Yes,28170.0,14698.69,118,250105
+2015-01-21,Peru,Germany,Bremerhaven (DE),Maritime,440929,Yes,13220.0,16873.75,118,160300
+2015-01-30,Peru,Mexico,Monterrey (MX),Maritime,441232,Yes,626.95,825.0,118,250101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,7115.61,8155.8,118,250105
+2015-01-30,Peru,United States,Los Angeles (US),Maritime,940360,Yes,841.24,6920.0,118,150118
+2015-01-11,Peru,United States,Denver (US),Air,441400,Yes,47.21,3025.0,235,150108
+2015-01-09,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,25900.0,21651.0,118,160300
+2015-01-14,Peru,United States,Miami (US),Air,442090,Yes,2.47,95.0,235,150122
+2015-01-01,Peru,China,China (CN),Maritime,440929,Yes,3095.56,2388.4,118,250105
+2015-01-28,Peru,Belgium,Antwerpen (BE),Maritime,440799,Yes,27100.0,17039.45,118,250102
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,441820,Yes,115.77,3005.33,118,150131
+2015-01-11,Peru,United States,San Pedro (US),Maritime,442010,Yes,136.39,1235.0,118,150117
+2015-01-27,Peru,United States,Charleston (US),Maritime,440929,Yes,20380.0,38612.0,118,150119
+2015-01-17,Peru,United States,Miami (US),Air,442010,Yes,1.49,53.0,235,150122
+2015-01-21,Peru,Chile,Arica (CL),Truck,940340,Yes,100.43,100.0,172,230101
+2015-01-20,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,3487.37,2160.0,118,170303
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441231,Yes,755.49,1200.0,118,150125
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,1550.66,4940.0,118,150132
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940360,Yes,101.95,211.78,118,150116
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,1.59,3.31,118,150116
+2015-01-31,Peru,United States,Houston (US),Maritime,940360,Yes,34.53,115.3,118,150132
+2015-01-31,Peru,United States,Houston (US),Maritime,940350,Yes,94.17,314.45,118,150132
+2015-01-02,Peru,Sweden,Göteborg (SE),Maritime,441520,Yes,11932.0,17816.9,118,70101
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,460.0,236.55,118,120600
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940350,Yes,38.87,150.0,118,150101
+2015-01-14,Peru,United States,Miami (US),Air,442010,Yes,0.94,36.38,235,150122
+2015-01-09,Peru,United States,Houston (US),Maritime,940350,Yes,80.3,190.0,118,150132
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,1720.0,1100.1,118,120600
+2015-01-24,Peru,United States,Miami (US),Air,940360,Yes,3.78,125.0,235,150122
+2015-01-11,Peru,United States,San Pedro (US),Maritime,940169,Yes,485.92,4400.0,118,150117
+2015-01-27,Peru,Chile,Arica (CL),Truck,940360,Yes,157.5,321.0,172,230101
+2015-01-20,Peru,China,China (CN),Maritime,440799,Yes,23679.3,19408.79,118,250105
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,5450.0,3126.45,118,120600
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,24900.0,24414.75,118,120600
+2015-01-26,Peru,United States,Long Beach (US),Maritime,940161,Yes,597.99,3950.0,118,150132
+2015-01-17,Peru,Netherlands,Rotterdam (NL),Maritime,940360,Yes,41.46,160.0,118,150101
+2015-01-06,Peru,Mexico,Manzanillo (MX),Maritime,440929,Yes,8303.81,11666.77,118,150119
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,91.0,228.14,172,230101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,223.02,463.27,118,150116
+2015-01-27,Peru,United States,New Orleans (US),Maritime,440799,Yes,3814.87,4134.38,118,150103
+2015-01-08,Peru,China,China (CN),Maritime,440929,Yes,21877.81,19569.96,118,250105
+2015-01-17,Peru,Chile,Valparaiso (CL),Maritime,440929,Yes,1256.17,3824.7,118,160101
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,2061.66,2990.64,118,250101
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,5111.16,3417.75,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,11830.0,10744.65,118,120600
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,620.55,16108.59,118,150131
+2015-01-15,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,5402.26,4475.52,118,250105
+2015-01-11,Peru,United States,San Pedro (US),Maritime,442010,Yes,44.18,400.0,118,150117
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,442190,Yes,421.27,9822.8,118,150101
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,0.63,22.5,235,150122
+2015-01-15,Peru,Chile,Arica (CL),Truck,940340,Yes,126.79,150.0,172,150101
+2015-01-20,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,7966.46,4934.25,118,170303
+2015-01-30,Peru,United States,Pittsburgh (US),Air,940169,Yes,7.18,111.2,235,150120
+2015-01-11,Peru,United States,Long Beach (US),Maritime,940350,Yes,224.48,1680.0,118,150132
+2015-01-02,Peru,United States,Houston (US),Maritime,441400,Yes,43.67,668.19,118,150108
+2015-01-02,Peru,United States,Houston (US),Maritime,940360,Yes,50.56,773.74,118,150108
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,441900,Yes,0.96,1.99,118,150116
+2015-01-20,Peru,China,China (CN),Maritime,440929,Yes,248020.0,238635.59,118,150101
+2015-01-20,Peru,France,Le Havre (FR),Maritime,440799,Yes,25612.0,43699.5,118,250101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,90.27,2104.89,118,150101
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,133.26,3107.21,118,150101
+2015-01-23,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,4230.19,3286.33,118,150119
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,762.97,524.16,118,250105
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,572.91,786.6,118,250105
+2015-01-31,Peru,United States,Miami (US),Air,442010,Yes,2.66,87.5,235,150122
+2015-01-08,Peru,Chile,Arica (CL),Truck,940360,Yes,27.49,60.0,172,230101
+2015-01-09,Peru,United States,Miami (US),Air,442010,Yes,2.29,71.64,235,150122
+2015-01-24,Peru,United States,Miami (US),Air,442010,Yes,0.71,23.38,235,150122
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,27870.0,18741.87,118,150119
+2015-01-18,Peru,Panama,Balboa (PA),Maritime,940360,Yes,102.22,2383.53,118,150131
+2015-01-17,Peru,Dominican Republic,Caucedo (DO),Maritime,440799,Yes,460.0,236.55,118,120600
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,241.42,227.85,118,250105
+2015-01-23,Peru,Japan,Tokyo (JP),Maritime,440721,Yes,12370.55,57166.56,118,150119
+2015-01-27,Peru,Australia,Brisbane (AU),Maritime,440929,Yes,3304.16,4794.0,118,150119
+2015-01-22,Peru,Chile,Antofagasta (CL),Truck,940360,Yes,52.19,130.84,172,230101
+2015-01-16,Peru,Mexico,Ciudad de México (MX),Maritime,441232,Yes,1874.4,2719.0,118,250101
+2015-01-27,Peru,Cuba,Mariel (CU),Maritime,940350,Yes,95.58,198.54,118,150116
+2015-01-13,Peru,South Korea,Incheon (KR),Maritime,440799,Yes,1917.0,1154.4,118,120600
+2015-01-08,Peru,China,China (CN),Maritime,440929,Yes,4231.81,3785.4,118,250105
+2015-01-20,Peru,Netherlands,Rotterdam (NL),Maritime,440799,Yes,11804.11,7311.2,118,170303
+2015-01-14,Peru,Ecuador,Guayaquil (EC),Maritime,940330,Yes,38.83,80.96,118,150131
+2015-01-13,Peru,France,Le Havre (FR),Maritime,440799,Yes,26790.0,43525.2,118,250101
+2015-01-17,Peru,Belgium,Antwerpen (BE),Maritime,440929,Yes,23340.0,41523.46,118,150133
+2015-01-30,Peru,Mexico,Manzanillo (MX),Maritime,440799,Yes,6127.78,5370.75,118,250105
+2015-01-30,Peru,Dominican Republic,Caucedo (DO),Maritime,440722,Yes,2205.0,1481.0,118,120600
+2015-01-31,Peru,United States,Miami (US),Air,940360,Yes,4.75,156.25,235,150122
+2015-01-20,Peru,South Korea,Incheon Intl Apt/Seoul (KR),Maritime,440929,Yes,12910.34,17852.76,118,250101
+2015-01-11,Peru,Panama,Balboa (PA),Maritime,940360,Yes,59.43,1542.74,118,150131
+2015-01-15,Peru,China,Shanghai Hongqiao International Apt (CN),Maritime,440799,Yes,21947.75,18182.7,118,250105
+2015-01-27,Peru,United States,New Orleans (US),Maritime,440799,Yes,43215.13,46834.57,118,150103
+2015-01-17,Peru,United States,Miami (US),Air,442090,Yes,1.68,60.0,235,150122
+2015-01-21,Peru,Germany,Bremerhaven (DE),Maritime,440929,Yes,13220.0,16873.75,118,160300
+2015-01-15,Peru,Chile,Arica (CL),Truck,940161,Yes,152.15,180.0,172,150101

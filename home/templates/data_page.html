@@ -23,6 +23,13 @@
     var thumbsUrl = "{% url 'submit_thumbs' track_name=track_name %}";
     var expandRowUrl = "{% url 'expand_row' track_name=track_name %}";
     var csrfToken = "{{ csrf_token }}";
+
+    var files = [
+      "{% static 'sankey/data/panjiva_china_exports_01_2015_viz.csv' %}",
+      "{% static 'sankey/data/panjiva_china_imports_01_2015_viz.csv' %}",
+      "{% static 'sankey/data/panjiva_peru_exports_01_2015_viz.csv' %}",
+      "{% static 'sankey/data/panjiva_us_imports_01_2015_viz.csv' %}"
+    ];
   </script>
 </head>
 
@@ -103,6 +110,13 @@
   <script src="{% static 'jquery-easing/jquery.easing.min.js' %}"></script>
   <script src="{% static 'js/stylish-portfolio.min.js' %}"></script>
   <script src="{% static 'datatables/datatables.min.js' %}"></script>
+
+      <script src="{% static 'sankey/d3.js' %}"></script>
+      <script src="{% static 'sankey/d3-sankey.js' %}"></script>
+      <script src="{% static 'sankey/visualization.js' %}"></script>
+      <script src="{% static 'sankey/parser.js' %}"></script>
+      <script src="{% static 'sankey/filters.js' %}"></script>
+
   <script src="{% static 'js/table.js' %}"></script>
   <script src="{% static 'js/data_page.js' %}"></script>
 

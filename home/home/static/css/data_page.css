@@ -31,3 +31,75 @@ section.content-section {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+
+
+/* CSS for controls */
+.dropdownStyle{
+  width: 300px;
+}
+
+.smallerDropdownStyle{
+  width: 175px;
+}
+
+
+/* CSS for the visualization and interaction regions */
+#chart {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 350px);
+}
+
+#filters {
+  width: 300px;
+  margin-left: 10px;
+}
+
+#recommended {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+    border-width: 2px;
+}
+
+.column {
+    float: left;
+    height: 3000px; /* set this in JS eventually */
+}
+
+/* Clear floats after the column ends and we transition to a single column thing */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* CSS for the nodes and links of the Sankey diagram */
+.node rect {
+  cursor: move;
+  fill-opacity: .9;
+  shape-rendering: crispEdges;
+}
+
+.node text {
+  pointer-events: none;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: Arial, Verdana;
+}
+
+.link {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.link:hover {
+  stroke-opacity: .5;
+}

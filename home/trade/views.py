@@ -5,7 +5,7 @@ from django.http import JsonResponse, HttpResponseNotAllowed, Http404
 from django.views import View
 from django.views.generic.detail import DetailView, BaseDetailView
 
-from .management.commands.build_china_import_csv import process_score_rows
+from .management.commands.parsers import ChinaImportParser, ChinaExportParser
 from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs
 
 
@@ -29,16 +29,33 @@ class AnomalyApiView(BaseDetailView):
     slug_url_kwarg = 'panjivarecordid'
 
     def get_queryset(self):
+        trade_config = apps.get_app_config('trade')
+
         if self.kwargs['track_name'] == 'china_import':
+            self.parser_cls = ChinaImportParser
+            self.scores = trade_config.get_china_import()
+            self.list_i = 4
             return ChinaImport.objects.using('wwf').all()
+        elif self.kwargs['track_name'] == 'china_export':
+            self.parser_cls = ChinaExportParser
+            self.scores = trade_config.get_china_export()
+            self.list_i = 3
+            return ChinaExport.objects.using('wwf').all()
+        elif self.kwargs['track_name'] == 'peru_export':
+            self.parser_cls = PeruExportParser
+            self.scores = trade_config.get_peru_export()
+            self.list_i = 3
+            return PeruExport.objects.using('wwf').all()
+        elif self.kwargs['track_name'] == 'us_import':
+            self.parser_cls = UsImportParser
+            self.scores = trade_config.get_us_import()
+            self.list_i = 3
+            return UsImport.objects.using('wwf').all()
         return None
 
     def render_to_response(self, context, *args, **kwargs):
-        trade_config = apps.get_app_config('trade')
-        scores = trade_config.get_china_import()
-
         record = None
-        for row in scores:
+        for row in self.scores:
             if row[0] == self.kwargs['panjivarecordid']:
                 record = row
                 break
@@ -48,7 +65,8 @@ class AnomalyApiView(BaseDetailView):
                 'status': '404'
             })
 
-        output = process_score_rows([[pid, 0] for pid in record[4].split(';')])
+        parser = self.parser_cls([[pid, 0] for pid in record[self.list_i].split(';')])
+        output = parser.process_scores()
         return JsonResponse(output)
 
 
@@ -59,13 +77,25 @@ class AnomalyView(DetailView):
 
     def get_queryset(self):
         if self.kwargs['track_name'] == 'china_import':
+            self.parser_cls = ChinaImportParser
             return ChinaImport.objects.using('wwf').all()
+        elif self.kwargs['track_name'] == 'china_export':
+            self.parser_cls = ChinaExportParser
+            return ChinaExport.objects.using('wwf').all()
+        elif self.kwargs['track_name'] == 'peru_export':
+            self.parser_cls = PeruExportParser
+            return PeruExport.objects.using('wwf').all()
+        elif self.kwargs['track_name'] == 'us_import':
+            self.parser_cls = UsImportParser
+            return UsImport.objects.using('wwf').all()
         return None
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        output = process_score_rows([[self.kwargs['panjivarecordid'], 0]])
+        fake_iterable = [[self.kwargs['panjivarecordid'], 0]]
+        parser = self.parser_cls(fake_iterable)
+        output = parser.process_scores()
         anomaly_data = json.dumps(output)
 
         context['track_name'] = self.kwargs['track_name']
@@ -99,7 +129,8 @@ class BaseExpandedRowView(DetailView):
         except self.thumbs_cls.DoesNotExist:
             pass
 
-        context['hide_compare'] = 'hide' in self.request.GET
+        context['hide_all'] = 'hide' in self.request.GET
+        context['hide_compare'] = 'hide_compare' in self.request.GET
         context['comment'] = comment
         context['thumbs'] = thumbs
         context['track_name'] = self.track_name
@@ -118,6 +149,27 @@ class ChinaImportExpandRowView(BaseExpandedRowView):
     comment_cls = ChinaImportComment
     thumbs_cls = ChinaImportThumbs
     track_name = 'china_import'
+
+
+class ChinaExportExpandRowView(BaseExpandedRowView):
+    transaction_cls = ChinaExport
+    comment_cls = ChinaExportComment
+    thumbs_cls = ChinaExportThumbs
+    track_name = 'china_export'
+
+
+class PeruExportExpandRowView(BaseExpandedRowView):
+    transaction_cls = PeruExport
+    comment_cls = PeruExportComment
+    thumbs_cls = PeruExportThumbs
+    track_name = 'peru_export'
+
+
+class UsImportExpandRowView(BaseExpandedRowView):
+    transaction_cls = UsImport
+    comment_cls = UsImportComment
+    thumbs_cls = UsImportThumbs
+    track_name = 'us_import'
 
 
 class BaseUpdateView(View):

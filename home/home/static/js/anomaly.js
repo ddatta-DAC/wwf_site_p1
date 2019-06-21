@@ -2,7 +2,9 @@ $(document).ready(function () {
   buildTable({
     data: anomalyData,
     selector: '#anomaly_table',
-    hide: true,
+    getData: {
+      hide_compare: true,
+    },
     datatablesSettings: {
       info: false,
       ordering: false,
@@ -20,7 +22,9 @@ $(document).ready(function () {
       // buildTable(data);
       buildTable({
         data: data,
-        hide: true
+        getData: {
+          hide: true
+        }
       })
     },
     error: function (error) {

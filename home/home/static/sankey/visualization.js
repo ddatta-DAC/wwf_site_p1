@@ -2,7 +2,7 @@
 var chartDiv = document.getElementById("chart");
 var section = document.getElementById("svg-section");
 var width = chartDiv.clientWidth;
-var height = chartDiv.clientHeight;
+var height = 3000;
 
 // Number formatting
 var formatNumber = d3.format(",.0f"),

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'crispy_forms',
+    'huey.contrib.djhuey',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -102,6 +103,10 @@ DATABASES = {
     'wwf': env.db('DJANGO_MYSQL_URL')
 }
 
+HUEY = {
+    'huey_class': 'huey.SqliteHuey',
+    'immediate': False
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

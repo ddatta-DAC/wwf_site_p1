@@ -7,6 +7,7 @@ from django.views.generic.detail import DetailView, BaseDetailView
 
 from .management.commands.parsers import ChinaImportParser, ChinaExportParser, PeruExportParser, UsImportParser
 from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs
+from .tasks import rebuild_csv
 
 
 def format(instance, field):
@@ -99,13 +100,13 @@ class AnomalyView(DetailView):
         anomaly_data = json.dumps(output)
 
         if self.kwargs['track_name'] == 'china_import':
-            context['track_type_name'] ='China Import'
+            context['track_type_name'] = 'China Import'
         elif self.kwargs['track_name'] == 'china_export':
-            context['track_type_name'] ='China Export'
+            context['track_type_name'] = 'China Export'
         elif self.kwargs['track_name'] == 'peru_export':
-            context['track_type_name'] ='Peru Export'
+            context['track_type_name'] = 'Peru Export'
         elif self.kwargs['track_name'] == 'us_import':
-            context['track_type_name'] ='US Import'
+            context['track_type_name'] = 'US Import'
 
         context['track_name'] = self.kwargs['track_name']
         context['anomaly'] = anomaly_data
@@ -233,6 +234,13 @@ class SubmitCommentView(BaseUpdateView):
     }
     value_attr = 'comment'
     value_key = 'comment'
+
+    def post(self, request, track_name):
+        response = super(SubmitCommentView, self).post(request, track_name)
+        body = json.loads(response.content)
+        if 'status' in body and body['status'] == 'ok':
+            rebuild_csv(track_name)
+        return response
 
 
 pretty_name = {

@@ -1,3 +1,5 @@
+var mainTable = null;
+
 $(document).ready(function () {
   buildTable({
     data: anomalyData,
@@ -20,7 +22,7 @@ $(document).ready(function () {
     method: 'GET',
     success: function (data) {
       // buildTable(data);
-      buildTable({
+      mainTable = buildTable({
         data: data,
         getData: {
           hide: true

@@ -1,4 +1,4 @@
-
+var mainTable = null;
 var primaryIndex = 0;
 
 $(document).ready(function () {
@@ -7,7 +7,7 @@ $(document).ready(function () {
     url: tableUrl, 
     method: 'GET',
     success: function (data) {
-      buildTable({
+      mainTable = buildTable({
         data
       });
     },

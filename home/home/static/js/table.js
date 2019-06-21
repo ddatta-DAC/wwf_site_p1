@@ -1,3 +1,4 @@
+var primaryIndex = 0;
 
 function buildTable(attrs) {
   var data = attrs.data;
@@ -6,7 +7,7 @@ function buildTable(attrs) {
     tableId = attrs.selector;
   }
 
-  var primaryIndex = data.id_index;
+  primaryIndex = data.id_index;
 
   var settings = {
     columns: data.columns,
@@ -65,6 +66,7 @@ function buildTable(attrs) {
       });
       return div;
   }
+  return table;
 }
 
 function setThumbs(panjivarecordid) {
@@ -85,7 +87,7 @@ function setThumbs(panjivarecordid) {
     success: function (data) {
       console.log(data);
       var rowIndexes = [];
-      table.rows( function (idx, row, node) {
+      mainTable.rows( function (idx, row, node) {
         if(row[primaryIndex] == panjivarecordid){
           rowIndexes.push(idx);                  
         }
@@ -93,7 +95,7 @@ function setThumbs(panjivarecordid) {
       });
 
       if (rowIndexes.length > 0) {
-        table.cell(rowIndexes[0], primaryIndex+3).data(data.thumbs)
+        mainTable.cell(rowIndexes[0], primaryIndex+3).data(data.thumbs)
       } else {
         console.error('Cannot find row with id', panjivarecordid);
       }
@@ -127,7 +129,7 @@ function submitComment(panjivarecordid) {
       console.log(data);
 
       var rowIndexes = [];
-      table.rows( function (idx, row, node) {
+      mainTable.rows( function (idx, row, node) {
         if(row[primaryIndex] == panjivarecordid){
           rowIndexes.push(idx);                  
         }
@@ -135,7 +137,7 @@ function submitComment(panjivarecordid) {
       });
 
       if (rowIndexes.length > 0) {
-        table.cell(rowIndexes[0], primaryIndex+2).data(data.comment)
+        mainTable.cell(rowIndexes[0], primaryIndex+2).data(data.comment)
       } else {
         console.error('Cannot find row with id', panjivarecordid);
       }

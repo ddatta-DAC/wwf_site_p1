@@ -360,7 +360,7 @@ function populatePeruExportDropdowns() {
   linkType.appendChild(element);  
 
 
-  leftColumn.value = "ShipperCountry";
+  leftColumn.value = "PortOfUnlading";
   rightColumn.value = "ShipmentDestination";  
   linkType.value = "NetWeightKg";
   

@@ -377,6 +377,7 @@ a:hover, a:focus, a:active {
 
 .footer .team_logo{
   height: 10vh;
+  max-width: 25vh;
 }
 
 

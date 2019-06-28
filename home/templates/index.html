@@ -72,12 +72,17 @@
      }
     .team_link img{
         max-height:4vw;
+        max-width: 25vh;
     }
     .team_link:hover{
       transform: scale(1.05);
     }
     .name{
         font-size:1.1vw
+    }
+
+    p.lead {
+      margin-bottom: 0;
     }
 
     #intro_1{
@@ -100,15 +105,19 @@
          max-width: 100% !important;
     }
 
+    .centeredrow {
+      align-items: center;
+    }
+
     .intro_container{
-        background: #212529 !important;
-        opacity: 3 !important;
-        color: #f8f9fa !important;
+        background: #2a6180 !important;
+        /*opacity: 3 !important;*/
+        color: white !important;
         padding: 3%;
     }
     .intro_text{
-        color:white;
-        background-color:#212529 !important;
+        /*color:white;*/
+        /*background-color:#212529 !important;*/
         font-size:1.0vw;
         opacity:0.85;
         padding:2%;
@@ -133,10 +142,10 @@
          left:0;
          right:0;
          bottom:0;
-         background-image:url("{% static 'img/logs_1.jpg' %}");
-         filter: blur(5px);
+         /*background-image:url("{% static 'img/logs_1.jpg' %}");*/
+         /*filter: blur(5px);*/
          z-index:-10;
-         opacity:0.85;
+         /*opacity:0.85;*/
          max-width: 100% !important;
     }
 
@@ -182,8 +191,9 @@
          left:0;
          right:0;
          bottom:0;
-         background-image:url("{% static 'img/analyticsPic.jpg' %}");
-         filter: blur(3px);
+         /*background-image:url("{% static 'img/analyticsPic.jpg' %}");*/
+         background-image: -webkit-linear-gradient(45deg, rgba(76,76,76,1) 0%,rgba(89,89,89,0.9) 12%,rgba(102,102,102,0.8) 25%,rgba(71,71,71,0.85) 39%,rgba(44,44,44,0.89) 50%,rgba(0,0,0,0.89) 51%,rgba(17,17,17,0.92) 60%,rgba(43,43,43,0.98) 76%,rgba(38,38,38,1) 81%,rgba(30,30,30,1) 89%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%), url("{% static 'img/logs_1.jpg' %}");
+         /*filter: blur(3px);*/
          z-index:-5;
          opacity:0.95;
          max-width: 100% !important;
@@ -242,7 +252,7 @@
                     </em>
             </div>
         <div class="col-sm-3">
-             - UN Report
+             - <a target="_blank" rel="noopener" href="https://www.google.com/url?q=https://news.un.org/en/story/2014/06/471582-illegal-trade-wildlife-timber-products-funding-criminals-armed-groups-joint-un&sa=D&source=hangouts&ust=1561813898202000&usg=AFQjCNF6hi5aJvlgrpNn0MlwFK8oPmh63w">UN Report</a>
         </div>
         </div>
         <br/>
@@ -258,7 +268,7 @@
                     </em>
             </div>
          <div class="col-sm-3">
-               - Global Forest Atlas
+               - <a target="_blank" rel="noopener" href="https://www.google.com/url?q=https://globalforestatlas.yale.edu/forest-use-logging/logging/illegal-logging&sa=D&source=hangouts&ust=1561813898203000&usg=AFQjCNFS6QfvxXvEHcWzNC2x0d5IW2AkJw">Global Forest Atlas</a>
          </div>
          </div>
          <br/>
@@ -270,11 +280,9 @@
                         "...particularly those [countries] in Africa and South America, between 50 and 90% of timber is harvested and traded illegally."
                     </em>
 
-
-
             </div>
          <div class="col-sm-3">
-              - TRAFFIC Report
+              <a target="_blank" rel="noopener" href="https://www.traffic.org/what-we-do/species/timber/">- TRAFFIC Report</a>
          </div>
          </div>
     </div>
@@ -283,19 +291,19 @@
     <div class="container" id="intro_1">
         <div id="intro_1_bg"></div>
         <div class="container-fluid text-center intro_container">
-            <div class="row content_row">
+            <div class="row content_row centeredrow">
                 <div class="col-sm-2 col_left">
                     <h5>About</h5>
                 </div>
                 <div class="col-sm-10 ">
-                    <p class="lead mb-5">
+                    <p class="lead">
                       Illegal timber trade has adverse ecological as well as economic effects. Trafficking in wildlife, plant,
                       and plant products (such as paper, timber) is outlawed under the US Lacey Act (originally introduced
                       in 1990 and amended as recently as 2008). In addition to outlawing the
                       trading of certain categories of products, the law also
                       requires importers to declare the origin country, name,
                       and quantity of products imported in other
-                      categories. The Lacey act is considered
+                      categories. The Lacey Act is considered
                       a highly effective act, best evidenced by the 
                       $13M fine imposed in 2016 by the US Department of
                       Justice on the Virginia company Lumber Liquidators Inc. for
@@ -319,15 +327,12 @@
 <div class="container-fluid text-center" id = "platform">
     <div id="platform_bg"></div>
      <div class="container-fluid text-center" id="platform_container">
-        <div class="row content_row">
+        <div class="row content_row centeredrow">
             <div class="col-sm-2 col_left">
-                <h4>Our Solution</h4></div>
+                <h5>Our Solution</h5></div>
             <div class="col-sm-10">
-                <p class="lead mb-5">
-                    <span style="background-color: black">
-                        We present a machine learning solution to flag instances of potentially suspicious records from trade data. Our system merges disparate data sources such as IUCN Redlist, CITES, and trade data from Panjiva Inc. We use a deep learning based embedding approach to conduct unsupervised anomaly detection. Our user interface allows the analyst to visualize trade data using Sankey diagrams and inspect identified anomalies. To support user understanding, it allows the display of the anomalous records in the context of nearby records.
-                    </span>
-
+                <p class="lead">
+                      We present a machine learning solution to flag instances of potentially suspicious records from trade data. Our system merges disparate data sources such as IUCN Redlist, CITES, and trade data from Panjiva Inc. We use a deep learning based embedding approach to conduct unsupervised anomaly detection. Our user interface allows the analyst to visualize trade data using Sankey diagrams and inspect identified anomalies. To support user understanding, it allows the display of the anomalous records in the context of nearby records.
                 </p>
             </div>
         </div>
@@ -336,13 +341,13 @@
 
 
 
-<div class="container-fluid">
-     <div class="row topbar_row">
+<div class="container-fluid bg-light">
+     <div class="row topbar_row pt-5">
         <div class="col-sm-12 ">
-          Analysis Case Studies
+          <h4>Analysis Case Studies</h4>
         </div>
      </div>
-    <div class="row topbar_row">
+    <div class="row topbar_row pb-5">
 
        <div class="col-sm-3">
         <a class="js-scroll-trigger" href="{% url 'track' 'china_import' %}">China Import</a>
@@ -361,10 +366,10 @@
 
 
 
-<section class="content-section bg-light" id="team">
+<section class="mt-5 " id="team">
 
     <div class="container text-center">
-        <h2>Team</h2>
+        <h4>Team</h4>
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto">
@@ -473,7 +478,7 @@
 
                     <div class="team_link">
                         <a href="https://www.traffic.org/"> TRAFFIC
-<!--                            <img class="team_logo" src="{% static 'img/traffic-logo.png' %}"/>-->
+                            <img class="team_logo" src="{% static 'img/traffic-logo.png' %}"/>
                         </a>
                     </div>
                 </div>

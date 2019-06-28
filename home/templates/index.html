@@ -212,11 +212,11 @@
 <header class="masthead d-flex">
     <div class="container text-center my-auto">
         <h2 class="mb-4 mt-5">Detecting Illegal Timber Trade</h2>
-        <h5 class="mb-5">
+        <h6 class="mb-5">
             <em>
-                A collaboration between Discovery Analytics Center, Virginia Tech & World Wildlife Fund
+                A collaboration between the Discovery Analytics Center, Virginia Tech, TRAFFIC & World Wildlife Fund
             </em>
-        </h5>
+        </h6>
 
         <!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a> -->
     </div>
@@ -224,10 +224,122 @@
 </header>
 
 
+<div class="container"
+     id="jumbotron">
+    <div id="jumbotron_bg"></div>
+    <div class="intro_text">
+
+
+        <div class="row">
+
+            <div class="col-sm-8 offset-sm-1 col__quote">
+<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
+<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
+                    <em>
+                        "Studies indicate that the
+                        illegal trade in wildlife and
+                        timber may help finance terrorism and organized crime across the world."
+                    </em>
+            </div>
+        <div class="col-sm-3">
+             - UN Report
+        </div>
+        </div>
+        <br/>
+         <div class="row">
+
+            <div class="col-sm-8 offset-sm-1 col__quote">
+<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
+<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
+                    <em>
+                        "As a result of weak forest governance,
+                        illegal timber accounts over 70% of some countries’ timber exports,
+                        such as Peru, Bolivia and the DRC."
+                    </em>
+            </div>
+         <div class="col-sm-3">
+               - Global Forest Atlas
+         </div>
+         </div>
+         <br/>
+         <div class="row">
+            <div class="col-sm-8 offset-sm-1 col__quote">
+<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
+<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
+                    <em>
+                        "...particularly those [countries] in Africa and South America, between 50 and 90% of timber is harvested and traded illegally."
+                    </em>
+
+
+
+            </div>
+         <div class="col-sm-3">
+              - TRAFFIC Report
+         </div>
+         </div>
+    </div>
+</div>
+<section class="content-section bg-light content-section-hp">
+    <div class="container" id="intro_1">
+        <div id="intro_1_bg"></div>
+        <div class="container-fluid text-center intro_container">
+            <div class="row content_row">
+                <div class="col-sm-2 col_left">
+                    <h5>About</h5>
+                </div>
+                <div class="col-sm-10 ">
+                    <p class="lead mb-5">
+                      Illegal timber trade has adverse ecological as well as economic effects. Trafficking in wildlife, plant,
+                      and plant products (such as paper, timber) is outlawed under the US Lacey Act (originally introduced
+                      in 1990 and amended as recently as 2008). In addition to outlawing the
+                      trading of certain categories of products, the law also
+                      requires importers to declare the origin country, name,
+                      and quantity of products imported in other
+                      categories. The Lacey act is considered
+                      a highly effective act, best evidenced by the 
+                      $13M fine imposed in 2016 by the US Department of
+                      Justice on the Virginia company Lumber Liquidators Inc. for
+                      importing hardwood manufactured in China from timber illegally
+                      logged in Eastern Europe.
+                      Agencies tasked with enforcement
+                      of laws like the Lacey Act require automated tools to
+                      better identify "red flags" for potentially illegal timber shipments, utilizing timber trade data and other publicly available data. Such tools do not exist currently
+                      and thus there is a critical need for a better decision support
+                      system for assessing trade data for
+                      potential anomalies.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<div class="container-fluid text-center" id = "platform">
+    <div id="platform_bg"></div>
+     <div class="container-fluid text-center" id="platform_container">
+        <div class="row content_row">
+            <div class="col-sm-2 col_left">
+                <h4>Our Solution</h4></div>
+            <div class="col-sm-10">
+                <p class="lead mb-5">
+                    <span style="background-color: black">
+                        We present a machine learning solution to flag instances of potentially suspicious records from trade data. Our system merges disparate data sources such as IUCN Redlist, CITES, and trade data from Panjiva Inc. We use a deep learning based embedding approach to conduct unsupervised anomaly detection. Our user interface allows the analyst to visualize trade data using Sankey diagrams and inspect identified anomalies. To support user understanding, it allows the display of the anomalous records in the context of nearby records.
+                    </span>
+
+                </p>
+            </div>
+        </div>
+     </div>
+</div>
+
+
+
 <div class="container-fluid">
      <div class="row topbar_row">
         <div class="col-sm-12 ">
-          Visualizations by Origin
+          Analysis Case Studies
         </div>
      </div>
     <div class="row topbar_row">
@@ -245,149 +357,6 @@
             <a class="js-scroll-trigger" href="{% url 'track' 'peru_export' %}">Peru Export</a>
        </div>
     </div>
-</div>
-
-<div class="container"
-     id="jumbotron">
-    <div id="jumbotron_bg"></div>
-    <div class="intro_text">
-
-
-        <div class="row content_row">
-
-            <div class="col-sm-10 col__quote">
-<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
-<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
-                    <em>
-                        "Studies indicate that the
-                        illegal trade in wildlife and
-                        timber may help finance terrorism and organized crime across the world."
-                    </em>
-            </div>
-        <div class="col-sm-2">
-             - UN Report
-        </div>
-        </div>
-        <br/>
-         <div class="row content_row">
-
-            <div class="col-sm-10 col__quote">
-<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
-<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
-                    <em>
-                        "As a result of weak forest governance,
-                        illegal timber accounts over 70% of some countries’ timber exports,
-                        such as Peru, Bolivia and the DRC."
-                    </em>
-            </div>
-         <div class="col-sm-2">
-               - Global Forest Atlas
-         </div>
-         </div>
-         <br/>
-         <div class="row content_row">
-            <div class="col-sm-10 col__quote">
-<!--                    <span style="font-size: 2.5rem">&ldquo;</span>-->
-<!--                    <span style="font-size: 2.5rem">&rdquo;</span>-->
-                    <em>
-                        "..particularly those (countries) in Africa and South America, between 50 and 90% of timber is harvested and traded illegally."
-                    </em>
-
-
-
-            </div>
-         <div class="col-sm-2">
-              - TRAFFIC Report
-         </div>
-         </div>
-    </div>
-</div>
-<section class="content-section bg-light content-section-hp">
-    <div class="container" id="intro_1">
-        <div id="intro_1_bg"></div>
-        <div class="container-fluid text-center intro_container">
-            <div class="row content_row">
-                <div class="col-sm-2 col_left">
-                    <h5> Why illegal timber trade is critical ? </h5>
-                </div>
-                <div class="col-sm-10 ">
-                    <p class="lead mb-5">
-
-                        Conservation of biodiversity is key to ecological sustainability and long-term growth.
-                        The world today is threatened by an impending mass extinction brought upon by unchecked growth,
-                        corporate greed, complicity and negligence coupled with  burgeoning expansion of human population.
-                        With each passing year, the growing demand for wood based products keep on increasing. The forests and their ecosystems are continuously encroached upon to feed the economic systems
-                        that have seen exponential growth in the last century.<br/>
-                        The vast expanse of these forests are in remote areas, removed from direct surveillance.
-                        The limits of the law enforcement agencies, especially in developing countries where
-                        these endangered flora and fauna are found, are stretched in its effort to enforce local and international laws enacted for preservation.
-                        What complicates matters is that these vulnerable species are economically valuable leading to
-                        unfair trade practices.
-                        This is true in countries where the governance structure is not capable or willing to enforce
-                        the rules required for global conservation efforts.
-                        Illegal timber trade ranks among the top categories in illegal trade,
-                        prevention of which is important to national security among other aspects.
-                        Such trade adversely impacts biodiversity and increases extinction risk for
-                        commercially valuable timber species.
-                        <br/>
-                        Thus it is imperative to take more innovative approaches to detect and track illegal trade
-                        patterns, which could lead to a more targeted approach in curbing this problem.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row content_row">
-                <div class="col-sm-2 col_left">
-                    <h5> How critical is illegal timber trade ? </h5>
-                </div>
-                <div class="col-sm-10 ">
-
-                    <ul class="into_list">
-                        <li>
-                         Wildlife crime alone is estimated to be worth $15 to $20 billion annually.
-                        </li>
-                        <li>
-                            Recognized as the fourth largest global illegal trade preceded only by narcotics, human
-                    trafficking and weapons trade.
-                        </li>
-                        <li>
-                            Significant efforts and progress made over last decades yet effectiveness of measures have been plateauing.
-                        </li>
-                        <li>Deforestation in critical parts of South America, Africa and Asia have been monitored, yet the
-                    practice of illegal trade remains persistent.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<div class="container-fluid text-center" id = "platform">
-    <div id="platform_bg"></div>
-     <div class="container-fluid text-center" id="platform_container">
-        <div class="row content_row">
-            <div class="col-sm-2 col_left">
-                <h4>Framework</h4></div>
-            <div class="col-sm-10">
-                <p class="lead mb-5">
-                    <span style="background-color: black">
-                        The integrated framework we build is aimed at detecting suspicious illegal timber trade.
-                        <br/>
-                        Our system is merges disparate data from a multitude of sources to gather targeted domain
-                    knowledge on timber trade. The trade data is obtained from Panjiva Inc. We further curate data from a variety of sources including IUCN Redlist and CITES among others.
-                        <br/>
-                          We apply <b>Machine Learning</b> algorithms on trade data records along with domain knowledge to
-                    highlight suspicous trade instances in an interactive interface that allows domain experts to
-                    track, analyze and understand illegal timber trade better.
-
-                    </span>
-
-                </p>
-            </div>
-        </div>
-     </div>
 </div>
 
 
@@ -431,7 +400,7 @@
                 <div class="col-sm team_member">
 
                     <span class="name">
-                        <b><a href="https://dac.cs.vt.edu/person/naren-ramakrishnan/"> Dr. Naren Ramkrishnan</a></b>
+                        <b><a href="https://dac.cs.vt.edu/person/naren-ramakrishnan/">Naren Ramakrishnan</a></b>
                     </span>
                     <br>
                     Discovery Analytics Center

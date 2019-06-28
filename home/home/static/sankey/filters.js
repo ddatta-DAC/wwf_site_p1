@@ -286,7 +286,7 @@ function populateChinaImportDropdowns() {
   
   
   leftColumn.value = "ConsigneeStateRegion";
-  rightColumn.value = "ConsigneeCountry";
+  rightColumn.value = "ShipmentOrigin";
   linkType.value = "ValueOfGoodsUSD";
   
 } //populateChinaImportDropdowns

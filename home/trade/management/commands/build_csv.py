@@ -35,7 +35,7 @@ class Command(BaseCommand):
 
         with open(options['path']) as csvfile:
             reader = csv.reader(csvfile)
-            next(reader)
+            next(reader)  # skip column name row
             parser = parser_cls(reader)
             output = parser.process_scores()
 

@@ -1,11 +1,7 @@
   <div class="col">
     <dl>
-      <dt>Shipper Name</dt>
-      <dd>{{ object.shippername }}</dd>
       <dt>Shipper Location</dt>
       <dd>{{ object.shippercity }}{% if object.shippercity and object.shipperstateregion %}, {% endif %}{{ object.shipperstateregion }}{% if object.shipperstateregion and object.shippercountry %}, {% endif %}{{ object.shippercountry }}</dd>
-      <dt>Shipper Parent Name</dt>
-      <dd>{{ object.shipperultimateparentname }}</dd>
       <dt>Port of Unlading</dt>
       <dd>{{ object.portofunlading }}{% if object.portofunlading and object.portofunladingcountry %}, {% endif %}{{ object.portofunladingcountry }}</dd>
       <dt>Goods Shipped</dt>

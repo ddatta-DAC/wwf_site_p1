@@ -8,7 +8,10 @@ $(document).ready(function () {
     method: 'GET',
     success: function (data) {
       mainTable = buildTable({
-        data
+        data,
+        getData: {
+          hide_compare: true,  // hiding compare until new query resolved
+        },
       });
     },
     error: function (error) {

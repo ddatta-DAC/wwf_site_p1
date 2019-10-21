@@ -6,7 +6,7 @@ from django.views import View
 from django.views.generic.detail import DetailView, BaseDetailView
 
 from .management.commands.parsers import ChinaImportParser, ChinaExportParser, PeruExportParser, UsImportParser
-from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs
+from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs, Flags
 from .tasks import rebuild_csv
 
 
@@ -139,10 +139,19 @@ class BaseExpandedRowView(DetailView):
         except self.thumbs_cls.DoesNotExist:
             pass
 
+        flags = []
+        try:
+            flags_obj = Flags.objects.get(
+                panjivarecordid=self.object.panjivarecordid)
+            flags = flags_obj.to_pretty_list()
+        except Flags.DoesNotExist:
+            pass
+
         context['hide_all'] = 'hide' in self.request.GET
         context['hide_compare'] = 'hide_compare' in self.request.GET
         context['comment'] = comment
         context['thumbs'] = thumbs
+        context['flags'] = flags
         context['track_name'] = self.track_name
         return context
 

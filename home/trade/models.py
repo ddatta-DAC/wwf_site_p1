@@ -165,3 +165,43 @@ class UsImportThumbs(models.Model):
         max_length=5,
         choices=THUMBS_CHOICES,
         default="clear")
+
+
+class Flags(models.Model):
+    panjivarecordid = models.BigIntegerField(primary_key=True)
+    leb = models.BooleanField(default=False)  # LEB
+    cites = models.BooleanField(default=False)  # CITES
+    high = models.BooleanField(default=False)  # WWF_HighRisk
+    iucn = models.BooleanField(default=False)  # IUCN RedList
+    lacey = models.BooleanField(default=False)  # Lacey Act
+    text = models.BooleanField(default=False)  # Text_Keyword
+
+    pretty_list = {
+        "leb": "LEB",
+        "cites": "CITES",
+        "high": "WWF High Risk",
+        "iucn": "IUCN Red List",
+        "lacey": "Lacey Act",
+        "text": "Text Keyword",
+    }
+
+    class Meta:
+        verbose_name = "Flags"
+        verbose_name_plural = "Flags"
+
+    def to_pretty_list(self):
+        for flag in ["cites", "iucn", "lacey", "leb", "text", "high"]:
+            if getattr(self, flag):
+                yield self.pretty_list[flag]
+
+    def __str__(self):
+        return "{} {} {} {} {} {} {}".format(
+            self.panjivarecordid,
+            self.leb,
+            self.cites,
+            self.high,
+            self.iucn,
+            self.lacey,
+            self.text
+        )
+    

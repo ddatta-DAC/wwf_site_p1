@@ -12,6 +12,7 @@ from trade.models import (
     UsImportComment,
     UsImportThumbs,
 )
+from trade.forms import FlagsForm
 
 
 def custom_format(instance, field):
@@ -205,6 +206,7 @@ class BaseParserV2(object):
                 )
                 for index, flag_name in self.flag_indexes.items()
             ]
+            FlagsForm.insert_from_csv_v2(self.scores[str(instance.panjivarecordid)])
 
             data.append(
                 score_value

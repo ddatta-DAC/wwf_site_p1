@@ -1,0 +1,9 @@
+<dt>Human Defined Factors</dt>
+  <ul style="list-style-type:none;padding-inline-start:1em">
+    {% for flag in flags %}
+      <li><i class="far fa-times-circle" style="color:red"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ flag }}</li>
+    {% empty %}
+      <li>None</li>
+    {% endfor %}
+  </ul>
+</dl>

@@ -2,7 +2,8 @@
 *.log
 db.sqlite3
 huey.db
-home/static/china_import.json
-home/static/china_export.json
-home/static/peru_export.json
-home/static/us_import.json
+home/home/static/china_import.json
+home/home/static/china_export.json
+home/home/static/peru_export.json
+home/home/static/us_import.json
+home/trade/data

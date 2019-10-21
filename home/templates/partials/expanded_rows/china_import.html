@@ -1,7 +1,9 @@
   <div class="col">
     <dl>
+      {% if object.consigneecity %}
       <dt>Consignee City</dt>
       <dd>{{ object.consigneecity }}</dd>
+      {% endif %}
       <dt>Province</dt>
       <dd>{{ object.province }}</dd>
       <dt>Admin Region</dt>

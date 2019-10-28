@@ -2,9 +2,9 @@
     <dl>
       <dt>Admin Region</dt>
       <dd>{{ object.adminregion }}</dd>
-      <dt>panjivarecordid</dt>
-      <dd> {{ object.panjivarecordid }}</dd>
-      {% include "partials/expanded_rows/_human_defined_factors.html" %}
+      <dt>Panjiva Record ID</dt>
+      <dd><code>{{ object.panjivarecordid }}</code></dd>
+      {% include "partials/expanded_rows/_human_defined_factors.html" with text_label="HS Code" %}
     </dl>
   </div>
   <div class="col">

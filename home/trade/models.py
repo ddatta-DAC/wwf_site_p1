@@ -182,7 +182,7 @@ class Flags(models.Model):
         "high": "WWF High Risk",
         "iucn": "IUCN Red List",
         "lacey": "Lacey Act",
-        "text": "Text Keyword",
+        "text": "text",  # leave text for template to resolve
     }
 
     class Meta:

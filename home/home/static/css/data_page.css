@@ -103,3 +103,10 @@ section.content-section {
 .link:hover {
   stroke-opacity: .5;
 }
+
+
+dd code {
+  font-family: monospace;
+  font-size: 115%;
+  color: black;
+}

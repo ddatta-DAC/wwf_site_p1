@@ -10,9 +10,9 @@
       <dd>{{ object.carrier }}</dd>
       <dt>Place of Receipt</dt>
       <dd>{{ object.placeofreceipt }}</dd>
-      <dt>panjivarecordid</dt>
-      <dd> {{ object.panjivarecordid }}</dd>
-      {% include "partials/expanded_rows/_human_defined_factors.html" %}
+      <dt>Panjiva Record ID</dt>
+      <dd><code>{{ object.panjivarecordid }}</code></dd>
+      {% include "partials/expanded_rows/_human_defined_factors.html" with text_label="Goods Shipped" %}
     </dl>
   </div>
   <div class="col">

@@ -1,9 +1,11 @@
 <dt>Human Defined Factors</dt>
-  <ul style="list-style-type:none;padding-inline-start:1em">
+  {% if flags %}
+  <ul style="list-style-type:none;padding-inline-start:0">
     {% for flag in flags %}
-      <li><i class="far fa-times-circle" style="color:red"></i>&nbsp;&nbsp;&nbsp;&nbsp;{{ flag }}</li>
-    {% empty %}
-      <li>None</li>
+      <li><i class="fas fa-exclamation-circle"></i>&nbsp;&nbsp;&nbsp;{% if flag == "text" %}Check {{ text_label }}{% else %}{{ flag }}{% endif %}</li>
     {% endfor %}
   </ul>
+  {% else %}
+  <dd>None</dd>
+  {% endif %}
 </dl>

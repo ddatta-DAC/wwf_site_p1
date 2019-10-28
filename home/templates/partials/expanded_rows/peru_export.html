@@ -4,11 +4,9 @@
       <dd>{{ object.shippercity }}{% if object.shippercity and object.shipperstateregion %}, {% endif %}{{ object.shipperstateregion }}{% if object.shipperstateregion and object.shippercountry %}, {% endif %}{{ object.shippercountry }}</dd>
       <dt>Port of Unlading</dt>
       <dd>{{ object.portofunlading }}{% if object.portofunlading and object.portofunladingcountry %}, {% endif %}{{ object.portofunladingcountry }}</dd>
-      <dt>Goods Shipped</dt>
-      <dd>{{ object.goodsshipped }}</dd>
-      <dt>panjivarecordid</dt>
-      <dd> {{ object.panjivarecordid }}</dd>
-      {% include "partials/expanded_rows/_human_defined_factors.html" %}
+      <dt>Panjiva Record ID</dt>
+      <dd><code>{{ object.panjivarecordid }}</code></dd>
+      {% include "partials/expanded_rows/_human_defined_factors.html" with text_label="Goods Shipped" %}
     </dl>
   </div>
   <div class="col">
@@ -23,5 +21,7 @@
       <dd>{{ object.transportmethod }}</dd>
       <dt>Containerized</dt>
       <dd>{{ object.iscontainerized }}</dd>
+      <dt>Goods Shipped</dt>
+      <dd>{{ object.goodsshipped }}</dd>
     </dl>
   </div>

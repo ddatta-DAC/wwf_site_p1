@@ -110,3 +110,7 @@ dd code {
   font-size: 115%;
   color: black;
 }
+
+#analysis_table td {
+  vertical-align: middle;
+}

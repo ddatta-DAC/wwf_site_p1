@@ -1,6 +1,7 @@
 import json
 
 from django.apps import apps
+from django.conf import settings
 from django.http import JsonResponse, HttpResponseNotAllowed, Http404
 from django.views import View
 from django.views.generic.detail import DetailView, BaseDetailView
@@ -126,7 +127,9 @@ class BaseExpandedRowView(DetailView):
         comment = ''
         try:
             comment_obj = self.comment_cls.objects.get(
-                panjivarecordid=self.object.panjivarecordid)
+                panjivarecordid=self.object.panjivarecordid,
+                user=self.request.user
+            )
             comment = comment_obj.comment
         except self.comment_cls.DoesNotExist:
             pass
@@ -134,7 +137,9 @@ class BaseExpandedRowView(DetailView):
         thumbs = 'clear'
         try:
             thumbs_obj = self.thumbs_cls.objects.get(
-                panjivarecordid=self.object.panjivarecordid)
+                panjivarecordid=self.object.panjivarecordid,
+                user=self.request.user
+            )
             thumbs = thumbs_obj.thumbs
         except self.thumbs_cls.DoesNotExist:
             pass
@@ -196,7 +201,8 @@ class BaseUpdateView(View):
         return HttpResponseNotAllowed(['POST'])
 
     def post(self, request, track_name):
-        print(request.POST)
+        if settings.DEBUG:
+            print(request.POST)
 
         if track_name not in self.mapping:
             print("Figure out how to raise malformed request exception")
@@ -205,7 +211,10 @@ class BaseUpdateView(View):
         object_cls, transaction_cls = self.mapping[track_name]
         transaction = transaction_cls.objects.using('wwf').get(panjivarecordid=request.POST['panjivarecordid'])
 
-        obj = object_cls.objects.filter(panjivarecordid=transaction.panjivarecordid)
+        obj = object_cls.objects.filter(
+            panjivarecordid=transaction.panjivarecordid,
+            user=request.user
+        )
         if obj.exists():
             print("Trying to save changes")
             obj = obj[0]
@@ -214,6 +223,7 @@ class BaseUpdateView(View):
         else:
             kwargs = {
                 'panjivarecordid': transaction.panjivarecordid,
+                'user': request.user,
                 self.value_attr: request.POST[self.value_key]
             }
             object_cls.objects.create(**kwargs)

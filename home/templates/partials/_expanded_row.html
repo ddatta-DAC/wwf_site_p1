@@ -13,6 +13,13 @@
     {% if not hide_compare %}
       <a class="btn btn-outline-info mb-3" href="{% url 'anomaly' track_name=track_name panjivarecordid=object.panjivarecordid %}" role="button" target="_blank" rel="noopener">Compare with Constrasting Transactions</a>
     {% endif %}
+
+    {% if not user.is_authenticated %}
+    <div class="prompt-login d-flex align-items-center justify-content-center">
+      <a href="{% url "account_login" %}" class="p-4 btn btn-primary">Log in to leave feedback!</a>
+    </div>
+    {% endif %}
+
     <div class="form-group">
       <div>
         <label class="mr-2">
@@ -44,7 +51,9 @@
       </label>
       <textarea class="form-control" id="comments-text-area-{{ object.panjivarecordid }}" rows="3">{{ comment }}</textarea>
     </div>
-    <button type="button" class="btn btn-primary mb-3" onclick="submitComment('{{ object.panjivarecordid }}')">Submit comment</button>
+    <div class="text-center">
+      <button type="button" class="btn mb-3 {% if user.is_authenticated %}btn-primary{% else %}btn-outline-primary{% endif %}" onclick="submitComment('{{ object.panjivarecordid }}')">Submit comment</button>
+    </div>
     <i id="spin-{{ object.panjivarecordid }}" class="fas fa-spinner fa-pulse hidden"></i>
     <i id="check-{{ object.panjivarecordid }}" class="fas fa-check hidden"></i>
     <i id="error-{{ object.panjivarecordid }}" class="fas fa-times hidden"></i>

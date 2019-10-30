@@ -6,6 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+from django.conf import settings
 
 
 class ChinaExport(models.Model):
@@ -108,24 +109,33 @@ class UsImport(models.Model):
         db_table = 'us_import'
 
 
-class ChinaExportComment(models.Model):
+class Comment(models.Model):
     panjivarecordid = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    updated = models.DateTimeField(auto_now=True)
+
     comment = models.TextField()
 
-
-class ChinaImportComment(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    comment = models.TextField()
-
-
-class PeruExportComment(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    comment = models.TextField()
+    class Meta:
+        abstract = True
+        unique_together = ('user', 'panjivarecordid',)
 
 
-class UsImportComment(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    comment = models.TextField()
+class ChinaExportComment(Comment):
+    pass
+
+
+class ChinaImportComment(Comment):
+    pass
+
+
+class PeruExportComment(Comment):
+    pass
+
+
+class UsImportComment(Comment):
+    pass
+
 
 
 THUMBS_CHOICES = (
@@ -135,36 +145,36 @@ THUMBS_CHOICES = (
 )
 
 
-class ChinaExportThumbs(models.Model):
+class Thumbs(models.Model):
     panjivarecordid = models.BigIntegerField(primary_key=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    updated = models.DateTimeField(auto_now=True)
+
     thumbs = models.CharField(
         max_length=5,
         choices=THUMBS_CHOICES,
         default="clear")
 
-
-class ChinaImportThumbs(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    thumbs = models.CharField(
-        max_length=5,
-        choices=THUMBS_CHOICES,
-        default="clear")
+    class Meta:
+        abstract = True
+        unique_together = ('user', 'panjivarecordid',)
 
 
-class PeruExportThumbs(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    thumbs = models.CharField(
-        max_length=5,
-        choices=THUMBS_CHOICES,
-        default="clear")
+class ChinaExportThumbs(Thumbs):
+    pass
 
 
-class UsImportThumbs(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    thumbs = models.CharField(
-        max_length=5,
-        choices=THUMBS_CHOICES,
-        default="clear")
+class ChinaImportThumbs(Thumbs):
+    pass
+
+
+class PeruExportThumbs(Thumbs):
+    pass
+
+
+class UsImportThumbs(Thumbs):
+    pass
+
 
 
 class Flags(models.Model):

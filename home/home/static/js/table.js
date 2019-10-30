@@ -113,6 +113,12 @@ function setThumbs(panjivarecordid) {
 
 function submitComment(panjivarecordid) {
   console.log(panjivarecordid);
+  var comment = $('#comments-text-area-' + panjivarecordid).val();
+  if (comment.length == 0) {
+    console.log("Cowardly refusing to update display to point out that we are not saving an empty comment.");
+    return;
+  }
+
   $('#spin-' + panjivarecordid).removeClass('hidden');
   $('#check-' + panjivarecordid).addClass('hidden')
   $('#error-' + panjivarecordid).addClass('hidden')
@@ -122,7 +128,7 @@ function submitComment(panjivarecordid) {
     method: 'POST',
     data: {
       panjivarecordid,
-      comment: $('#comments-text-area-' + panjivarecordid).val(),
+      comment: comment,
       csrfmiddlewaretoken: csrfToken,
     },
     success: function (data) {

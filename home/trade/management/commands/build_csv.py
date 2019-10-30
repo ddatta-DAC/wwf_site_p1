@@ -11,7 +11,7 @@ class Command(BaseCommand):
     """Builds the csv for running the anomaly table.
 
     Example:
-    ./manage.py build_csv china_import trade/data/china_import_scores.csv
+    ./manage.py build_csv china_export trade/data/v2/china_export_scores.csv
     """
 
     help = 'Builds the csv for the output file'

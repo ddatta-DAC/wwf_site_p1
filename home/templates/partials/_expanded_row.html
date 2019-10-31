@@ -47,7 +47,7 @@
       </div>
       <div>
         {% for th in all_thumbs %}
-          <p>Marked {{ th.thumbs }} by {{ th.user }} {{ th.updated|naturaltime }}</p>
+          <p class="feedback-wrap">Marked <span>{{ th.thumbs }}</span> by <span class="feedback-user">{{ th.user }}</span> <span class="feedback-time">({{ th.updated|naturaltime }})</span></p>
         {% endfor %}
       </div>
     </div>
@@ -62,7 +62,7 @@
       <button type="button" class="btn mb-3 {% if user.is_authenticated %}btn-primary{% else %}btn-outline-primary{% endif %}" onclick="submitComment('{{ object.panjivarecordid }}')">Submit comment</button>
     </div>
     {% for c in all_comments %}
-      <p>{{ c.comment }} - {{ c.user }} {{ c.updated|naturaltime }}</p>
+      <p class="feedback-wrap">{{ c.comment }} - <span class="feedback-user">{{ c.user }}</span> <span class="feedback-time">({{ c.updated|naturaltime }})</span></p>
     {% endfor %}
     <i id="spin-{{ object.panjivarecordid }}" class="fas fa-spinner fa-pulse hidden"></i>
     <i id="check-{{ object.panjivarecordid }}" class="fas fa-check hidden"></i>

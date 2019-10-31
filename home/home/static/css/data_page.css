@@ -131,3 +131,15 @@ dd code {
         rgba(0, 0, 0, 0.1) 10px);
   z-index: 10;
 }
+
+.feedback-time {
+  font-size: 12px;
+}
+
+.feedback-user {
+  font-weight: bold;
+}
+
+p.feedback-wrap {
+  margin-bottom: 0;
+}

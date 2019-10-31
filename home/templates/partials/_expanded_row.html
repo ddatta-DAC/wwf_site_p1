@@ -47,7 +47,7 @@
       </div>
       <div>
         {% for th in all_thumbs %}
-          <p class="feedback-wrap">Marked <span>{{ th.thumbs }}</span> by <span class="feedback-user">{{ th.user }}</span> <span class="feedback-time">({{ th.updated|naturaltime }})</span></p>
+          <p class="feedback-wrap">Marked <span>{{ th.thumbs|title }}</span> by <span class="feedback-user">{{ th.user }}</span> <span class="feedback-time">({{ th.updated|naturaltime }})</span></p>
         {% endfor %}
       </div>
     </div>

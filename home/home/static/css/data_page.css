@@ -143,3 +143,11 @@ dd code {
 p.feedback-wrap {
   margin-bottom: 0;
 }
+
+.page-title {
+  color: white;
+}
+
+.page-title:hover {
+  color: #FFE6AA;
+}

@@ -1,14 +1,18 @@
 <a class="menu-toggle rounded" id="toggle_sidebar" href="#">
     <i class="fas fa-bars" >
-    <span>Menu</span></i>
+    <span>{% if user.is_authenticated %}&nbsp;{{ user }}{% else %}Menu{% endif %}</span></i>
   </a>
   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="#"></a>
+        <!--<a class="js-scroll-trigger" href="#"></a>-->
       </li>
-      <li class="sidebar-brand">
-        <a class="js-scroll-trigger" href="{% url 'data_home' %}"> Home </a>
+      <li class="sidebar-top-level">
+        {% if user.is_authenticated %}
+          <a class="js-scroll-trigger" href="{% url 'account_logout' %}"> Log out </a>
+        {% else %}
+          <a class="js-scroll-trigger" href="{% url 'account_login' %}"> Log in </a>
+        {% endif %}
       </li>
       <li class="sidebar-nav-item">
         <a class="js-scroll-trigger" href="{% url 'track' 'china_import' %}">China Import</a>

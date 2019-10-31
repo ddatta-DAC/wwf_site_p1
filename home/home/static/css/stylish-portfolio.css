@@ -148,9 +148,18 @@ h6 {
   padding: 15px;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li.sidebar-top-level a {
+  display: block;
   text-decoration: none;
   color: #fff;
+  padding: 15px;
+  background: rgba(52, 58, 64, 0.1);
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #FFE6AA;
+  font-weight: bold;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -200,6 +209,11 @@ h6 {
 
 .menu-toggle:focus, .menu-toggle:hover {
   color: #fff;
+}
+
+
+#toggle_sidebar:hover {
+  color: #FFE6AA;
 }
 
 .menu-toggle:hover {

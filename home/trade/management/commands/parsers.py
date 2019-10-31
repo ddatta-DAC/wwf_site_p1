@@ -1,16 +1,18 @@
-from trade.models import (
-    ChinaImport,
+from feedback.models import (
     ChinaImportComment,
     ChinaImportThumbs,
-    ChinaExport,
     ChinaExportComment,
     ChinaExportThumbs,
-    PeruExport,
     PeruExportComment,
     PeruExportThumbs,
-    UsImport,
     UsImportComment,
     UsImportThumbs,
+)
+from trade.models import (
+    ChinaImport,
+    ChinaExport,
+    PeruExport,
+    UsImport,
 )
 from trade.forms import FlagsForm
 

@@ -109,63 +109,63 @@ class UsImport(models.Model):
         db_table = 'us_import'
 
 
-class Comment(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    comment = models.TextField()
+# class Comment(models.Model):
+#     panjivarecordid = models.BigIntegerField(primary_key=True)
+#     comment = models.TextField()
 
-    class Meta:
-        abstract = True
-
-
-class ChinaExportComment(Comment):
-    pass
+#     class Meta:
+#         abstract = True
 
 
-class ChinaImportComment(Comment):
-    pass
+# class ChinaExportComment(Comment):
+#     pass
 
 
-class PeruExportComment(Comment):
-    pass
+# class ChinaImportComment(Comment):
+#     pass
 
 
-class UsImportComment(Comment):
-    pass
+# class PeruExportComment(Comment):
+#     pass
+
+
+# class UsImportComment(Comment):
+#     pass
 
 
 
-THUMBS_CHOICES = (
-    ('yes', 'Yes'),
-    ('no', 'No'),
-    ('clear', 'Clear'),
-)
+# THUMBS_CHOICES = (
+#     ('yes', 'Yes'),
+#     ('no', 'No'),
+#     ('clear', 'Clear'),
+# )
 
 
-class Thumbs(models.Model):
-    panjivarecordid = models.BigIntegerField(primary_key=True)
-    thumbs = models.CharField(
-        max_length=5,
-        choices=THUMBS_CHOICES,
-        default="clear")
+# class Thumbs(models.Model):
+#     panjivarecordid = models.BigIntegerField(primary_key=True)
+#     thumbs = models.CharField(
+#         max_length=5,
+#         choices=THUMBS_CHOICES,
+#         default="clear")
 
-    class Meta:
-        abstract = True
-
-
-class ChinaExportThumbs(Thumbs):
-    pass
+#     class Meta:
+#         abstract = True
 
 
-class ChinaImportThumbs(Thumbs):
-    pass
+# class ChinaExportThumbs(Thumbs):
+#     pass
 
 
-class PeruExportThumbs(Thumbs):
-    pass
+# class ChinaImportThumbs(Thumbs):
+#     pass
 
 
-class UsImportThumbs(Thumbs):
-    pass
+# class PeruExportThumbs(Thumbs):
+#     pass
+
+
+# class UsImportThumbs(Thumbs):
+#     pass
 
 
 

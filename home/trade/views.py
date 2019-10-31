@@ -7,8 +7,18 @@ from django.views import View
 from django.views.generic.detail import DetailView, BaseDetailView
 
 from .management.commands.parsers import ChinaImportParser, ChinaExportParser, PeruExportParser, UsImportParser
-from .models import ChinaExport, PeruExport, UsImport, ChinaImport, ChinaExportComment, ChinaImportComment, PeruExportComment, UsImportComment, ChinaExportThumbs, ChinaImportThumbs, PeruExportThumbs, UsImportThumbs, Flags
+from .models import ChinaExport, PeruExport, UsImport, ChinaImport, Flags
 from .tasks import rebuild_csv
+from feedback.models import (
+    ChinaExportComment,
+    ChinaImportComment,
+    PeruExportComment,
+    UsImportComment,
+    ChinaExportThumbs,
+    ChinaImportThumbs,
+    PeruExportThumbs,
+    UsImportThumbs
+)
 
 
 def format(instance, field):

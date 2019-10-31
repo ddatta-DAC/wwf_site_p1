@@ -157,10 +157,12 @@ class BaseExpandedRowView(DetailView):
         all_thumbs = self.thumbs_cls.objects.filter(panjivarecordid=self.object.panjivarecordid)
 
         flags = []
+        text_flag = False
         try:
             flags_obj = Flags.objects.get(
                 panjivarecordid=self.object.panjivarecordid)
             flags = flags_obj.to_pretty_list()
+            text_flag = flags_obj.text
         except Flags.DoesNotExist:
             pass
 
@@ -170,6 +172,7 @@ class BaseExpandedRowView(DetailView):
             "comment": comment,
             "thumbs": thumbs,
             "flags": flags,
+            "text_flag": text_flag,
             "track_name": self.track_name,
             "all_comments": all_comments,
             "all_thumbs": all_thumbs

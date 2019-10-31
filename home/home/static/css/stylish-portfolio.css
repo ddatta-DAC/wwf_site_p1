@@ -405,8 +405,12 @@ a:hover, a:focus, a:active {
 }
 
 #toggle_sidebar.menu-toggle{
-  width: 25vh !important;
+  width: 200px !important;
   height: none;
+}
+
+.first-nav-item {
+  border-top: white 1px solid;
 }
 
 .container .row .container_row_content{

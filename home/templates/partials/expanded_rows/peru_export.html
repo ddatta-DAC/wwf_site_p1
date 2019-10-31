@@ -6,7 +6,11 @@
       <dd>{{ object.portofunlading }}{% if object.portofunlading and object.portofunladingcountry %}, {% endif %}{{ object.portofunladingcountry }}</dd>
       <dt>Panjiva Record ID</dt>
       <dd><code>{{ object.panjivarecordid }}</code></dd>
-      {% include "partials/expanded_rows/_human_defined_factors.html" with text_label="Goods Shipped" %}
+      {% include "partials/expanded_rows/_human_defined_factors.html" %}
+      {% if text_flag %}
+      <dt>Keyword Match?</dt>
+      <dd><i class="fas fa-exclamation-circle" style="color:red"></i>&nbsp;&nbsp;&nbsp;Check Goods Shipped</dd>
+      {% endif %}
     </dl>
   </div>
   <div class="col">

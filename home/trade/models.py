@@ -184,7 +184,7 @@ class Flags(models.Model):
         "high": "WWF High Risk",
         "iucn": "IUCN Red List",
         "lacey": "Lacey Act",
-        "text": "text",  # leave text for template to resolve
+        # "text": "text",  # leave text for template to resolve
     }
 
     class Meta:
@@ -192,7 +192,7 @@ class Flags(models.Model):
         verbose_name_plural = "Flags"
 
     def to_pretty_list(self):
-        for flag in ["cites", "iucn", "lacey", "leb", "text", "high"]:
+        for flag in ["cites", "iucn", "lacey", "leb", "high"]:
             if getattr(self, flag):
                 yield self.pretty_list[flag]
 

@@ -2,7 +2,7 @@
   {% if flags %}
   <ul style="list-style-type:none;padding-inline-start:0">
     {% for flag in flags %}
-      <li><i class="fas fa-exclamation-circle"></i>&nbsp;&nbsp;&nbsp;{% if flag == "text" %}Check {{ text_label }}{% else %}{{ flag }}{% endif %}</li>
+      <li><i class="fas fa-times-circle" style="color:red"></i>&nbsp;&nbsp;&nbsp;{{ flag }}</li>
     {% endfor %}
   </ul>
   {% else %}

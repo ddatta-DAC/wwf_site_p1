@@ -136,22 +136,24 @@ class BaseExpandedRowView(DetailView):
         context = super().get_context_data(**kwargs)
         comment = ''
         try:
-            comment_obj = self.comment_cls.objects.get(
-                panjivarecordid=self.object.panjivarecordid,
-                user=self.request.user
-            )
-            comment = comment_obj.comment
+            if self.request.user.is_authenticated:
+                comment_obj = self.comment_cls.objects.get(
+                    panjivarecordid=self.object.panjivarecordid,
+                    user=self.request.user
+                )
+                comment = comment_obj.comment
         except self.comment_cls.DoesNotExist:
             pass
         all_comments = self.comment_cls.objects.filter(panjivarecordid=self.object.panjivarecordid)
 
         thumbs = 'clear'
         try:
-            thumbs_obj = self.thumbs_cls.objects.get(
-                panjivarecordid=self.object.panjivarecordid,
-                user=self.request.user
-            )
-            thumbs = thumbs_obj.thumbs
+            if self.request.user.is_authenticated:
+                thumbs_obj = self.thumbs_cls.objects.get(
+                    panjivarecordid=self.object.panjivarecordid,
+                    user=self.request.user
+                )
+                thumbs = thumbs_obj.thumbs
         except self.thumbs_cls.DoesNotExist:
             pass
         all_thumbs = self.thumbs_cls.objects.filter(panjivarecordid=self.object.panjivarecordid)

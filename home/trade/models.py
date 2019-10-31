@@ -111,14 +111,10 @@ class UsImport(models.Model):
 
 class Comment(models.Model):
     panjivarecordid = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    updated = models.DateTimeField(auto_now=True)
-
     comment = models.TextField()
 
     class Meta:
         abstract = True
-        unique_together = ('user', 'panjivarecordid',)
 
 
 class ChinaExportComment(Comment):
@@ -147,9 +143,6 @@ THUMBS_CHOICES = (
 
 class Thumbs(models.Model):
     panjivarecordid = models.BigIntegerField(primary_key=True)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    updated = models.DateTimeField(auto_now=True)
-
     thumbs = models.CharField(
         max_length=5,
         choices=THUMBS_CHOICES,
@@ -157,7 +150,6 @@ class Thumbs(models.Model):
 
     class Meta:
         abstract = True
-        unique_together = ('user', 'panjivarecordid',)
 
 
 class ChinaExportThumbs(Thumbs):

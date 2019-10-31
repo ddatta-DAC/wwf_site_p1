@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <div class="expanded-row row">
   {% if track_name == 'china_import' %}
     {% include "partials/expanded_rows/china_import.html" %}
@@ -42,6 +44,11 @@
           <input onchange="setThumbs('{{ object.panjivarecordid }}')" type="radio" name="options" value="clear" id="option3" autocomplete="off" {% if thumbs == 'clear' %}checked{% endif %}>
           <i class="fas fa-ban"></i> Clear
         </label>
+      </div>
+      <div>
+        {% for th in all_thumbs %}
+          <p>Marked {{ th.thumbs }} by {{ th.user }} {{ th.updated|naturaltime }}</p>
+        {% endfor %}
       </div>
     </div>
     {% endif %}

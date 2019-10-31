@@ -133,6 +133,7 @@ class BaseExpandedRowView(DetailView):
             comment = comment_obj.comment
         except self.comment_cls.DoesNotExist:
             pass
+        all_comments = self.comment_cls.objects.filter(panjivarecordid=self.object.panjivarecordid)
 
         thumbs = 'clear'
         try:
@@ -143,6 +144,7 @@ class BaseExpandedRowView(DetailView):
             thumbs = thumbs_obj.thumbs
         except self.thumbs_cls.DoesNotExist:
             pass
+        all_thumbs = self.thumbs_cls.objects.filter(panjivarecordid=self.object.panjivarecordid)
 
         flags = []
         try:
@@ -152,12 +154,16 @@ class BaseExpandedRowView(DetailView):
         except Flags.DoesNotExist:
             pass
 
-        context['hide_all'] = 'hide' in self.request.GET
-        context['hide_compare'] = 'hide_compare' in self.request.GET
-        context['comment'] = comment
-        context['thumbs'] = thumbs
-        context['flags'] = flags
-        context['track_name'] = self.track_name
+        context.update({
+            "hide_all": 'hide' in self.request.GET,
+            "hide_compare": 'hide_compare' in self.request.GET,
+            "comment": comment,
+            "thumbs": thumbs,
+            "flags": flags,
+            "track_name": self.track_name,
+            "all_comments": all_comments,
+            "all_thumbs": all_thumbs
+        })
         return context
 
     def render_to_response(self, context, *args, **kwargs):

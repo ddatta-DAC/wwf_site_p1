@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
     'crispy_forms',
     'huey.contrib.djhuey',
     'allauth',
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'trade',
+    'feedback',
 ]
 
 if DEBUG:

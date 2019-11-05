@@ -18,7 +18,7 @@ class TradeConfig(AppConfig):
 
     def load_csv(self, filename):
         output = []
-        scores_file = os.path.join(settings.BASE_DIR, 'trade', 'data', filename)
+        scores_file = os.path.join(settings.BASE_DIR, 'trade', 'data', 'v2', filename)
         with open(scores_file, 'r') as file:
             csvreader = csv.reader(file)
             next(csvreader)

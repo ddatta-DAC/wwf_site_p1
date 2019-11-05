@@ -30,6 +30,9 @@ var svg = d3.select("#chart")
 var sankey = d3.sankey();
 var path = sankey.link();
 
+$('#nav-home-tab').on('shown.bs.tab', function (e) {
+  redraw();
+});
 
 /**
 * The function that actually draws the Sankey

@@ -172,12 +172,16 @@ class AnomalyView(DetailView):
 
         if self.kwargs['track_name'] == 'china_import':
             context['track_type_name'] = 'China Import'
+            context['criteria_list'] = "Consignee, Shipment Origin, Country of Sale"
         elif self.kwargs['track_name'] == 'china_export':
             context['track_type_name'] = 'China Export'
+            context['criteria_list'] = "Shipper, Destination, Country of Sale"
         elif self.kwargs['track_name'] == 'peru_export':
             context['track_type_name'] = 'Peru Export'
+            context['criteria_list'] = "Shipper Name, Destination, Port of Unlading"
         elif self.kwargs['track_name'] == 'us_import':
             context['track_type_name'] = 'US Import'
+            context['criteria_list'] = "Consignee, Shipper, Shipment Origin"
 
         context['track_name'] = self.kwargs['track_name']
         context['anomaly'] = anomaly_data

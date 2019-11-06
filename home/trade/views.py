@@ -92,13 +92,13 @@ class AnomalyApiView(BaseDetailView):
                 hscode=self.object.hscode
             )
             style = [{
-                "i": 2,
+                "i": 1,
                 "value": self.object.shipperpanjivaid,
             }, {
-                "i": 3,
+                "i": 2,
                 "value": self.object.shipmentdestination,
             }, {
-                "i": 4,
+                "i": 3,
                 "value": self.object.countryofsale,
             }]
         elif self.kwargs['track_name'] == 'peru_export':

@@ -30,7 +30,7 @@ $(document).ready(function () {
         datatablesSettings: {
           createdRow: function ( row, data, index ) {
             response.style.forEach(function (pair) {
-              console.log(data[pair.i], "==", pair.value);
+              // console.log(data[pair.i], "==", pair.value);
               if (data[pair.i] == pair.value) {
                 $('td', row).eq(pair.i + 1).addClass('highlight');
               }

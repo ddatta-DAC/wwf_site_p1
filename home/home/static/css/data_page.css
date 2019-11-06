@@ -151,3 +151,7 @@ p.feedback-wrap {
 .page-title:hover {
   color: #FFE6AA;
 }
+
+td.highlight {
+  font-weight: bold;
+}

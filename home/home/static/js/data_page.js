@@ -10,7 +10,7 @@ $(document).ready(function () {
       mainTable = buildTable({
         data,
         getData: {
-          hide_compare: true,  // hiding compare until new query resolved
+          // hide_compare: true,  // hiding compare until new query resolved
         },
       });
     },

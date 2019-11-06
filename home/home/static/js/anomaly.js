@@ -20,12 +20,22 @@ $(document).ready(function () {
   $.ajax({
     url: anomalyUrl, 
     method: 'GET',
-    success: function (data) {
+    success: function (response) {
       // buildTable(data);
       mainTable = buildTable({
-        data: data,
+        data: response.data,
         getData: {
           hide: true
+        },
+        datatablesSettings: {
+          createdRow: function ( row, data, index ) {
+            response.style.forEach(function (pair) {
+              console.log(data[pair.i], "==", pair.value);
+              if (data[pair.i] == pair.value) {
+                $('td', row).eq(pair.i + 1).addClass('highlight');
+              }
+            });
+          }
         }
       })
     },

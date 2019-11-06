@@ -13,6 +13,7 @@ from trade.models import (
     ChinaExport,
     PeruExport,
     UsImport,
+    Flags,
 )
 from trade.forms import FlagsForm
 
@@ -163,15 +164,18 @@ class BaseParserV2(object):
         10: "fl-text",  # Text_Keyword
     }
 
-    def __init__(self, iterable):
+    def __init__(self, iterable, skip_scores=False):
         super(BaseParserV2, self).__init__()
 
         # Sort rows and keep 10,000 with highest scores
+        self.scores = {}
         _scores = []
         for row in iterable:
             _scores.append(row)
 
-        _scores = sorted(_scores, reverse=True, key=lambda x: x[self.score_index])
+        if not skip_scores:
+            _scores = sorted(_scores, reverse=True, key=lambda x: x[self.score_index])
+
         for row in _scores[:10000]:
             self.scores[row[0]] = row
 
@@ -194,21 +198,40 @@ class BaseParserV2(object):
         for instance in self.model_cls.objects.using("wwf").filter(
             panjivarecordid__in=ids
         ):
-            score_value = [
-                "{:.3f}".format(
-                    float(self.scores[str(instance.panjivarecordid)][self.score_index])
-                )
-            ]
-            if skip_scores:
-                score_value = []
+            # print("Processing scores for {}".format(instance.panjivarecordid))
+            score_value = []
+            if not skip_scores:
+                score_value = [
+                    "{:.3f}".format(
+                        float(self.scores[str(instance.panjivarecordid)][self.score_index])
+                    )
+                ]
 
-            flags = [
-                "{}-{}".format(
-                    flag_name, self.scores[str(instance.panjivarecordid)][index]
-                )
-                for index, flag_name in self.flag_indexes.items()
-            ]
-            FlagsForm.insert_from_csv_v2(self.scores[str(instance.panjivarecordid)])
+                flags = [
+                    "{}-{}".format(
+                        flag_name, self.scores[str(instance.panjivarecordid)][index]
+                    )
+                    for index, flag_name in self.flag_indexes.items()
+                ]
+                FlagsForm.insert_from_csv_v2(self.scores[str(instance.panjivarecordid)])
+            else:
+                try:
+                    flags_obj = Flags.objects.get(panjivarecordid=instance.panjivarecordid)
+                except Flags.DoesNotExist:
+                    flags_obj = Flags()
+                flags = [
+                    "{}-{}".format(
+                        flag_name, '1' if getattr(flags_obj, flag_attr) else '0'
+                    )
+                    for flag_name, flag_attr in {
+                        "fl-leb": "leb",
+                        "fl-cites": "cites",
+                        "fl-high": "high",
+                        "fl-iucn": "iucn",
+                        "fl-lacey": "lacey",
+                        "fl-text": "text",
+                    }.items()
+                ]
 
             data.append(
                 score_value

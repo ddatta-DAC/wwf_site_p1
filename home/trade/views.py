@@ -2,6 +2,7 @@ import json
 
 from django.apps import apps
 from django.conf import settings
+from django.db.models import Q
 from django.http import JsonResponse, HttpResponseNotAllowed, Http404
 from django.views import View
 from django.views.generic.detail import DetailView, BaseDetailView
@@ -66,20 +67,47 @@ class AnomalyApiView(BaseDetailView):
         return None
 
     def render_to_response(self, context, *args, **kwargs):
-        record = None
-        for row in self.scores:
-            if row[0] == self.kwargs['panjivarecordid']:
-                record = row
-                break
+        if self.kwargs['track_name'] == 'china_export':
+            objects = self.get_queryset().filter(
+                ~Q(panjivarecordid=self.object.panjivarecordid) & (
+                    Q(shipperpanjivaid=self.object.shipperpanjivaid) |
+                    Q(countryofsale=self.object.countryofsale) |
+                    Q(shipmentdestination=self.object.shipmentdestination)
+                ),
+                hscode=self.object.hscode
+            )
 
-        if record is None:
-            return JsonResponse({
-                'status': '404'
-            })
-
-        parser = self.parser_cls([[pid, 0] for pid in record[self.list_i].split(';')])
+        parser = self.parser_cls([[obj.panjivarecordid, 0] for obj in objects], skip_scores=True)
         output = parser.process_scores(skip_scores=True)
-        return JsonResponse(output)
+        return JsonResponse({
+            "data": output,
+            "style": [{
+                "i": 1,
+                "value": self.object.shipperpanjivaid,
+            }, {
+                "i": 2,
+                "value": self.object.countryofsale,
+            }, {
+                "i": 3,
+                "value": self.object.shipmentdestination,
+            }]
+        })
+
+    # def foobar(self, context, *args, **kwargs):
+    #     record = None
+    #     for row in self.scores:
+    #         if row[0] == self.kwargs['panjivarecordid']:
+    #             record = row
+    #             break
+
+    #     if record is None:
+    #         return JsonResponse({
+    #             'status': '404'
+    #         })
+
+    #     parser = self.parser_cls([[pid, 0] for pid in record[self.list_i].split(';')])
+    #     output = parser.process_scores(skip_scores=True)
+    #     return JsonResponse(output)
 
 
 class AnomalyView(DetailView):
@@ -106,7 +134,7 @@ class AnomalyView(DetailView):
         context = super().get_context_data(**kwargs)
 
         fake_iterable = [[self.kwargs['panjivarecordid'], 0]]
-        parser = self.parser_cls(fake_iterable)
+        parser = self.parser_cls(fake_iterable, skip_scores=True)
         output = parser.process_scores(skip_scores=True)
         anomaly_data = json.dumps(output)
 

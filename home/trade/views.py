@@ -46,28 +46,43 @@ class AnomalyApiView(BaseDetailView):
 
         if self.kwargs['track_name'] == 'china_import':
             self.parser_cls = ChinaImportParser
-            self.scores = trade_config.get_china_import()
-            self.list_i = 4
+            # self.scores = trade_config.get_china_import()
             return ChinaImport.objects.using('wwf').all()
         elif self.kwargs['track_name'] == 'china_export':
             self.parser_cls = ChinaExportParser
-            self.scores = trade_config.get_china_export()
-            self.list_i = 3
+            # self.scores = trade_config.get_china_export()
             return ChinaExport.objects.using('wwf').all()
         elif self.kwargs['track_name'] == 'peru_export':
             self.parser_cls = PeruExportParser
-            self.scores = trade_config.get_peru_export()
-            self.list_i = 4
+            # self.scores = trade_config.get_peru_export()
             return PeruExport.objects.using('wwf').all()
         elif self.kwargs['track_name'] == 'us_import':
             self.parser_cls = UsImportParser
-            self.scores = trade_config.get_us_import()
-            self.list_i = 3
+            # self.scores = trade_config.get_us_import()
             return UsImport.objects.using('wwf').all()
         return None
 
     def render_to_response(self, context, *args, **kwargs):
-        if self.kwargs['track_name'] == 'china_export':
+        if self.kwargs['track_name'] == 'china_import':
+            objects = self.get_queryset().filter(
+                ~Q(panjivarecordid=self.object.panjivarecordid) & (
+                    Q(consigneepanjivaid=self.object.consigneepanjivaid) |
+                    Q(countryofsale=self.object.countryofsale) |
+                    Q(shipmentorigin=self.object.shipmentorigin)
+                ),
+                hscode=self.object.hscode
+            )
+            style = [{
+                "i": 3,
+                "value": self.object.consigneepanjivaid,
+            }, {
+                "i": 4,
+                "value": self.object.shipmentorigin,
+            }, {
+                "i": 5,
+                "value": self.object.countryofsale,
+            }]
+        elif self.kwargs['track_name'] == 'china_export':
             objects = self.get_queryset().filter(
                 ~Q(panjivarecordid=self.object.panjivarecordid) & (
                     Q(shipperpanjivaid=self.object.shipperpanjivaid) |
@@ -76,38 +91,55 @@ class AnomalyApiView(BaseDetailView):
                 ),
                 hscode=self.object.hscode
             )
+            style = [{
+                "i": 2,
+                "value": self.object.shipperpanjivaid,
+            }, {
+                "i": 3,
+                "value": self.object.shipmentdestination,
+            }, {
+                "i": 4,
+                "value": self.object.countryofsale,
+            }]
+        elif self.kwargs['track_name'] == 'peru_export':
+            objects = self.get_queryset().filter(
+                ~Q(panjivarecordid=self.object.panjivarecordid) & (
+                    Q(shippername=self.object.shippername) |
+                    Q(shipmentdestination=self.object.shipmentdestination) |
+                    Q(portofunlading=self.object.portofunlading)
+                ),
+                hscode=self.object.hscode
+            )
+            style = [{
+                "i": 2,
+                "value": self.object.shipmentdestination,
+            }]
+        elif self.kwargs['track_name'] == 'us_import':
+            objects = self.get_queryset().filter(
+                ~Q(panjivarecordid=self.object.panjivarecordid) & (
+                    Q(consigneepanjivaid=self.object.consigneepanjivaid) |
+                    Q(shipperpanjivaid=self.object.shipperpanjivaid) |
+                    Q(shipmentorigin=self.object.shipmentorigin)
+                ),
+                hscode=self.object.hscode
+            )
+            style = [{
+                "i": 2,
+                "value": self.object.consigneepanjivaid,
+            }, {
+                "i": 3,
+                "value": self.object.shipperpanjivaid,
+            }, {
+                "i": 4,
+                "value": self.object.shipmentorigin,
+            }]
 
         parser = self.parser_cls([[obj.panjivarecordid, 0] for obj in objects], skip_scores=True)
         output = parser.process_scores(skip_scores=True)
         return JsonResponse({
             "data": output,
-            "style": [{
-                "i": 1,
-                "value": self.object.shipperpanjivaid,
-            }, {
-                "i": 2,
-                "value": self.object.countryofsale,
-            }, {
-                "i": 3,
-                "value": self.object.shipmentdestination,
-            }]
+            "style": style
         })
-
-    # def foobar(self, context, *args, **kwargs):
-    #     record = None
-    #     for row in self.scores:
-    #         if row[0] == self.kwargs['panjivarecordid']:
-    #             record = row
-    #             break
-
-    #     if record is None:
-    #         return JsonResponse({
-    #             'status': '404'
-    #         })
-
-    #     parser = self.parser_cls([[pid, 0] for pid in record[self.list_i].split(';')])
-    #     output = parser.process_scores(skip_scores=True)
-    #     return JsonResponse(output)
 
 
 class AnomalyView(DetailView):

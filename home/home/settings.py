@@ -138,6 +138,8 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+ACCOUNT_EMAIL_REQUIRED = True
+
 LOGIN_REDIRECT_URL = '/home'
 
 # Internationalization

@@ -201,3 +201,12 @@ LOGGING = {
         }
     }
 }
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' if DEBUG else 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT = 1025 if DEBUG else 587
+EMAIL_USE_TLS = not DEBUG
+
+EMAIL_HOST = env('DJANGO_EMAIL_HOST', default='localhost')
+EMAIL_HOST_USER = env('DJANGO_EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD = env('DJANGO_EMAIL_HOST_PASSWORD', default='')

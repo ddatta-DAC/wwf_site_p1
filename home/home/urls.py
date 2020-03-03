@@ -26,6 +26,7 @@ urlpatterns = [
     path('', views.home, name='data_home'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    path('invitations/', include('invitations.urls', namespace='invitations')),
     path('track/<slug:track_name>', views.data_home, name='track'),
     path('anomaly/<slug:track_name>/<slug:panjivarecordid>', AnomalyView.as_view(), name='anomaly'),
     path('api/anomaly/<slug:track_name>/<slug:panjivarecordid>', AnomalyApiView.as_view(), name='anomaly_api'),

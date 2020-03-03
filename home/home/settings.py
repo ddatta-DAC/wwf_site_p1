@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'invitations',
     'home',
     'trade',
     'feedback',
@@ -137,6 +138,12 @@ AUTHENTICATION_BACKENDS = (
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 )
+
+ACCOUNT_ADAPTER = 'invitations.models.InvitationsAdapter'
+
+INVITATIONS_INVITATION_EXPIRY = 30
+INVITATIONS_INVITATION_ONLY = True
+INVITATIONS_ACCEPT_INVITE_AFTER_SIGNUP = True
 
 ACCOUNT_EMAIL_REQUIRED = True
 

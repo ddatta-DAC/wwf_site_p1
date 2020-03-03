@@ -11,6 +11,7 @@ Possibly need
 ```
 ./manage.py migrate
 ./manage.py collectstatic
+pip install -r requirements.txt
 ```
 
 Definitely need

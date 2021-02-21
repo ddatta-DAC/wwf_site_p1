@@ -58,10 +58,11 @@ INSTALLED_APPS = [
     'trade',
     'feedback',
     'hitcounter',
+    'hitl',
 ]
 
 if DEBUG:
-    INSTALLED_APPS += ['debug_toolbar']
+    INSTALLED_APPS += ['django_extensions', 'debug_toolbar']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -106,6 +107,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'hitl': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'wwf.db'),
     },
     'wwf': env.db('DJANGO_MYSQL_URL')
 }

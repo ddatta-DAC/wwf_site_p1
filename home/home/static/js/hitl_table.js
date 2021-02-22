@@ -1,3 +1,5 @@
+var table;
+
 function buildEpochTable(attrs) {
   var data = attrs.data;
   var tableId = '#main_table';
@@ -5,31 +7,39 @@ function buildEpochTable(attrs) {
     tableId = attrs.selector;
   }
 
-  var settings = {
-    columns: data.columns,
-    order: [[ 9, "desc" ]]
-  };
+  if (!table) {
+    var settings = {
+      columns: data.columns,
+      order: [[ 9, "desc" ]]
+    };
 
-  var table = $(tableId).DataTable(settings);
+    table = $(tableId).DataTable(settings);
+  }
 
   table.rows.add(data.data).draw();
   
   return table;
 }
 
-var mainTable;
-$(document).ready(function () {
-  console.log("Need to get table data for epoch", $("#epochs").val());
+function fetchEpoch(epoch) {
   $.ajax({
-    url: `/api/epoch/${$("#epochs").val()}`, 
+    url: `/api/epoch/${epoch}`, 
     method: 'GET',
     success: function (data) {
       console.log(data);
-      mainTable = buildEpochTable(data);
+      buildEpochTable(data);
     },
     error: function (error) {
       console.error(error);
     }
   });
+}
 
+$(document).ready(function () {
+  fetchEpoch($("#epochs").val());
+
+  $("#epochs").on("change", function () {
+    fetchEpoch(this.value);
+    table.rows().remove().draw();
+  });
 });

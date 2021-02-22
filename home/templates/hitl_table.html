@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'css/hitl_table.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+
+<div>
+  <label for="epochs">Epochs</label>
+  <select id="epochs">
+    {% for epoch in object_list %}
+      <option value="{{ epoch.date|date:"Y-m-d" }}">{{ epoch.name }}</option>
+    {% endfor %}
+  </select>
+
+  <table class="table table-striped table-sm projections" id="main_table" class="display" width="100%"></table>
+
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+  <script src="{% static 'js/hitl_table.js' %}"></script>
+{% endblock scripts %}

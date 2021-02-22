@@ -19,7 +19,7 @@ from django.urls import path, include
 
 from . import views
 from trade.views import get_results, AnomalyView, AnomalyApiView, SubmitThumbsView, SubmitCommentView, ChinaImportExpandRowView, ChinaExportExpandRowView, PeruExportExpandRowView, UsImportExpandRowView, DefaultExpandRowView
-# from hitl.views import us_import
+from hitl.views import EpochListView, EpochDetailView
 
 urlpatterns = [
     path('home', views.home, name='data_home'),
@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('invitations/', include('invitations.urls', namespace='invitations')),
-    # path('track/us_import', us_import, name="us_import"),
+    path('track/us_import', EpochListView.as_view(), name="hitl_table"),
     path('track/v1/<slug:track_name>', views.data_home, name='track'),
     path('anomaly/<slug:track_name>/<slug:panjivarecordid>', AnomalyView.as_view(), name='anomaly'),
     path('api/anomaly/<slug:track_name>/<slug:panjivarecordid>', AnomalyApiView.as_view(), name='anomaly_api'),
@@ -39,6 +39,7 @@ urlpatterns = [
     path('api/expand_row/peru_export/<slug:panjivarecordid>', PeruExportExpandRowView.as_view()),
     path('api/expand_row/us_import/<slug:panjivarecordid>', UsImportExpandRowView.as_view()),
     path('api/expand_row/<slug:track_name>', DefaultExpandRowView.as_view(), name='expand_row'),
+    path('api/epoch/<slug:month>', EpochDetailView.as_view(), name='epoch_detail'),
 ]
 
 urlpatterns += [

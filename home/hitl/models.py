@@ -57,6 +57,31 @@ class Record(models.Model):
     ContainerTypes = models.TextField(db_column="ContainerTypes", blank=True, null=True)
     DangerousGoods = models.TextField(db_column="DangerousGoods", blank=True, null=True)
 
+    CSV_FIELDS = [
+        "PanjivaRecordID",
+        "Carrier",
+        "PortOfLading",
+        "ShipmentDestination",
+        "ConsigneePanjivaID",
+        "PortOfUnlading",
+        "ShipmentOrigin",
+        "HSCode",
+        "ShipperPanjivaID",
+    ]
+
+    def to_csv(self):
+        return [
+            self.PanjivaRecordID,
+            self.Carrier,
+            self.PortOfLading,
+            self.ShipmentDestination,
+            self.ConsigneePanjivaID,
+            self.PortOfUnlading,
+            self.ShipmentOrigin,
+            self.HSCode,
+            self.ShipperPanjivaID
+        ]
+
     class Meta:
         managed = False
         db_table = 'Records'

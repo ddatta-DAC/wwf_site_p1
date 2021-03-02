@@ -17,6 +17,23 @@ class EpochListView(ListView):
         return context
 
 
+class RecordDetailView(DetailView):
+    model = Record
+
+    template_name = 'hitl_record_detail.html'
+    slug_field = 'PanjivaRecordID'
+    slug_url_kwarg = 'panjivarecordid'
+
+    queryset = Record.objects.using('hitl')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        graph1 = "<div>graph</div>"
+        context["graph"] = graph1
+        return context
+
+
 class EpochDetailView(DetailView):
     model = Epoch
 

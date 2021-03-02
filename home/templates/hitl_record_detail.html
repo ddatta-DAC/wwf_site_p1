@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'css/hitl_table.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block content %}
+
+<div>
+  <p>ID: {{ record.PanjivaRecordID }}</p>
+  {{ graph }}
+</div>
+
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}

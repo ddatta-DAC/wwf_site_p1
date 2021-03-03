@@ -27,10 +27,16 @@ class RecordDetailView(DetailView):
     queryset = Record.objects.using('hitl')
 
     def get_context_data(self, **kwargs):
+        from HITL_System_v0.VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         context = super().get_context_data(**kwargs)
 
-        graph1 = "<div>graph</div>"
-        context["graph"] = graph1
+        base_path = "/home/django/wwf_site_p1/home/HITL_System_v0"
+        TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path), _subDIR='01_2016', _html_saveDir='{}/htmlCache'.format(base_path), _json_saveDir='{}/jsonCache'.format(base_path))
+
+        fig1, fig2 = TS.get_TimeSeries('106645949', use_cache=True, return_type=2)
+
+        context["fig1"] = fig1
+        context["fig2"] = fig2
         return context
 
 

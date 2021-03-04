@@ -4,14 +4,47 @@
 
 {% block head %}
     <link href="{% static 'css/hitl_table.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
 {% endblock head %}
 
 {% block content %}
 
-<div>
-  <p>ID: {{ record.PanjivaRecordID }}</p>
-  {{ fig1|safe }}
-  {{ fig2|safe }}
+ <div class="container">
+ <p>ID: {{ record.PanjivaRecordID }}</p>
+ {#  fig1|safe #}
+ {#  fig2|safe #}
+ 
+ 
+<div class="accordion" id="TimeSeriesDiv">
+<div class="accordion-item">
+<h2 class="accordion-header" >
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TS_collapse2" aria-expanded="true" aria-controls="TS_collapse1">
+Consignee Activity over Time
+</button>
+</h2>
+<div id="TS_collapse1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#TimeSeriesDiv">
+<div class="accordion-body">
+{{ fig1|safe }}
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" >
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TS_collapse2" aria-expanded="true" aria-controls="TS_collapse2">Shipper Activity over Time</button></h2>
+<div id="TS_collapse2" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#TimeSeriesDiv">
+<div class="accordion-body">
+{{ fig2|safe }}
+</div>
+</div>
+</div>
+</div>
+<div class=".container-fluid">
+<div class="card">
+Scatter plot
+{{ fig3|safe }}
+
+</div>
+
 </div>
 
 {% endblock content %}

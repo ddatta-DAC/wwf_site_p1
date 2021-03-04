@@ -27,25 +27,19 @@ class RecordDetailView(DetailView):
     queryset = Record.objects.using('hitl')
 
     def get_context_data(self, **kwargs):
-        from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         context = super().get_context_data(**kwargs)
 
-        base_path = "/home/django/Code/HITL_System_v0"
-        TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path), _subDIR='01_2016', _html_saveDir='{}/htmlCache'.format(base_path), _json_saveDir='{}/jsonCache'.format(base_path))
+        app = apps.get_app_config('hitl')
 
-        fig1, fig2 = TS.get_TimeSeries('106645949', use_cache=True, return_type=2)
-        from VisualComponents_backend.EmbViz_all import main as embTSNE
-        embTSNE.initialize(
-                _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
-                _subDIR='01_2016',
-                mp2v_emb_dir = '{}/records2graph/saved_model_data'.format(base_path),
-                emb_dim = 64,
-                _htmlSaveDir = '{}/htmlCache'.format(base_path)
+        fig1, fig2 = app.TS.get_TimeSeries(
+            '106645949',
+            use_cache=True,
+            return_type=2
         )
 
-        fig3 = embTSNE.get_record_entityEmbeddings(
-                PanjivaRecordID= '148975932',
-                return_type=3
+        fig3 = app.embTSNE.get_record_entityEmbeddings(
+            PanjivaRecordID= '148975932',
+            return_type=3
         )
 
         context["fig1"] = fig1

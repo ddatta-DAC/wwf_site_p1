@@ -9,9 +9,6 @@ class HitlConfig(AppConfig):
     name = 'hitl'
     epochs = {}
 
-    TS = None
-    embTSNE = None
-
     MAX_TRANSACTIONS = 50
 
     def ready(self):
@@ -19,8 +16,8 @@ class HitlConfig(AppConfig):
         from VisualComponents_backend.EmbViz_all import main as embTSNE
 
         base_path = "/home/django/Code/HITL_System_v0"
-        self.TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path), _subDIR='01_2016', _html_saveDir='{}/htmlCache'.format(base_path), _json_saveDir='{}/jsonCache'.format(base_path))
-        self.embTSNE.initialize(
+        TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path), _subDIR='01_2016', _html_saveDir='{}/htmlCache'.format(base_path), _json_saveDir='{}/jsonCache'.format(base_path))
+        embTSNE.initialize(
                 _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
                 _subDIR='01_2016',
                 mp2v_emb_dir = '{}/records2graph/saved_model_data'.format(base_path),

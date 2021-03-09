@@ -16,7 +16,11 @@ class HitlConfig(AppConfig):
         from VisualComponents_backend.EmbViz_all import main as embTSNE
 
         base_path = "/home/django/Code/HITL_System_v0"
-        TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path), _subDIR='01_2016', _html_saveDir='{}/htmlCache'.format(base_path), _json_saveDir='{}/jsonCache'.format(base_path))
+        TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path),
+                _subDIR='01_2016',
+                _html_saveDir='{}/htmlCache'.format(base_path), 
+                _json_saveDir='{}/jsonCache'.format(base_path)
+        )
         embTSNE.initialize(
                 _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
                 _subDIR='01_2016',

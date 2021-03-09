@@ -210,6 +210,11 @@ LOGGING = {
             'propagate': True,
             'level': 'DEBUG',
         },
+        'hitl': {
+            'handlers': ['django_file'],
+            'propagate': True,
+            'level': 'DEBUG',
+        },
         'home': {
             'handlers': ['django_file'],
             'propagate': True,

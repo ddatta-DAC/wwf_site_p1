@@ -2,8 +2,15 @@ from django.apps import apps
 from django.http import JsonResponse
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-
+from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
+from VisualComponents_backend.EmbViz_all import main as embTSNE
+          
 from hitl.models import Epoch, Record
+
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 
 class EpochListView(ListView):
@@ -27,22 +34,23 @@ class RecordDetailView(DetailView):
     queryset = Record.objects.using('hitl')
 
     def get_context_data(self, **kwargs):
-        from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
-        from VisualComponents_backend.EmbViz_all import main as embTSNE
+        #from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
+        #from VisualComponents_backend.EmbViz_all import main as embTSNE
 
         context = super().get_context_data(**kwargs)
 
-        app = apps.get_app_config('hitl')
+        #app = apps.get_app_config('hitl')
+        logger.error("object we are looking for {}".format(self.object.PanjivaRecordID))
 
         fig1, fig2 = TS.get_TimeSeries(
-            '106645949',
+            self.object.PanjivaRecordID,
             use_cache=True,
             return_type=2
         )
 
         fig3 = embTSNE.get_record_entityEmbeddings(
-            PanjivaRecordID= '148975932',
-            return_type=3
+            self.object.PanjivaRecordID,
+            return_type=2
         )
 
         context["fig1"] = fig1

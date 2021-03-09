@@ -31,7 +31,7 @@ class HitlConfig(AppConfig):
 
     def load_csv(self, path):
         output = []
-        epoch_file = os.path.join(settings.BASE_DIR, path)
+        epoch_file = os.path.join(settings.BASE_DIR, "../../Code", path)
         with open(epoch_file, 'r') as file:
             csvreader = csv.reader(file)
             next(csvreader)

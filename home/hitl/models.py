@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Epoch(models.Model):
@@ -71,7 +72,8 @@ class Record(models.Model):
 
     def to_csv(self):
         return [
-            self.PanjivaRecordID,
+            #self.PanjivaRecordID,
+            '<a href="{}">{}</a>'.format(reverse("record_detail", args=[self.PanjivaRecordID]), self.PanjivaRecordID),
             self.Carrier,
             self.PortOfLading,
             self.ShipmentDestination,

@@ -14,6 +14,18 @@
  {#  fig1|safe #}
  {#  fig2|safe #}
  
+<table>
+{% for pair in pairs %}
+  <tr>
+	      <td>{{ pair.0 }}</td>
+    <td>{{ pair.1 }}</td>
+    <td>{{ pair.2 }}</td>
+
+    <td>√</td>
+  </tr>
+{% endfor %}
+</table>
+
  
  <div class="conatiner-flex">
  <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#TS1">

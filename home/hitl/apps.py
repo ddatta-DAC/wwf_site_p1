@@ -3,6 +3,9 @@ import csv
 
 from django.apps import AppConfig
 from django.conf import settings
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class HitlConfig(AppConfig):
@@ -14,13 +17,17 @@ class HitlConfig(AppConfig):
     def ready(self):
         from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         from VisualComponents_backend.EmbViz_all import main as embTSNE
+        from PairwiseComparison.fetchRecord_details import setupGlobals
+        from datetime import datetime
 
+        logger.error("Starting TS {}".format(datetime.now()))
         base_path = "/home/django/Code/HITL_System_v0"
         TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path),
                 _subDIR='01_2016',
                 _html_saveDir='{}/htmlCache'.format(base_path), 
                 _json_saveDir='{}/jsonCache'.format(base_path)
         )
+        logger.error("Starting embTSNE {}".format(datetime.now()))
         embTSNE.initialize(
                 _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
                 _subDIR='01_2016',
@@ -28,6 +35,14 @@ class HitlConfig(AppConfig):
                 emb_dim = 64,
                 _htmlSaveDir = '{}/htmlCache'.format(base_path)
         )
+        logger.error("Starting pairwiseInitialize {}".format(datetime.now()))
+        setupGlobals('{}/generated_data_v1/us_import'.format(base_path))
+        #pairwiseInitialize(
+        #        "{}/generated_data_v1/us_import/".format(base_path),
+        #        "{}/PairwiseComparison/pairWiseDist/".format(base_path),
+        #        "01_2016",
+        #)
+        logger.error("Done with initializations")
 
     def load_csv(self, path):
         output = []

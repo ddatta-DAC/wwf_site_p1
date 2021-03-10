@@ -4,6 +4,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
 from VisualComponents_backend.EmbViz_all import main as embTSNE
+from PairwiseComparison.fetchRecord_details import fetchRecord_details
           
 from hitl.models import Epoch, Record
 
@@ -52,10 +53,19 @@ class RecordDetailView(DetailView):
             self.object.PanjivaRecordID,
             return_type=2
         )
+        entity_pairs = fetchRecord_details(id=self.object.PanjivaRecordID, subDIR="01_2016")
+        sorted_pairs = sorted(entity_pairs, key=lambda y: y[2], reverse=True)
+        pairs = [[
+            list(y[0].keys())[0],
+            list(y[1].keys())[0],
+            y[2]
+        ] for y in sorted_pairs]
 
         context["fig1"] = fig1
         context["fig2"] = fig2
         context["fig3"] = fig3
+        context["pairs"] = pairs
+        logger.error(entity_pairs)
         return context
 
 

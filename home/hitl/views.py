@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
           
-from hitl.models import Epoch, Record
+from hitl.models import Epoch, Record, Shipper, Consignee
 
 import logging
 

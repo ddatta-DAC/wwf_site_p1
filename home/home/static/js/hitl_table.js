@@ -27,7 +27,9 @@ function fetchEpoch(epoch) {
     method: 'GET',
     success: function (data) {
       console.log(data);
-      buildEpochTable(data);
+      // buildEpochTable(data);
+      data.selector = "#main_table";
+      buildTable(data);
     },
     error: function (error) {
       console.error(error);
@@ -39,7 +41,9 @@ $(document).ready(function () {
   fetchEpoch($("#epochs").val());
 
   $("#epochs").on("change", function () {
+    if (table) {
+      table.rows().remove().draw();
+    }
     fetchEpoch(this.value);
-    table.rows().remove().draw();
   });
 });

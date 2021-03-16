@@ -2,9 +2,6 @@ from django.apps import apps
 from django.http import JsonResponse
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
-from VisualComponents_backend.EmbViz_all import main as embTSNE
-from PairwiseComparison.fetchRecord_details import fetchRecord_details
           
 from hitl.models import Epoch, Record
 
@@ -37,6 +34,9 @@ class RecordDetailView(DetailView):
     def get_context_data(self, **kwargs):
         #from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         #from VisualComponents_backend.EmbViz_all import main as embTSNE
+        from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
+        from VisualComponents_backend.EmbViz_all import main as embTSNE
+        from PairwiseComparison.fetchRecord_details import fetchRecord_details
 
         context = super().get_context_data(**kwargs)
 
@@ -69,6 +69,56 @@ class RecordDetailView(DetailView):
         return context
 
 
+show_fields = [
+    'ArrivalDate', #'shipmentmonth',
+    'ShipmentOrigin', #'consigneecountry',
+    'ConsigneePanjivaID',
+    'ShipmentOrigin',
+    'PlaceOfReceipt', #'countryofsale',
+    'ValueOfGoodsUSD',
+    'HSCode'
+]
+hidden_fields = [
+    # 'consigneename',
+    # 'consigneecity',
+    # 'province',
+    # 'transportmethod',
+    # 'iscontainerized',
+    # 'adminregion',
+    # 'tradetype',
+    # 'hscodekeywords',
+    'PanjivaRecordID'
+]
+pretty_name = {
+    'score': 'Score',
+    'shipmentmonth': 'Month Shipped',
+    'consigneename': 'Consignee Name',
+    'consigneecity': 'Consignee City',
+    'consigneepanjivaid': 'Consignee',
+    'consigneecountry': 'Consignee Country',
+    'shipmentorigin': 'Shipment Origin',
+    'province': 'Province',
+    'countryofsale': 'Country of Sale',
+    'transportmethod': 'Transport Method',
+    'iscontainerized': 'Containerized',
+    'valueofgoodsusd': 'Value',
+    'hscode': 'HS Code',
+    'hscodekeywords': 'HS Code Keywords',
+    'adminregion': 'Admin Region',
+    'tradetype': 'Trade Type',
+    'panjivarecordid': 'panjivarecordid'
+}
+
+
+def table_format(instance, field):
+    value = getattr(instance, field, '')
+    if field in ['valueofgoodsusd']:
+        return '${:,}'.format(value)
+    if field in ['shipmentmonth']:
+        return value.strftime('%Y/%m')
+    return value
+
+
 class EpochDetailView(DetailView):
     model = Epoch
 
@@ -82,27 +132,64 @@ class EpochDetailView(DetailView):
         app = apps.get_app_config('hitl')
         transactions = app.get_epoch(self.object.path)
 
+        ids = [t[0] for t in transactions]
         records = (
             Record.objects.using("hitl")
-                .filter(PanjivaRecordID__in=[t[0] for t in transactions])
-                .only(*Record.CSV_FIELDS)
+                .filter(PanjivaRecordID__in=ids)
+                # .only(*Record.CSV_FIELDS)
         )
 
         scores = dict(transactions)
 
+        fields = ['score'] + show_fields + hidden_fields # + ['comment', 'thumbs']
+        id_index = len(fields) - 1#3  # the most magic of numbers
+
         columns = [{
-            'title': field,
+            'className': "details-control",
+            'orderable': False,
+            'data': None,
+            'defaultContent': ""
+        }] + [{
+            'title': pretty_name[field] if field in pretty_name else field,
             'data': i
-        } for i, field in enumerate(Record.CSV_FIELDS + ["Score"])]
+        } for i, field in enumerate(fields)]
 
-        context = {
-            "data": [r.to_csv() + [scores[r.PanjivaRecordID] if r.PanjivaRecordID in scores else "???"] for r in records],
-            "columns": columns
+        data = []
+        for instance in records:
+            data.append([
+                scores[instance.PanjivaRecordID]
+            ] + [
+                table_format(instance, field) for field in show_fields
+            ] + [
+                table_format(instance, field) for field in hidden_fields
+            ])
 
+
+        # columns = [{
+        #     'title': field,
+        #     'data': i
+        # } for i, field in enumerate(Record.CSV_FIELDS + ["Score"])]
+
+        # context = {
+        #     "data": [r.to_csv() + [scores[r.PanjivaRecordID] if r.PanjivaRecordID in scores else "???"] for r in records],
+        #     "columns": columns
+
+        # }
+        table_data = {
+            'columns': columns,
+            'id_index': id_index,
+            'hidden_cols': list(range(len(show_fields) + 1, len(fields) + 1)),
+            'data': data,
         }
-        return context
+        import json
+        print(json.dumps(table_data))
+        return table_data
 
     def render_to_response(self, context, *args, **kwargs):
         return JsonResponse({
             "data": context,
         })
+
+
+class HitlExpandRowView(DetailView):
+    pass

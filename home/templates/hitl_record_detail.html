@@ -97,10 +97,10 @@
          </div>
 
          <div class="card-body">
-         <h5 class="card-title">Shipper PanjivaID: {{ record.ShipperPanjivaID }}</h5>
+         <h5 class="card-title">Shipper PanjivaID: {{ record.ShipperPanjivaID|stringformat:".0f" }}</h5>
          <p class="card-text">
-            Country : Vietnam  <br/>
-            Address : CO. LTD. LOT 3 UYEN HUNG HAMLET TAN UYEN DIS TBINH DUONG PROVINCE VIETNAM
+            Country : {{ shipper.ShipperCountry }} <br/>
+            Address : {{ shipper.ShipperFullAddress }}
          </p>
 
          </div>
@@ -112,10 +112,10 @@
         </div>
 
         <div class="card-body">
-        <h5 class="card-title">Consignee PanjivaID: {{ record.ConsigneePanjivaID }} </h5>
+        <h5 class="card-title">Consignee PanjivaID: {{ record.ConsigneePanjivaID|stringformat:".0f" }} </h5>
         <p class="card-text">
-            Country: United States <br/>
-            Address: 11540 HIGHWAY 92 EAST SEFFNER, FL 33584 <br/>
+            Country: {{ consignee.ConsigneeCountry }} <br/>
+            Address: {{ consignee.ConsigneeFullAddress }} <br/>
 
         </p>
         </div>

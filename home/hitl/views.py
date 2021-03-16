@@ -81,6 +81,19 @@ class RecordDetailView(DetailView):
         context["portofunlading_fig"] = fig_dict["PortOfUnlading"]
         context["portoflading_fig"] = fig_dict["PortOfLading"]
 
+
+        shipper_id = str(int(self.object.ShipperPanjivaID))
+        consignee_id = str(int(self.object.ConsigneePanjivaID))
+        try:
+            context["shipper"] = Shipper.objects.using("hitl").get(ShipperPanjivaID=shipper_id)
+        except Shipper.DoesNotExist:
+            logger.error("Shipper {} does not exist".format(shipper_id))
+
+        try:
+            context["consignee"] = Consignee.objects.using("hitl").get(ConsigneePanjivaID=consignee_id)
+        except Consignee.DoesNotExist:
+            logger.error("Consignee {} does not exist".format(consignee_id))
+
         return context
 
 

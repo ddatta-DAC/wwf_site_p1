@@ -69,14 +69,19 @@ class RecordDetailView(DetailView):
             return_type=1
         )
 
-        logger.error(str(fig_dict))
-        logger.error(fig_dict.keys())
-
         context["fig1"] = fig1
         context["fig2"] = fig2
         context["fig3"] = fig3
         context["pairs"] = pairs
-        logger.error(entity_pairs)
+
+        context["carrier_fig"] = fig_dict["Carrier"]
+        context["hscode_fig"] = fig_dict["HSCode"]
+        context["shipmentorigin_fig"] = fig_dict["ShipmentOrigin"]
+        context["shipmentdestination_fig"] = fig_dict["ShipmentDestination"]
+        context["portofunlading_fig"] = fig_dict["PortOfUnlading"]
+        context["portoflading_fig"] = fig_dict["PortOfLading"]
+
+        # logger.error(entity_pairs)
         return context
 
 

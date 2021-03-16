@@ -81,7 +81,6 @@ class RecordDetailView(DetailView):
         context["portofunlading_fig"] = fig_dict["PortOfUnlading"]
         context["portoflading_fig"] = fig_dict["PortOfLading"]
 
-        # logger.error(entity_pairs)
         return context
 
 

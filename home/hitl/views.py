@@ -37,6 +37,7 @@ class RecordDetailView(DetailView):
         from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         from VisualComponents_backend.EmbViz_all import main as embTSNE
         from PairwiseComparison.fetchRecord_details import fetchRecord_details
+        from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
 
         context = super().get_context_data(**kwargs)
 
@@ -61,6 +62,15 @@ class RecordDetailView(DetailView):
             '{0:.3g}'.format(y[2]),
             i
         ] for i, y in enumerate(sorted_pairs)]
+
+        fig_dict = get_stackedComparisonPlots(
+            record_id=self.object.PanjivaRecordID, 
+            min_count = 500, 
+            return_type=1
+        )
+
+        logger.error(str(fig_dict))
+        logger.error(fig_dict.keys())
 
         context["fig1"] = fig1
         context["fig2"] = fig2

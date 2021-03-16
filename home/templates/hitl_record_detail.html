@@ -14,7 +14,7 @@
  {#  fig1|safe #}
  {#  fig2|safe #}
  
-<table>
+<table id="pair_table">
 {% for pair in pairs %}
   <tr>
     <td>{{ pair.0 }}</td>
@@ -72,4 +72,5 @@ Scatter plot
 {% endblock content %}
 
 {% block scripts %}
+  <script src="{% static 'js/hitl_record.js' %}"></script>
 {% endblock scripts %}

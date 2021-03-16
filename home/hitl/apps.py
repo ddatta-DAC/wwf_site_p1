@@ -15,9 +15,11 @@ class HitlConfig(AppConfig):
     MAX_TRANSACTIONS = 50
 
     def ready(self):
+        # return
         from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         from VisualComponents_backend.EmbViz_all import main as embTSNE
         from PairwiseComparison.fetchRecord_details import setupGlobals
+        from VisualComponents_backend.StackedComparison.stackedComparison import initialize
         from datetime import datetime
 
         logger.error("Starting TS {}".format(datetime.now()))
@@ -42,11 +44,20 @@ class HitlConfig(AppConfig):
         #        "{}/PairwiseComparison/pairWiseDist/".format(base_path),
         #        "01_2016",
         #)
+
+        logger.error("Starting stacked initialization {}".format(datetime.now()))
+        initialize(
+            _DATA_LOC = '{}/generated_data_v1/us_import'.format(base_path),
+            _subDIR = '01_2016',
+            mp2v_emb_dir = '{}/records2graph/saved_model_data'.format(base_path),
+            emb_dim = 64,
+            _htmlSaveDir = '{}/htmlCache'.format(base_path)
+        )
         logger.error("Done with initializations")
 
     def load_csv(self, path):
         output = []
-        epoch_file = os.path.join(settings.BASE_DIR, "../../Code", path)
+        epoch_file = os.path.join(settings.BASE_DIR, path)
         with open(epoch_file, 'r') as file:
             csvreader = csv.reader(file)
             next(csvreader)

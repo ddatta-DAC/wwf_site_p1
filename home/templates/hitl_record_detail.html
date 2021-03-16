@@ -5,6 +5,11 @@
 {% block head %}
     <link href="{% static 'css/hitl_table.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
 {% endblock head %}
 
 {% block content %}
@@ -76,6 +81,94 @@
       {{ fig3|safe }}
     </div>
   </div>
+
+<!--   <div class="panel">
+  <div class="navbar navbar-expand navbar-dark bg-primary">
+    <span class="h5 navbar-brand text-center"> Compare Similar Records </span>
+  </div>
+ -->
+
+   {# <div class="container-fluid border"> #}
+     <div class="row">
+       <div class="col-lg-3 border">
+         <div class="card flex-d" >
+         <div class="card-img-top text-center">
+             <span class="h4 "> Shipper Name[Redacted] </span>
+         </div>
+
+         <div class="card-body">
+         <h5 class="card-title">Shipper PanjivaID: 4549330</h5>
+         <p class="card-text">
+            Country : Vietnam  <br/>
+            Address : CO. LTD. LOT 3 UYEN HUNG HAMLET TAN UYEN DIS TBINH DUONG PROVINCE VIETNAM
+         </p>
+
+         </div>
+         </div>
+
+        <div class="card flex-d" >
+        <div class="card-img-top text-center">
+            <span class="h4"> Consignee Name[Redacted] </span>
+        </div>
+
+        <div class="card-body">
+        <h5 class="card-title">Consignee PanjivaID: 27874166 </h5>
+        <p class="card-text">
+            Country: United States <br/>
+            Address: 11540 HIGHWAY 92 EAST SEFFNER, FL 33584 <br/>
+
+        </p>
+        </div>
+        </div>
+      </div>
+       <div class="col-lg-3 border">
+         <div class="row ">
+            <div class="col-lg-12 gx-2 border text-container">
+               <span class="text-center h5"> Carrier </span>
+                {# <iframe class="figure_box" src="./sc_Carrier.html"> </iframe> #}
+                {{ carrier_fig|safe }}
+            </div>
+            <div class="col-lg-12 gx-2 border text-container">
+                <span class="text-center h5"> HSCode </span>
+                {# <iframe class="figure_box" src="./sc_HSCode.html"> </iframe> #}
+                {{ hscode_fig|safe }}
+            </div>
+
+         </div>
+       </div>
+
+       <div class="col-lg-3 border">
+         <div class="row ">
+
+          <div class="col-lg-12 gx-2 border text-container">
+              <span class="text-center h5"> ShipmentOrigin </span>
+
+              {# <iframe  class="flex-d figure_box" src="./sc_ShipmentOrigin.html"> </iframe> #}
+              {{ shipmentorigin_fig|safe }}
+          </div>
+          <div class="col-lg-12 gx-2 border text-container">
+              <span  class="text-center h5"> ShipmentDestination </span>
+
+              {# <iframe class="figure_box"  src="./sc_ShipmentDestination.html"> </iframe> #}
+              {{ shipmentdestination_fig|safe }}
+          </div>
+         </div>
+       </div>
+       <div class="col-lg-3 border">
+         <div class="col-lg-12 gx-2 border text-container">
+           <span class="text-center h5"> PortOfUnlading </span>
+
+           {# <iframe class="flex-d figure_box" src="./sc_PortOfUnlading.html"> </iframe> #}
+           {{ portofunlading_fig|safe }}
+         </div>
+         <div class="col-lg-12 gx-2 border text-container">
+             <span class="text-center h5"> PortOfLading </span>
+             {# <iframe class="figure_box" src="./sc_PortOfLading.html"> </iframe> #}
+             {{ portoflading_fig|safe }}
+         </div>
+       </div>
+     </div>
+
 
 </div>
 

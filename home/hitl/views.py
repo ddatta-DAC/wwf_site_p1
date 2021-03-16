@@ -58,7 +58,7 @@ class RecordDetailView(DetailView):
         pairs = [[
             list(y[0].keys())[0],
             list(y[1].keys())[0],
-            y[2],
+            '{0:.3g}'.format(y[2]),
             i
         ] for i, y in enumerate(sorted_pairs)]
 

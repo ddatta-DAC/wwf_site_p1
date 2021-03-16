@@ -10,70 +10,69 @@
 {% block content %}
 
  <div class="container">
- <p>ID: {{ record.PanjivaRecordID }}</p>
  {#  fig1|safe #}
  {#  fig2|safe #}
  
-<table id="pair_table" class="table table-striped">
-  <tr>
-    <th>Entity A</th>
-    <th>Entity B</th>
-    <th>Score</th>
-    <th>Anomalous?</th>
-  </tr>
-{% for pair in pairs %}
-  <tr>
-    <td>{{ pair.0 }}</td>
-    <td>{{ pair.1 }}</td>
-    <td>{{ pair.2 }}</td>
-    <td><input class="form-check-input" type="checkbox" id="pair-check-{{ pair.3 }}" value="pair-{{ pair.3 }}"></td>
-  </tr>
-{% endfor %}
-</table>
+<div class="container-flex">
 
- 
- <div class="conatiner-flex">
- <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="collapse" data-target="#TS1">
-	<span class="glyphicon glyphicon-stats" aria-hidden="true"> </span> 
-	Time Series of Consignee Activity 
- </button>
- <div id="TS1" class="collapse">
-	 {{ fig1|safe }}
- </div>
- </div>
- </div>
+  <div class="row">
+    <div class="col-6">
+      <dl>
+        <dd>PanjivaRecordID</dd>
+        <dt>{{ record.PanjivaRecordID }}</dt>
+        <dd>Consignee</dd>
+        <dt>{{ record.ConsigneePanjivaID }}</dt>
+        <dd>Shipper</dd>
+        <dt>{{ record.ShipperPanjivaID }}</dt>
+        <dd>ArrivalDate</dd>
+        <dt>{{ record.ArrivalDate }}</dt>
+        <dd>ShipmentOrigin</dd>
+        <dt>{{ record.ShipmentOrigin }}</dt>
+        <dd>ShipmentDestination</dd>
+        <dt>{{ record.ShipmentDestination }}</dt>
+        <dd>HSCode</dd>
+        <dt>{{ record.HSCode }}</dt>
+      </dl>
 
-<div class="accordion" id="TimeSeriesDiv">
-<div class="accordion-item">
-<h2 class="accordion-header" >
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TS_collapse2" aria-expanded="true" aria-controls="TS_collapse1">
-Consignee Activity over Time
-</button>
-</h2>
-<div id="TS_collapse1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#TimeSeriesDiv">
-<div class="accordion-body">
-{{ fig1|safe }}
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" >
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#TS_collapse2" aria-expanded="true" aria-controls="TS_collapse2">Shipper Activity over Time</button></h2>
-<div id="TS_collapse2" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#TimeSeriesDiv">
-<div class="accordion-body">
-{{ fig2|safe }}
-</div>
-</div>
-</div>
-</div>
-<div class=".container-fluid">
-<div class="card">
-Scatter plot
-{{ fig3|safe }}
+    </div>
+    <div class="col-6">
+      <table id="pair_table" class="table table-striped">
+        <tr>
+          <th>Entity A</th>
+          <th>Entity B</th>
+          <th>Score</th>
+          <th>Anomalous?</th>
+        </tr>
+      {% for pair in pairs %}
+        <tr>
+          <td>{{ pair.0 }}</td>
+          <td>{{ pair.1 }}</td>
+          <td>{{ pair.2 }}</td>
+          <td><input class="form-check-input" type="checkbox" id="pair-check-{{ pair.3 }}" value="pair-{{ pair.3 }}"></td>
+        </tr>
+      {% endfor %}
+      </table>
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      {{ fig1|safe }}
+    </div>
+    <div class="col-6">
+      {{ fig2|safe }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      {{ fig3|safe }}
+    </div>
+  </div>
 
 </div>
 
-</div>
 
 {% endblock content %}
 

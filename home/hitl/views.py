@@ -58,8 +58,9 @@ class RecordDetailView(DetailView):
         pairs = [[
             list(y[0].keys())[0],
             list(y[1].keys())[0],
-            y[2]
-        ] for y in sorted_pairs]
+            y[2],
+            i
+        ] for i, y in enumerate(sorted_pairs)]
 
         context["fig1"] = fig1
         context["fig2"] = fig2

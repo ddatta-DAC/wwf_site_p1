@@ -1,3 +1,8 @@
 #pair_table td:last-of-type {
-    text-align: center;
+  text-align: center;
+}
+
+.table-wrapper {
+  height: 500px;
+  overflow-y: scroll;
 }

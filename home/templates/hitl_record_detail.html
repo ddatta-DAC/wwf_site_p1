@@ -36,22 +36,24 @@
 
     </div>
     <div class="col-6">
-      <table id="pair_table" class="table table-striped">
-        <tr>
-          <th>Entity A</th>
-          <th>Entity B</th>
-          <th>Score</th>
-          <th>Anomalous?</th>
-        </tr>
-      {% for pair in pairs %}
-        <tr>
-          <td>{{ pair.0 }}</td>
-          <td>{{ pair.1 }}</td>
-          <td>{{ pair.2 }}</td>
-          <td><input class="form-check-input" type="checkbox" id="pair-check-{{ pair.3 }}" value="pair-{{ pair.3 }}"></td>
-        </tr>
-      {% endfor %}
-      </table>
+      <div class="table-wrapper">
+        <table id="pair_table" class="table table-striped">
+          <tr>
+            <th>Entity A</th>
+            <th>Entity B</th>
+            <th>Score</th>
+            <th>Anomalous?</th>
+          </tr>
+        {% for pair in pairs %}
+          <tr>
+            <td>{{ pair.0 }}</td>
+            <td>{{ pair.1 }}</td>
+            <td>{{ pair.2 }}</td>
+            <td><input class="form-check-input" type="checkbox" id="pair-check-{{ pair.3 }}" value="pair-{{ pair.3 }}"></td>
+          </tr>
+        {% endfor %}
+        </table>
+      </div>
       <button type="button" class="btn btn-primary">Submit</button>
     </div>
   </div>

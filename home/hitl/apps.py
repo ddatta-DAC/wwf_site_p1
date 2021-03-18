@@ -21,6 +21,8 @@ class HitlConfig(AppConfig):
         from PairwiseComparison.fetchRecord_details import setupGlobals
         from VisualComponents_backend.StackedComparison.stackedComparison import initialize
         from VisualComponents_backend.HSCodeViz.main import initialize as hs_initialize
+        from VisualComponents_backend.sankey_diagram.main import initialize as sankey_initialize
+
         from datetime import datetime
 
         logger.error("Starting TS {}".format(datetime.now()))
@@ -62,7 +64,7 @@ class HitlConfig(AppConfig):
         )
 
         logger.error("Starting sankey initialization {}".format(datetime.now()))
-        sankey.initialize(
+        sankey_initialize(
             _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
             _subDIR='01_2016',
             _html_saveDir='{}/htmlCache'.format(base_path),

@@ -69,6 +69,11 @@ class RecordDetailView(DetailView):
             return_type=1
         )
 
+        hsfig1, hsfig2 = get_HSCode_distribution(
+            record_id=self.object.PanjivaRecordID,
+            return_type=2
+        )
+
         context["fig1"] = fig1
         context["fig2"] = fig2
         context["fig3"] = fig3
@@ -81,6 +86,10 @@ class RecordDetailView(DetailView):
         context["portofunlading_fig"] = fig_dict["PortOfUnlading"]
         context["portoflading_fig"] = fig_dict["PortOfLading"]
 
+        context["track_type_name"] = self.object.PanjivaRecordID
+
+        context["hsfig1"] = hsfig1
+        context["hsfig2"] = hsfig2
 
         shipper_id = str(int(self.object.ShipperPanjivaID))
         consignee_id = str(int(self.object.ConsigneePanjivaID))

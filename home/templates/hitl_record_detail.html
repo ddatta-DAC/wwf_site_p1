@@ -18,7 +18,6 @@
  {#  fig1|safe #}
  {#  fig2|safe #}
  
-<div class="container-flex">
 
   <div class="row">
     <div class="col-4">
@@ -26,9 +25,9 @@
         <dt>PanjivaRecordID</dt>
         <dd>{{ record.PanjivaRecordID }}</dd>
         <dt>Consignee</dt>
-        <dd>{{ record.ConsigneePanjivaID }}</dd>
+        <dd>{{ record.ConsigneePanjivaID|stringformat:".0f" }}</dd>
         <dt>Shipper</dt>
-        <dd>{{ record.ShipperPanjivaID }}</dd>
+        <dd>{{ record.ShipperPanjivaID|stringformat:".0f" }}</dd>
         <dt>ArrivalDate</dt>
         <dd>{{ record.ArrivalDate }}</dd>
         <dt>ShipmentOrigin</dt>
@@ -41,41 +40,58 @@
 
     </div>
     <div class="col-8">
-      <div class="table-wrapper">
-        <table id="pair_table" class="table table-striped">
-          <thead>
-            <tr>
-              <th>Entity A</th>
-              <th>Entity B</th>
-              <th>Score</th>
-              <th>Anomalous?</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for pair in pairs %}
+      <div class="row">
+        <div class="table-wrapper">
+          <table id="pair_table" class="table table-striped">
+            <thead>
               <tr>
-                <td>{{ pair.0 }}</td>
-                <td>{{ pair.1 }}</td>
-                <td>{{ pair.2 }}</td>
-                <td><input class="form-check-input" type="checkbox" id="pair-check-{{ pair.3 }}" value="pair-{{ pair.3 }}"></td>
+                <th>Entity A</th>
+                <th>Entity B</th>
+                <th>Score</th>
+                <th>Anomalous?</th>
               </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {% for pair in pairs %}
+                <tr>
+                  <td>{{ pair.0 }}</td>
+                  <td>{{ pair.1 }}</td>
+                  <td>{{ pair.2 }}</td>
+                  <td><input class="form-check-input" type="checkbox" id="pair-check-{{ pair.3 }}" value="pair-{{ pair.3 }}"></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </div>
-      <button type="button" class="btn btn-primary">Submit</button>
+      <div class="row">
+        <div class="col-6">
+          <button type="button" class="btn btn-primary">Submit Anomalous Pairs</button>
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-outline-danger">Not Anomalous</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="col">
-      {{ fig1|safe }}
-    </div>
-  </div>
+    <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="fig1-tab" data-bs-toggle="tab" data-bs-target="#" type="button" role="tab" aria-controls="fig1" aria-selected="true">Fig 1</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="fig2-tab" data-bs-toggle="tab" data-bs-target="#" type="button" role="tab" aria-controls="fig2" aria-selected="false">Fig 2</button>
+      </li>
+    </ul>
 
-  <div class="row">
-    <div class="col">
-      {{ fig2|safe }}
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="fig1" role="tabpanel" aria-labelledby="fig1-tab">
+        {{ fig1|safe }}
+      </div>
+      <div class="tab-pane fade" id="fig2" role="tabpanel" aria-labelledby="fig2-tab">
+        {{ fig2|safe }}
+      </div>
     </div>
   </div>
 
@@ -85,13 +101,16 @@
     </div>
   </div>
 
-<!--   <div class="panel">
-  <div class="navbar navbar-expand navbar-dark bg-primary">
-    <span class="h5 navbar-brand text-center"> Compare Similar Records </span>
+  <div class="row">
+    <h3>HS Code</h3>
+    <div class="col-6">
+      {{ hsfig1|safe }}
+    </div>
+    <div class="col-6">
+      {{ hsfig2|safe }}
+    </div>
   </div>
- -->
 
-   {# <div class="container-fluid border"> #}
      <div class="row">
        <div class="col-lg-3 border">
          <div class="card flex-d" >
@@ -172,7 +191,7 @@
        </div>
      </div>
 
-
+</div>
 </div>
 
 

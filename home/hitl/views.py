@@ -40,6 +40,7 @@ class RecordDetailView(DetailView):
         from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
         from VisualComponents_backend.HSCodeViz.main import get_HSCode_distribution
         from VisualComponents_backend.sankey_diagram.main import get_sankey_diagram
+        from VisualComponents_backend.companyNetworkViz.main import visualize
 
         context = super().get_context_data(**kwargs)
 
@@ -76,21 +77,29 @@ class RecordDetailView(DetailView):
             return_type=2
         )
 
-        sankey1 = get_sankey_diagram(
-                self.object.PanjivaRecordID,
-                diagram_type=1,
-                link_count_upper_bound=100,
-                return_type=2,
-                fig_height=600,
-                use_cache=True
-        )
-        sankey2 = get_sankey_diagram(
-                self.object.PanjivaRecordID,
-                diagram_type=2,
-                link_count_upper_bound=100,
-                return_type=2,
-                fig_height=600,
-                use_cache=True
+        # sankey1 = get_sankey_diagram(
+        #         self.object.PanjivaRecordID,
+        #         diagram_type=1,
+        #         link_count_upper_bound=100,
+        #         return_type=2,
+        #         fig_height=600,
+        #         use_cache=True
+        # )
+        # sankey2 = get_sankey_diagram(
+        #         self.object.PanjivaRecordID,
+        #         diagram_type=2,
+        #         link_count_upper_bound=100,
+        #         return_type=2,
+        #         fig_height=600,
+        #         use_cache=True
+        # )
+
+        html_path = visualize( 
+            PanjivaRecordID =self.object.PanjivaRecordID,
+            fig_width='100%', 
+            title=False, 
+            fig_height='920px', 
+            return_type = 2
         )
 
         context["fig1"] = fig1
@@ -110,8 +119,10 @@ class RecordDetailView(DetailView):
         context["hsfig1"] = hsfig1
         context["hsfig2"] = hsfig2
 
-        context["sankey1"] = sankey1
-        context["sankey2"] = sankey2
+        # context["sankey1"] = sankey1
+        # context["sankey2"] = sankey2
+
+        context["networkfig"] = html_path
 
         shipper_id = str(int(self.object.ShipperPanjivaID))
         consignee_id = str(int(self.object.ConsigneePanjivaID))

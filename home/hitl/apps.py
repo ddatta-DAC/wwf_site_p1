@@ -61,6 +61,14 @@ class HitlConfig(AppConfig):
             _subDIR='01_2016'
         )
 
+        logger.error("Starting sankey initialization {}".format(datetime.now()))
+        sankey.initialize(
+            _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
+            _subDIR='01_2016',
+            _html_saveDir='{}/htmlCache'.format(base_path),
+            _json_saveDir='{}/jsonCache'.format(base_path)
+        )
+
         logger.error("Done with initializations")
 
     def load_csv(self, path):

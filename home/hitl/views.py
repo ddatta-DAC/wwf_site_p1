@@ -39,6 +39,7 @@ class RecordDetailView(DetailView):
         from PairwiseComparison.fetchRecord_details import fetchRecord_details
         from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
         from VisualComponents_backend.HSCodeViz.main import get_HSCode_distribution
+        from VisualComponents_backend.sankey_diagram.main import get_sankey_diagram
 
         context = super().get_context_data(**kwargs)
 
@@ -75,7 +76,6 @@ class RecordDetailView(DetailView):
             return_type=2
         )
 
-        # Visualization heading should be   'ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination'
         sankey1 = get_sankey_diagram(
                 self.object.PanjivaRecordID,
                 diagram_type=1,
@@ -84,8 +84,6 @@ class RecordDetailView(DetailView):
                 fig_height=600,
                 use_cache=True
         )
-        # Call with type diagram_type=2
-        # Visualization heading should be  'ConsigneeName - HSCode - ShipperName'
         sankey2 = get_sankey_diagram(
                 self.object.PanjivaRecordID,
                 diagram_type=2,

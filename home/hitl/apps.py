@@ -20,6 +20,7 @@ class HitlConfig(AppConfig):
         from VisualComponents_backend.EmbViz_all import main as embTSNE
         from PairwiseComparison.fetchRecord_details import setupGlobals
         from VisualComponents_backend.StackedComparison.stackedComparison import initialize
+        from VisualComponents_backend.HSCodeViz.main import initialize as hs_initialize
         from datetime import datetime
 
         logger.error("Starting TS {}".format(datetime.now()))
@@ -53,6 +54,13 @@ class HitlConfig(AppConfig):
             emb_dim = 64,
             _htmlSaveDir = '{}/htmlCache'.format(base_path)
         )
+
+        logger.error("Starting hs initialization {}".format(datetime.now()))
+        hs_initialize(
+            _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
+            _subDIR='01_2016'
+        )
+
         logger.error("Done with initializations")
 
     def load_csv(self, path):

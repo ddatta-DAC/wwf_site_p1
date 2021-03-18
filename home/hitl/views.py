@@ -40,7 +40,7 @@ class RecordDetailView(DetailView):
         from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
         from VisualComponents_backend.HSCodeViz.main import get_HSCode_distribution
         from VisualComponents_backend.sankey_diagram.main import get_sankey_diagram
-        from VisualComponents_backend.companyNetworkViz.main import visualize
+        # from VisualComponents_backend.companyNetworkViz.main import visualize
 
         context = super().get_context_data(**kwargs)
 
@@ -94,13 +94,13 @@ class RecordDetailView(DetailView):
                 use_cache=True
         )
 
-        html_path = visualize( 
-            PanjivaRecordID =self.object.PanjivaRecordID,
-            fig_width='100%', 
-            title=False, 
-            fig_height='920px', 
-            return_type = 2
-        )
+        # html_path = visualize( 
+        #     PanjivaRecordID =self.object.PanjivaRecordID,
+        #     fig_width='100%', 
+        #     title=False, 
+        #     fig_height='920px', 
+        #     return_type = 2
+        # )
 
         context["fig1"] = fig1
         context["fig2"] = fig2

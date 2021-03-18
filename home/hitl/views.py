@@ -75,6 +75,26 @@ class RecordDetailView(DetailView):
             return_type=2
         )
 
+        # Visualization heading should be   'ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination'
+        sankey1 = get_sankey_diagram(
+                self.object.PanjivaRecordID,
+                diagram_type=1,
+                link_count_upper_bound=100,
+                return_type=2,
+                fig_height=600,
+                use_cache=True
+        )
+        # Call with type diagram_type=2
+        # Visualization heading should be  'ConsigneeName - HSCode - ShipperName'
+        sankey2 = get_sankey_diagram(
+                self.object.PanjivaRecordID,
+                diagram_type=2,
+                link_count_upper_bound=100,
+                return_type=2,
+                fig_height=600,
+                use_cache=True
+        )
+
         context["fig1"] = fig1
         context["fig2"] = fig2
         context["fig3"] = fig3
@@ -91,6 +111,9 @@ class RecordDetailView(DetailView):
 
         context["hsfig1"] = hsfig1
         context["hsfig2"] = hsfig2
+
+        context["sankey1"] = sankey1
+        context["sankey2"] = sankey2
 
         shipper_id = str(int(self.object.ShipperPanjivaID))
         consignee_id = str(int(self.object.ConsigneePanjivaID))

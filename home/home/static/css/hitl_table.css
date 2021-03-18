@@ -10,3 +10,7 @@
   /*height: 500px;*/
   /*overflow-y: scroll;*/
 }
+
+.wide-button {
+  width: 100%;
+}

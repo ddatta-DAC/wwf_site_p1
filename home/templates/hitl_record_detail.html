@@ -62,12 +62,12 @@
           </table>
         </div>
       </div>
-      <div class="row">
+      <div class="row pt-1">
         <div class="col-6">
-          <button type="button" class="btn btn-primary">Submit Anomalous Pairs</button>
+          <button type="button" class="btn btn-primary wide-button">Submit Anomalous Pairs</button>
         </div>
         <div class="col-6">
-          <button type="button" class="btn btn-outline-danger">Not Anomalous</button>
+          <button type="button" class="btn btn-outline-danger wide-button">Not Anomalous</button>
         </div>
       </div>
     </div>
@@ -106,6 +106,19 @@
     </div>
     <div class="col-6">
       {{ hsfig2|safe }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <h3>ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination</h3>
+      {{ sankey1|safe }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h3>ConsigneeName - HSCode - ShipperName</h3>
+      {{ sankey2|safe }}
     </div>
   </div>
 

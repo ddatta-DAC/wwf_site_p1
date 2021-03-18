@@ -77,22 +77,22 @@ class RecordDetailView(DetailView):
             return_type=2
         )
 
-        # sankey1 = get_sankey_diagram(
-        #         self.object.PanjivaRecordID,
-        #         diagram_type=1,
-        #         link_count_upper_bound=100,
-        #         return_type=2,
-        #         fig_height=600,
-        #         use_cache=True
-        # )
-        # sankey2 = get_sankey_diagram(
-        #         self.object.PanjivaRecordID,
-        #         diagram_type=2,
-        #         link_count_upper_bound=100,
-        #         return_type=2,
-        #         fig_height=600,
-        #         use_cache=True
-        # )
+        sankey1 = get_sankey_diagram(
+                self.object.PanjivaRecordID,
+                diagram_type=1,
+                link_count_upper_bound=100,
+                return_type=2,
+                fig_height=600,
+                use_cache=True
+        )
+        sankey2 = get_sankey_diagram(
+                self.object.PanjivaRecordID,
+                diagram_type=2,
+                link_count_upper_bound=100,
+                return_type=2,
+                fig_height=600,
+                use_cache=True
+        )
 
         html_path = visualize( 
             PanjivaRecordID =self.object.PanjivaRecordID,
@@ -119,8 +119,8 @@ class RecordDetailView(DetailView):
         context["hsfig1"] = hsfig1
         context["hsfig2"] = hsfig2
 
-        # context["sankey1"] = sankey1
-        # context["sankey2"] = sankey2
+        context["sankey1"] = sankey1
+        context["sankey2"] = sankey2
 
         context["networkfig"] = html_path
 

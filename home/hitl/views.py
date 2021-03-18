@@ -38,6 +38,7 @@ class RecordDetailView(DetailView):
         from VisualComponents_backend.EmbViz_all import main as embTSNE
         from PairwiseComparison.fetchRecord_details import fetchRecord_details
         from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
+        from VisualComponents_backend.HSCodeViz.main import get_HSCode_distribution
 
         context = super().get_context_data(**kwargs)
 

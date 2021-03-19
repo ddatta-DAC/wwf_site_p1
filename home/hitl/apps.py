@@ -22,7 +22,7 @@ class HitlConfig(AppConfig):
         from VisualComponents_backend.StackedComparison.stackedComparison import initialize
         from VisualComponents_backend.HSCodeViz.main import initialize as hs_initialize
         from VisualComponents_backend.sankey_diagram.main import initialize as sankey_initialize
-        # from VisualComponents_backend.companyNetworkViz.main import initialize as network_initialize
+        from VisualComponents_backend.companyNetworkViz.main import initialize as network_initialize
 
         from datetime import datetime
 

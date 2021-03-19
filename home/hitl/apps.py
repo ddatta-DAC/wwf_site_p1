@@ -73,14 +73,14 @@ class HitlConfig(AppConfig):
         )
 
         logger.error("Starting network initialization {}".format(datetime.now()))
-        # network_initialize(
-        #     _DATA_LOC ='{}/generated_data_v1/us_import'.format(base_path),
-        #     _saved_emb_loc =  '{}/GNN/saved_model_gnn'.format(base_path),
-        #     _subDIR = '01_2016',
-        #     _html_cache= '{}/htmlCache'.format(base_path),
-        #     _df_cache = '{}/dfCache'.format(base_path),
-        #     db_loc ='{}/DB/wwf.db'.format(base_path)
-        # )
+        network_initialize(
+            _DATA_LOC ='{}/generated_data_v1/us_import'.format(base_path),
+            _saved_emb_loc =  '{}/GNN/saved_model_gnn'.format(base_path),
+            _subDIR = '01_2016',
+            _html_cache= '{}/htmlCache'.format(base_path),
+            _df_cache = '{}/dfCache'.format(base_path),
+            db_loc ='{}/DB/wwf.db'.format(base_path)
+        )
 
         logger.error("Done with initializations")
 

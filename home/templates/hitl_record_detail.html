@@ -70,16 +70,41 @@
           <button type="button" class="btn btn-outline-danger wide-button">Not Anomalous</button>
         </div>
       </div>
+      <div class="row">
+         <div class="col-md-1"></div>
+         <div class="col-md-4 ">
+            <div class="panel text-center flex-d" >
+              <button type="button" class="btn btn-danger btn-outline-danger  btn-block h3 rounded-pill">
+                <span class='h3'>Suspicous Trade </span>
+              </button>
+            </div>
+         </div>
+         <div class="col-md-4 ">
+           <div class="panel text-center flex-d" >
+             <button type="button" class="btn btn-secondary btn-block h3 rounded-pill">
+               <span class='h3'>Not Suspicous</span>
+               </button>
+           </div>
+         </div>
+         <div class="col-md-2">
+           <div class="panel text-center flex-d" >
+             <button type="button" class="btn btn-info btn-block h3 rounded-pill" data-toggle="tooltip" data-placement="bottom" title="Click to save feedback.">
+               <span class='h3'>SAVE </span>
+             </button>
+           </div>
+         </div>
+         <div class="col-md-1"></div>
+      </div>
     </div>
   </div>
 
   <div class="row">
     <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="fig1-tab" data-bs-toggle="tab" data-bs-target="#fig1" type="button" role="tab" aria-controls="fig1" aria-selected="true">Fig 1</button>
+        <button class="nav-link active" id="fig1-tab" data-bs-toggle="tab" data-bs-target="#fig1" type="button" role="tab" aria-controls="fig1" aria-selected="true">Consignee Activity</button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="fig2-tab" data-bs-toggle="tab" data-bs-target="#fig2" type="button" role="tab" aria-controls="fig2" aria-selected="false">Fig 2</button>
+        <button class="nav-link" id="fig2-tab" data-bs-toggle="tab" data-bs-target="#fig2" type="button" role="tab" aria-controls="fig2" aria-selected="false">Shipper Activity</button>
       </li>
     </ul>
 
@@ -111,14 +136,27 @@
 
   <div class="row">
     <div class="col">
-      <h3>ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination</h3>
-      {{ sankey1|safe }}
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <h3>ConsigneeName - HSCode - ShipperName</h3>
-      {{ sankey2|safe }}
+
+      <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="sankey1-tab" data-bs-toggle="tab" data-bs-target="#sankey1" type="button" role="tab" aria-controls="sankey1" aria-selected="true">Consignee Activity</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="sankey2-tab" data-bs-toggle="tab" data-bs-target="#sankey2" type="button" role="tab" aria-controls="sankey2" aria-selected="false">Shipper Activity</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="sankeyTabs">
+        <div class="tab-pane fade show active" id="sankey1" role="tabpanel" aria-labelledby="sankey1-tab">
+          <h3>ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination</h3>
+          {{ sankey1|safe }}
+        </div>
+        <div class="tab-pane fade" id="sankey2" role="tabpanel" aria-labelledby="sankey2-tab">
+          <h3>ConsigneeName - HSCode - ShipperName</h3>
+          {{ sankey2|safe }}
+        </div>
+      </div>
+
     </div>
   </div>
 

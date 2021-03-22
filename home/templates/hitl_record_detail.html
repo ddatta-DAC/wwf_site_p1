@@ -39,13 +39,13 @@
         <dt>Shipment Destination</dt>
         <dd>{{ record.ShipmentDestination }}</dd>
         <dt>Consignee Panjiva ID</dt>
-        <dd>{{ record.ConsigneePanjivaID }}</dd>
+        <dd>{{ record.ConsigneePanjivaID|stringformat:".0f" }}</dd>
         <dt>Consignee Name</dt>
         <dd>{{ record.ConsigneeName }}</dd>
         <dt>Consignee Country</dt>
         <dd>{{ record.ConsigneeCountry }}</dd>
         <dt>Shipper Panjiva ID</dt>
-        <dd>{{ record.ShipperPanjivaID }}</dd>
+        <dd>{{ record.ShipperPanjivaID|stringformat:".0f" }}</dd>
         <dt>Shipper Name</dt>
         <dd>{{ record.ShipperName }}</dd>
         <dt>Shipper Country</dt>
@@ -97,29 +97,23 @@
         </div>
       </div>
       <div class="row">
-         <div class="col-md-1"></div>
-         <div class="col-md-4 ">
-            <div class="panel text-center flex-d" >
-              <button type="button" class="btn btn-danger btn-outline-danger  btn-block h3 rounded-pill">
-                <span class='h3'>Suspicous Trade </span>
-              </button>
-            </div>
-         </div>
-         <div class="col-md-4 ">
-           <div class="panel text-center flex-d" >
-             <button type="button" class="btn btn-secondary btn-block h3 rounded-pill">
-               <span class='h3'>Not Suspicous</span>
-               </button>
-           </div>
-         </div>
-         <div class="col-md-2">
-           <div class="panel text-center flex-d" >
-             <button type="button" class="btn btn-info btn-block h3 rounded-pill" data-toggle="tooltip" data-placement="bottom" title="Click to save feedback.">
-               <span class='h3'>SAVE </span>
-             </button>
-           </div>
-         </div>
-         <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4 ">
+          <button type="button" class="btn btn-outline-danger">
+          Suspicous Trade
+          </button>
+        </div>
+        <div class="col-md-4 ">
+          <button type="button" class="btn btn-secondary">
+          Not Suspicous
+          </button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Click to save feedback.">
+          Save
+          </button>
+        </div>
+        <div class="col-md-1"></div>
       </div>
     </div>
   </div>

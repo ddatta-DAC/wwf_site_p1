@@ -4,18 +4,21 @@
 
 {% block head %}
     <link href="{% static 'css/hitl_table.css' %}" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-
 {% endblock head %}
 
 {% block content %}
+<div id="viznavbar">
+ <a href="#pair_table_wrapper">Feedback</a>
+ <a href="#TS">Temporal Patterns</a>
+ <a href="#HSCode">HSCode Distributions</a>
+ <a href="#simailarRecords">Comapre Similar Records</a>
+ <a href="#Sankey">Visualize Flows</a>
+ <a href="#network">Visualize Network</a>
+</div>
 
- <div class="container">
- {#  fig1|safe #}
- {#  fig2|safe #}
- 
+ <div class="container content">
 
   <div class="row">
     <div class="col-4 record-detail">
@@ -118,7 +121,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" id="TS">
     <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="fig1-tab" data-bs-toggle="tab" data-bs-target="#fig1" type="button" role="tab" aria-controls="fig1" aria-selected="true">Consignee Activity</button>
@@ -144,8 +147,8 @@
     </div>
   </div>
 
-  <div class="row">
-    <h3>HS Code</h3>
+  <div id ="HSCode" class="row">
+    <h3>HS Code Distributions</h3>
     <div class="col-6">
       {{ hsfig1|safe }}
     </div>
@@ -154,7 +157,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" id="Sankey">
     <div class="col">
 
       <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
@@ -180,14 +183,14 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" id="network">
     <div class="col">
       <h3>Network</h3>
       {{ networkfig|safe }}
     </div>
   </div>
 
-     <div class="row">
+     <div class="row" class="simailarRecords">
        <div class="col-lg-3 border">
          <div class="card flex-d" >
          <div class="card-img-top text-center">

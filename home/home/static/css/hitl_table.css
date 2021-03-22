@@ -24,3 +24,34 @@
   border-width: 6px;
   padding: 0.25rem;
 }
+
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+#viznavbar {
+  overflow: hidden;
+  background-color: #3e4047;
+  z-index: 2;
+  opacity: 0.95;
+  border-radius: 0.35rem;
+}
+
+#viznavbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.05rem;
+}

@@ -22,18 +22,46 @@
       <dl>
         <dt>PanjivaRecordID</dt>
         <dd>{{ record.PanjivaRecordID }}</dd>
-        <dt>Consignee ID</dt>
-        <dd>{{ record.ConsigneePanjivaID|stringformat:".0f" }}</dd>
-        <dt>Shipper ID</dt>
-        <dd>{{ record.ShipperPanjivaID|stringformat:".0f" }}</dd>
-        <dt>Arrival Date</dt>
+        <dt>BillOfLadingNumber</dt>
+        <dd>{{ record.BillOfLadingNumber }}</dd>
+        <dt>ArrivalDate</dt>
         <dd>{{ record.ArrivalDate }}</dd>
-        <dt>Shipment Origin</dt>
-        <dd>{{ record.ShipmentOrigin }}</dd>
-        <dt>Shipment Destination</dt>
-        <dd>{{ record.ShipmentDestination }}</dd>
-        <dt>HS Code</dt>
+        <dt>Carrier</dt>
+        <dd>{{ record.Carrier }}</dd>
+        <dt>HSCode</dt>
         <dd>{{ record.HSCode }}</dd>
+        <dt>ShipmentOrigin</dt>
+        <dd>{{ record.ShipmentOrigin }}</dd>
+        <dt>PortOfLading</dt>
+        <dd>{{ record.PortOfLading }}</dd>
+        <dt>PortOfUnlading</dt>
+        <dd>{{ record.PortOfUnlading }}</dd>
+        <dt>ShipmentDestination</dt>
+        <dd>{{ record.ShipmentDestination }}</dd>
+        <dt>ConsigneePanjivaID</dt>
+        <dd>{{ record.ConsigneePanjivaID }}</dd>
+        <dt>ConsigneeName</dt>
+        <dd>{{ record.ConsigneeName }}</dd>
+        <dt>ConsigneeCountry</dt>
+        <dd>{{ record.ConsigneeCountry }}</dd>
+        <dt>ShipperPanjivaID</dt>
+        <dd>{{ record.ShipperPanjivaID }}</dd>
+        <dt>ShipperName</dt>
+        <dd>{{ record.ShipperName }}</dd>
+        <dt>ShipperCountry</dt>
+        <dd>{{ record.ShipperCountry }}</dd>
+        <dt>DividedLCL</dt>
+        <dd>{{ record.DividedLCL }}</dd>
+        <dt>TransportMethod</dt>
+        <dd>{{ record.TransportMethod }}</dd>
+        <dt>IsContainerized</dt>
+        <dd>{{ record.IsContainerized }}</dd>
+        <dt>WeightT</dt>
+        <dd>{{ record.WeightT }}</dd>
+        <dt>InbondCode</dt>
+        <dd>{{ record.InbondCode }}</dd>
+        <dt>VolumeContainerTEU</dt>
+        <dd>{{ record.VolumeContainerTEU }}</dd>
       </dl>
 
     </div>
@@ -63,11 +91,9 @@
         </div>
       </div>
       <div class="row pt-1">
+        <div class="col-3"></div>
         <div class="col-6">
           <button type="button" class="btn btn-primary wide-button">Submit Anomalous Pairs</button>
-        </div>
-        <div class="col-6">
-          <button type="button" class="btn btn-outline-danger wide-button">Not Anomalous</button>
         </div>
       </div>
       <div class="row">

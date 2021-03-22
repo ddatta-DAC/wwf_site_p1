@@ -14,3 +14,13 @@
 .wide-button {
   width: 100%;
 }
+
+
+.record-detail {
+  overflow: auto;
+  height: 35rem;
+  border-bottom-color: black;
+  border-radius: 10px;
+  border-width: 6px;
+  padding: 0.25rem;
+}

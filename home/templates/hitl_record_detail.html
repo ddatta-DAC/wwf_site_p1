@@ -10,10 +10,12 @@
 
 {% block content %}
 <div id="viznavbar">
- <a href="#pair_table_wrapper">Feedback</a>
+ <a href="#pair_table_wrapper">Record Details</a>
+ <a href="#pair_table_wrapper" style="color:#f8ff90;"> Explantions & Feedback</a>
  <a href="#TS">Temporal Patterns</a>
- <a href="#HSCode">HSCode Distributions</a>
- <a href="#simailarRecords">Comapre Similar Records</a>
+ <a href="#HSCode">HS Code Distributions</a>
+ <a href="#TS">Visualize Record Entities</a>
+ <a href="#simailarRecords">Compare Similar Records</a>
  <a href="#Sankey">Visualize Flows</a>
  <a href="#network">Visualize Network</a>
 </div>
@@ -21,54 +23,221 @@
  <div class="container content">
 
   <div class="row">
-    <div class="col-4 record-detail">
-      <dl>
-        <dt>PanjivaRecordID</dt>
-        <dd>{{ record.PanjivaRecordID }}</dd>
-        <dt>Bill Of Lading Number</dt>
-        <dd>{{ record.BillOfLadingNumber }}</dd>
-        <dt>Arrival Date</dt>
-        <dd>{{ record.ArrivalDate }}</dd>
-        <dt>Carrier</dt>
-        <dd>{{ record.Carrier }}</dd>
-        <dt>HS Code</dt>
-        <dd>{{ record.HSCode }}</dd>
-        <dt>Shipment Origin</dt>
-        <dd>{{ record.ShipmentOrigin }}</dd>
-        <dt>Port Of Lading</dt>
-        <dd>{{ record.PortOfLading }}</dd>
-        <dt>Port Of Unlading</dt>
-        <dd>{{ record.PortOfUnlading }}</dd>
-        <dt>Shipment Destination</dt>
-        <dd>{{ record.ShipmentDestination }}</dd>
-        <dt>Consignee Panjiva ID</dt>
-        <dd>{{ record.ConsigneePanjivaID|stringformat:".0f" }}</dd>
-        <dt>Consignee Name</dt>
-        <dd>{{ record.ConsigneeName }}</dd>
-        <dt>Consignee Country</dt>
-        <dd>{{ record.ConsigneeCountry }}</dd>
-        <dt>Shipper Panjiva ID</dt>
-        <dd>{{ record.ShipperPanjivaID|stringformat:".0f" }}</dd>
-        <dt>Shipper Name</dt>
-        <dd>{{ record.ShipperName }}</dd>
-        <dt>Shipper Country</dt>
-        <dd>{{ record.ShipperCountry }}</dd>
-        <dt>Divided LCL</dt>
-        <dd>{{ record.DividedLCL }}</dd>
-        <dt>Transport Method</dt>
-        <dd>{{ record.TransportMethod }}</dd>
-        <dt>Is Containerized</dt>
-        <dd>{{ record.IsContainerized }}</dd>
-        <dt>Weight T</dt>
-        <dd>{{ record.WeightT }}</dd>
-        <dt>Inbond Code</dt>
-        <dd>{{ record.InbondCode }}</dd>
-        <dt>Volume Container TEU</dt>
-        <dd>{{ record.VolumeContainerTEU }}</dd>
-      </dl>
+    <div class="col-6 record-detail">
 
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            PanjivaRecordID </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.PanjivaRecordID }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            Bill Of Lading Number </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.BillOfLadingNumber }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            Arrival Date </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ArrivalDate }}
+          </div>
+
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            Carrier </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.Carrier }}
+          </div>
+          </div>
+
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            HS Code</span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.HSCode }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            Shipment Origin </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ShipmentOrigin }}
+          </div>
+          </div>
+
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            Port Of Lading </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.PortOfLading }}
+          </div>
+          </div>
+
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+            Port Of Unlading </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.PortOfUnlading }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Shipment Destination
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ShipmentDestination }}
+          </div>
+          </div>
+
+
+
+
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Consignee Panjiva ID
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ConsigneePanjivaID|stringformat:".0f"  }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Consignee Name
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ConsigneeName }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Consignee Country
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ConsigneeCountry }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Shipper Panjiva ID
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ShipperPanjivaID|stringformat:".0f" }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Shipper Name
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+          {{ record.ShipperName }}
+          </div>
+          </div>
+
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Shipper Country
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.ShipperCountry }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Divided LCL
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.DividedLCL }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Transport Method
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.TransportMethod }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Is Containerized
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.IsContainerized }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Weight T
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.WeightT }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Inbond Code
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.InbondCode }}
+          </div>
+          </div>
+          <div class="row border record-detail-row text-center">
+          <div class="col-sm-5 recordDetailTitleCol">
+          <span class='recordDetailTitle text-center recordDetailTitleCol'>
+          Volume Container TEU
+          </span>
+          </div>
+          <div class="col-sm-7 recordDetailText">
+            {{ record.VolumeContainerTEU }}
+          </div>
+          </div>
     </div>
-    <div class="col-8">
+    <div class="col-6">
       <div class="row">
         <div class="table-wrapper">
           <table id="pair_table" class="table table-striped">
@@ -148,7 +317,7 @@
   </div>
 
   <div id ="HSCode" class="row">
-    <h3>HS Code Distributions</h3>
+    <h3>HS Code Distributions or Consignee and Shipper of current Record</h3>
     <div class="col-6">
       {{ hsfig1|safe }}
     </div>

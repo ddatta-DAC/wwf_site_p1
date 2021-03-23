@@ -55,3 +55,23 @@
   text-decoration: none;
   font-size: 1.05rem;
 }
+
+.recordDetailTitleCol{
+  background-color: #09531c;
+  color: white;
+}
+
+.record-detail-row{
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  font-size: larger;
+  align-items: flex-start;
+}
+
+.recordDetailTitle{
+  font-weight: 600;
+}
+
+.recordDetailText{
+  text-align: justify;
+}

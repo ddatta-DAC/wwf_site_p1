@@ -2,7 +2,8 @@ from django.apps import apps
 from django.http import JsonResponse
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
-          
+from django.urls import reverse
+
 from hitl.models import Epoch, Record, Shipper, Consignee
 
 import logging
@@ -32,6 +33,11 @@ class RecordDetailView(DetailView):
     queryset = Record.objects.using('hitl')
 
     def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["track_type_name"] = self.object.PanjivaRecordID
+
+        return context
+
         #from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         #from VisualComponents_backend.EmbViz_all import main as embTSNE
         from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
@@ -42,7 +48,6 @@ class RecordDetailView(DetailView):
         from VisualComponents_backend.sankey_diagram.main import get_sankey_diagram
         from VisualComponents_backend.companyNetworkViz.main import visualize
 
-        context = super().get_context_data(**kwargs)
 
         #app = apps.get_app_config('hitl')
         logger.error("object we are looking for {}".format(self.object.PanjivaRecordID))
@@ -145,7 +150,8 @@ show_fields = [
     'ConsigneePanjivaID',
     'ShipmentOrigin',
     'PlaceOfReceipt', #'countryofsale',
-    'ValueOfGoodsUSD',
+    # 'ValueOfGoodsUSD',
+    'PanjivaRecordID',
     'HSCode'
 ]
 hidden_fields = [
@@ -186,6 +192,8 @@ def table_format(instance, field):
         return '${:,}'.format(value)
     if field in ['shipmentmonth']:
         return value.strftime('%Y/%m')
+    if field in ['PanjivaRecordID']:
+        return "<a href={}>{}</a>".format(reverse("record_detail", args=[value]), value)
     return value
 
 
@@ -251,8 +259,8 @@ class EpochDetailView(DetailView):
             'hidden_cols': list(range(len(show_fields) + 1, len(fields) + 1)),
             'data': data,
         }
-        import json
-        print(json.dumps(table_data))
+        # import json
+        # print(json.dumps(table_data))
         return table_data
 
     def render_to_response(self, context, *args, **kwargs):

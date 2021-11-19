@@ -36,32 +36,36 @@ class RecordDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context["track_type_name"] = self.object.PanjivaRecordID
 
-        return context
+        from VisualComponents_backend.cachedDataFetcher import static_data_fetcher
+        obj = static_data_fetcher(base_path="/home/django/html_data_cache/")
+        result = obj.fetch_saved_html(self.object.PanjivaRecordID)
 
         #from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         #from VisualComponents_backend.EmbViz_all import main as embTSNE
-        from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
-        from VisualComponents_backend.EmbViz_all import main as embTSNE
+        # from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
+        # from VisualComponents_backend.EmbViz_all import main as embTSNE
         from PairwiseComparison.fetchRecord_details import fetchRecord_details
-        from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
-        from VisualComponents_backend.HSCodeViz.main import get_HSCode_distribution
-        from VisualComponents_backend.sankey_diagram.main import get_sankey_diagram
-        from VisualComponents_backend.companyNetworkViz.main import visualize
+        # from VisualComponents_backend.StackedComparison.stackedComparison import get_stackedComparisonPlots
+        # from VisualComponents_backend.HSCodeViz.main import get_HSCode_distribution
+        # from VisualComponents_backend.sankey_diagram.main import get_sankey_diagram
+        # from VisualComponents_backend.companyNetworkViz.main import visualize
 
 
         #app = apps.get_app_config('hitl')
         logger.error("object we are looking for {}".format(self.object.PanjivaRecordID))
 
-        fig1, fig2 = TS.get_TimeSeries(
-            self.object.PanjivaRecordID,
-            use_cache=True,
-            return_type=2
-        )
+        # fig1, fig2 = TS.get_TimeSeries(
+        #     self.object.PanjivaRecordID,
+        #     use_cache=True,
+        #     return_type=2
+        # )
 
-        fig3 = embTSNE.get_record_entityEmbeddings(
-            self.object.PanjivaRecordID,
-            return_type=2
-        )
+        fig1 = result["TimeSeries"]
+
+        # fig3 = embTSNE.get_record_entityEmbeddings(
+        #     self.object.PanjivaRecordID,
+        #     return_type=2
+        # )
         entity_pairs = fetchRecord_details(id=self.object.PanjivaRecordID, subDIR="01_2016")
         sorted_pairs = sorted(entity_pairs, key=lambda y: y[2], reverse=True)
         pairs = [[
@@ -71,61 +75,66 @@ class RecordDetailView(DetailView):
             i
         ] for i, y in enumerate(sorted_pairs)]
 
-        fig_dict = get_stackedComparisonPlots(
-            record_id=self.object.PanjivaRecordID, 
-            min_count = 500, 
-            return_type=1
-        )
+        # fig_dict = get_stackedComparisonPlots(
+        #     record_id=self.object.PanjivaRecordID, 
+        #     min_count = 500, 
+        #     return_type=1
+        # )
+        fig_dict = result["stackedComparison"]
 
-        hsfig1, hsfig2 = get_HSCode_distribution(
-            record_id=self.object.PanjivaRecordID,
-            return_type=2
-        )
+        # hsfig1, hsfig2 = get_HSCode_distribution(
+        #     record_id=self.object.PanjivaRecordID,
+        #     return_type=2
+        # )
+        hsfig1 = result["HSCodeViz"]
 
-        sankey1 = get_sankey_diagram(
-                self.object.PanjivaRecordID,
-                diagram_type=1,
-                link_count_upper_bound=100,
-                return_type=2,
-                fig_height=600,
-                use_cache=True
-        )
-        sankey2 = get_sankey_diagram(
-                self.object.PanjivaRecordID,
-                diagram_type=2,
-                link_count_upper_bound=100,
-                return_type=2,
-                fig_height=600,
-                use_cache=True
-        )
+        # sankey1 = get_sankey_diagram(
+        #         self.object.PanjivaRecordID,
+        #         diagram_type=1,
+        #         link_count_upper_bound=100,
+        #         return_type=2,
+        #         fig_height=600,
+        #         use_cache=True
+        # )
+        # sankey2 = get_sankey_diagram(
+        #         self.object.PanjivaRecordID,
+        #         diagram_type=2,
+        #         link_count_upper_bound=100,
+        #         return_type=2,
+        #         fig_height=600,
+        #         use_cache=True
+        # )
+        sankey1 = result["sankeyDiagram"]
 
-        html_path = visualize( 
-            PanjivaRecordID =self.object.PanjivaRecordID,
-            fig_width='100%', 
-            title=False, 
-            fig_height='920px', 
-            return_type = 2
-        )
+        # html_path = visualize( 
+        #     PanjivaRecordID =self.object.PanjivaRecordID,
+        #     fig_width='100%', 
+        #     title=False, 
+        #     fig_height='920px', 
+        #     return_type = 2
+        # )
+        html_path = result["companyNetworkViz"]
 
         context["fig1"] = fig1
-        context["fig2"] = fig2
-        context["fig3"] = fig3
+        # context["fig2"] = fig2
+        # context["fig3"] = fig3
         context["pairs"] = pairs
 
-        context["carrier_fig"] = fig_dict["Carrier"]
-        context["hscode_fig"] = fig_dict["HSCode"]
-        context["shipmentorigin_fig"] = fig_dict["ShipmentOrigin"]
-        context["shipmentdestination_fig"] = fig_dict["ShipmentDestination"]
-        context["portofunlading_fig"] = fig_dict["PortOfUnlading"]
-        context["portoflading_fig"] = fig_dict["PortOfLading"]
+        context["carrier_fig"] = result["stackedComparison"]
+        # context["carrier_fig"] = fig_dict["Carrier"]
+        # context["hscode_fig"] = fig_dict["HSCode"]
+        # context["shipmentorigin_fig"] = fig_dict["ShipmentOrigin"]
+        # context["shipmentdestination_fig"] = fig_dict["ShipmentDestination"]
+        # context["portofunlading_fig"] = fig_dict["PortOfUnlading"]
+        # context["portoflading_fig"] = fig_dict["PortOfLading"]
 
         context["track_type_name"] = self.object.PanjivaRecordID
 
         context["hsfig1"] = hsfig1
-        context["hsfig2"] = hsfig2
+        # context["hsfig2"] = hsfig2
 
         context["sankey1"] = sankey1
-        context["sankey2"] = sankey2
+        # context["sankey2"] = sankey2
 
         context["networkfig"] = html_path
 

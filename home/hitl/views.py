@@ -34,9 +34,8 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
         app = apps.get_app_config('hitl')
 
         logger.error("request.POST {}".format(request.POST))
-        data = json.loads(request.POST["entities"])
         entity_pair_list = [
-            (x.split(";")[0], x.split(";")[1]) for x in data
+            (x.split(";")[0], x.split(";")[1]) for x in data["entities"]
         ]
 
         logger.error("Updating onlineObj {}", entity_pair_list)

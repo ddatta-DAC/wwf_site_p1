@@ -35,7 +35,7 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
 
         logger.error("request.POST {}".format(request.POST))
         entity_pair_list = [
-            (x.split(";")[0], x.split(";")[1]) for x in request.POST.getlist["entities[]"]
+            (x.split(";")[0], x.split(";")[1]) for x in request.POST.getlist("entities[]")
         ]
 
         logger.error("Updating onlineObj {}", entity_pair_list)

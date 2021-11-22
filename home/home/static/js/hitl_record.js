@@ -7,8 +7,9 @@ $(document).ready(function () {
 
   $("#submit").on("click", function () {
     console.log("Let's do this submit action");
-    const entities = $('#pair_table input[type="checkbox"]:checked').map(function() {
-      $(this).attr("data-entities")
+    let entities = [];
+    $('#pair_table input[type="checkbox"]:checked').each(function() {
+      entities.push($(this).attr("data-entities"));
     });
 
     console.log({entities});

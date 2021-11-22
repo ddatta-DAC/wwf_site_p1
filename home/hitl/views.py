@@ -54,7 +54,7 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
             (x.split(";")[0], x.split(";")[1]) for x in request.POST.getlist("entities[]")
         ]
 
-        logger.error("Updating onlineObj {}", entity_pair_list)
+        logger.error("Updating onlineObj {}".format(entity_pair_list))
         app.onlineObj.register_feedback_input(
             recordID = self.kwargs['panjivarecordid'], 
             label=1, 

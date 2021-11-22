@@ -2,6 +2,7 @@ from django.apps import apps
 from django.http import JsonResponse
 from django.views.generic.detail import DetailView, SingleObjectMixin
 from django.views.generic.list import ListView
+from django.views.generic.base import View
 from django.urls import reverse
 
 from hitl.models import Epoch, Record, Shipper, Consignee

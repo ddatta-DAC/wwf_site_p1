@@ -12,7 +12,7 @@ $(document).ready(function () {
     order: [[ 2, "desc" ]]
   });
 
-  $("$notsubmit").on("click", function () {
+  $("#notsubmit").on("click", function () {
     console.log("Let's do this not suspicious button");
     $.post(notSuspiciousRecordURL);
   });

@@ -1,6 +1,6 @@
 from django.apps import apps
 from django.http import JsonResponse
-from django.views.generic.detail import DetailView
+from django.views.generic.detail import DetailView, SingleObjectMixin
 from django.views.generic.list import ListView
 from django.urls import reverse
 

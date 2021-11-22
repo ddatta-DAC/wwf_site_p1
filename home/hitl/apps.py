@@ -23,6 +23,7 @@ class HitlConfig(AppConfig):
 
         base_path = "/home/django/Code/HITL_System_v0"
 
+        logger.error("Starting data_handler.data_handler")
         data_handler_obj = data_handler.data_handler(
             DATA_LOC=f'{base_path}/generated_data_v1/us_import/',
             subDIR='01_2017',
@@ -31,19 +32,21 @@ class HitlConfig(AppConfig):
             data_store_dir='./tmp'
         )
 
-        self.onlineObj = onlineUpdateExecutor(
-            data_handler_obj,
-            update_at_every=4
-        )
+        logger.error("Skipping onlineUpdateExecutor")
+        # self.onlineObj = onlineUpdateExecutor(
+        #     data_handler_obj,
+        #     update_at_every=4
+        # )
 
         
         logger.error("Starting pairwiseInitialize ")
         setupGlobals('{}/generated_data_v1/us_import'.format(base_path))
-        initialize(
-                "{}/generated_data_v1/us_import/".format(base_path),
-                "{}/PairwiseComparison/pairWiseDist/".format(base_path),
-                "01_2016",
-        )
+        logger.error("Not calling pairwise initialize should be remembered")
+        # initialize(
+        #         "{}/generated_data_v1/us_import/".format(base_path),
+        #         "{}/PairwiseComparison/pairWiseDist/".format(base_path),
+        #         "01_2016",
+        # )
         logger.error("Done with pairwise init")
 
     def load_csv(self, path):

@@ -7,6 +7,7 @@ from django.urls import reverse
 
 from hitl.models import Epoch, Record, Shipper, Consignee
 
+import json
 import logging
 
 logger = logging.getLogger(__name__)
@@ -32,8 +33,9 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
     def post(self, request, *args, **kwargs):
         app = apps.get_app_config('hitl')
 
+        data = json.loads(request.POST)
         entity_pair_list = [
-            (x.split(";")[0], x.split(";")[1]) for x in request.POST["entities"]
+            (x.split(";")[0], x.split(";")[1]) for x in data["entities"]
         ]
 
         logger.error("Updating onlineObj {}", entity_pair_list)

@@ -13,8 +13,24 @@ $(document).ready(function () {
     });
 
     console.log({entities});
-    $.post(suspiciousEntitiesURL, {
-      'entities[]': entities
+    // $.post(suspiciousEntitiesURL, {
+    //   'entities[]': entities
+    // });
+
+    const request = new Request(
+        suspiciousEntitiesURL,
+        {
+          headers: {'X-CSRFToken': csrftoken},
+          method: "POST",
+          body: {"entities": JSON.stringify(entities)}
+        }
+    );
+    console.log({request});
+    fetch(request, {
+        method: 'POST',
+        mode: 'same-origin'  // Do not send CSRF token to another domain.
+    }).then(function(response) {
+        console.log("Got a response?")
     });
   })
 });

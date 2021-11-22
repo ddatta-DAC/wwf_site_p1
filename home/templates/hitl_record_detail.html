@@ -442,6 +442,7 @@
 </div>
 </div>
 
+{% csrf_token %}
 
 {% endblock content %}
 
@@ -455,6 +456,7 @@
 
 
   <script type="text/javascript">
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     const suspiciousEntitiesURL = "{% url 'suspicious_entities' object.PanjivaRecordID %}";
     console.log({suspiciousEntitiesURL});
   </script>        

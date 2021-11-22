@@ -19,7 +19,7 @@ from django.urls import path, include
 
 from . import views
 from trade.views import get_results, AnomalyView, AnomalyApiView, SubmitThumbsView, SubmitCommentView, ChinaImportExpandRowView, ChinaExportExpandRowView, PeruExportExpandRowView, UsImportExpandRowView, DefaultExpandRowView
-from hitl.views import EpochListView, EpochDetailView, RecordDetailView, HitlExpandRowView
+from hitl.views import EpochListView, EpochDetailView, RecordDetailView, HitlExpandRowView, SuspiciousEntitiesView
 
 urlpatterns = [
     path('home', views.home, name='data_home'),
@@ -29,6 +29,7 @@ urlpatterns = [
     path('invitations/', include('invitations.urls', namespace='invitations')),
     path('track/us_import', EpochListView.as_view(), name="hitl_table"),
     path('track/us_import/<slug:panjivarecordid>', RecordDetailView.as_view(), name="record_detail"),
+    path('api/hitl/susent/<slug:panjivarecordid>', SuspiciousEntitiesView.as_view(), name="suspicious_entities"),
     path('track/v1/<slug:track_name>', views.data_home, name='track'),
     path('anomaly/<slug:track_name>/<slug:panjivarecordid>', AnomalyView.as_view(), name='anomaly'),
     path('api/anomaly/<slug:track_name>/<slug:panjivarecordid>', AnomalyApiView.as_view(), name='anomaly_api'),

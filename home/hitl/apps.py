@@ -11,78 +11,40 @@ logger = logging.getLogger(__name__)
 class HitlConfig(AppConfig):
     name = 'hitl'
     epochs = {}
+    onlineObj = None
 
     MAX_TRANSACTIONS = 50
 
     def ready(self):
-        # return
-        # from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
-        # from VisualComponents_backend.EmbViz_all import main as embTSNE
-        from PairwiseComparison.fetchRecord_details import setupGlobals
-        # from VisualComponents_backend.StackedComparison.stackedComparison import initialize
-        # from VisualComponents_backend.HSCodeViz.main import initialize as hs_initialize
-        # from VisualComponents_backend.sankey_diagram.main import initialize as sankey_initialize
-        # from VisualComponents_backend.companyNetworkViz.main import initialize as network_initialize
+        from PairwiseComparison.fetchRecord_details import setupGlobals, initialize
+        from onlineUpdateModule.system_run import onlineUpdateExecutor
+        from onlineUpdateModule  import data_handler
 
-        # from datetime import datetime
 
-        # print("Starting TS {}".format(datetime.now()))
-        # base_path = "/home/django/Code/HITL_System_v0"
-        # TS.initialize(_DATA_LOC="{}/generated_data_v1/us_import/".format(base_path),
-        #         _subDIR='01_2016',
-        #         _html_saveDir='{}/htmlCache'.format(base_path), 
-        #         _json_saveDir='{}/jsonCache'.format(base_path)
-        # )
-        # print("Starting embTSNE {}".format(datetime.now()))
-        # embTSNE.initialize(
-        #         _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
-        #         _subDIR='01_2016',
-        #         mp2v_emb_dir = '{}/records2graph/saved_model_data'.format(base_path),
-        #         emb_dim = 64,
-        #         _htmlSaveDir = '{}/htmlCache'.format(base_path)
-        # )
-        # print("Starting pairwiseInitialize {}".format(datetime.now()))
+        base_path = "/home/django/Code/HITL_System_v0"
+
+        data_handler_obj = data_handler.data_handler(
+            DATA_LOC=f'${base_path}/generated_data_v1/us_import/',
+            subDIR='01_2017',
+            embedding_data_path=f'${base_path}/records2graph/saved_model_data',
+            anomaly_result_dir=f'${base_path}/AD_model/combined_output',
+            data_store_dir='./tmp'
+        )
+
+        self.onlineObj = onlineUpdateExecutor(
+            data_handler_obj,
+            update_at_every=4
+        )
+
+        
+        logger.error("Starting pairwiseInitialize ")
         setupGlobals('{}/generated_data_v1/us_import'.format(base_path))
-        # #pairwiseInitialize(
-        # #        "{}/generated_data_v1/us_import/".format(base_path),
-        # #        "{}/PairwiseComparison/pairWiseDist/".format(base_path),
-        # #        "01_2016",
-        # #)
-
-        # print("Starting stacked initialization {}".format(datetime.now()))
-        # initialize(
-        #     _DATA_LOC = '{}/generated_data_v1/us_import'.format(base_path),
-        #     _subDIR = '01_2016',
-        #     mp2v_emb_dir = '{}/records2graph/saved_model_data'.format(base_path),
-        #     emb_dim = 64,
-        #     _htmlSaveDir = '{}/htmlCache'.format(base_path)
-        # )
-
-        # print("Starting hs initialization {}".format(datetime.now()))
-        # hs_initialize(
-        #     _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
-        #     _subDIR='01_2016'
-        # )
-
-        # print("Starting sankey initialization {}".format(datetime.now()))
-        # sankey_initialize(
-        #     _DATA_LOC='{}/generated_data_v1/us_import'.format(base_path),
-        #     _subDIR='01_2016',
-        #     _html_saveDir='{}/htmlCache'.format(base_path),
-        #     _json_saveDir='{}/jsonCache'.format(base_path)
-        # )
-
-        # print("Starting network initialization {}".format(datetime.now()))
-        # network_initialize(
-        #     _DATA_LOC ='{}/generated_data_v1/us_import'.format(base_path),
-        #     _saved_emb_loc =  '{}/GNN/saved_model_gnn'.format(base_path),
-        #     _subDIR = '01_2016',
-        #     _html_cache= '{}/htmlCache'.format(base_path),
-        #     _df_cache = '{}/dfCache'.format(base_path),
-        #     db_loc ='{}/DB/wwf.db'.format(base_path)
-        # )
-
-        # logger.error("Done with initializations")
+        initialize(
+                "{}/generated_data_v1/us_import/".format(base_path),
+                "{}/PairwiseComparison/pairWiseDist/".format(base_path),
+                "01_2016",
+        )
+        logger.error("Done with pairwise init")
 
     def load_csv(self, path):
         output = []

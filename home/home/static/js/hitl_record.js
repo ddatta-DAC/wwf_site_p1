@@ -7,7 +7,7 @@ $(document).ready(function () {
      }
   });
 
-  
+
   pairTable = $("#pair_table").DataTable({
     order: [[ 2, "desc" ]]
   });
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     console.log({entities});
     $.post(suspiciousEntitiesURL, {
-      'entities[]': entities
+      entities
     });
 
     // const request = new Request(

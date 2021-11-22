@@ -32,11 +32,11 @@ class HitlConfig(AppConfig):
             data_store_dir='./tmp'
         )
 
-        logger.error("Skipping onlineUpdateExecutor")
-        # self.onlineObj = onlineUpdateExecutor(
-        #     data_handler_obj,
-        #     update_at_every=4
-        # )
+        logger.error("Starting onlineUpdateExecutor")
+        self.onlineObj = onlineUpdateExecutor(
+            data_handler_obj,
+            update_at_every=4
+        )
 
         
         logger.error("Starting pairwiseInitialize ")

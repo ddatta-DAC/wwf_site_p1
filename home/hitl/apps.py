@@ -26,7 +26,7 @@ class HitlConfig(AppConfig):
         logger.error("Starting data_handler.data_handler")
         data_handler_obj = data_handler.data_handler(
             DATA_LOC=f'{base_path}/generated_data_v1/us_import/',
-            subDIR='01_2017',
+            subDIR='01_2016',
             embedding_data_path=f'{base_path}/records2graph/saved_model_data',
             anomaly_result_dir=f'{base_path}/AD_model/combined_output',
             data_store_dir='./tmp'

@@ -43,10 +43,15 @@ class HitlConfig(AppConfig):
         setupGlobals('{}/generated_data_v1/us_import'.format(base_path))
         logger.error("Not calling pairwise initialize should be remembered")
         # initialize(
-        #         "{}/generated_data_v1/us_import/".format(base_path),
-        #         "{}/PairwiseComparison/pairWiseDist/".format(base_path),
-        #         "01_2016",
         # )
+        initialize(
+            "{}/generated_data_v1/us_import/".format(base_path),
+            "{}/PairwiseComparison/pairWiseDist/".format(base_path),
+            "01_2016",
+            _anomaly_result_dir='{}/AD_model/combined_output'.format(base_path),
+            _result_pkl_cacheDir = 'pkl_Cache',
+            load_redis = False
+        )
         logger.error("Done with pairwise init")
 
     def load_csv(self, path):

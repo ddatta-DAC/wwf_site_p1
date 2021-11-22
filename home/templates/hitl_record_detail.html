@@ -276,7 +276,7 @@
           </button>
         </div>
         <div class="col-md-4 ">
-          <button type="button" class="wide-button btn btn-secondary">
+          <button id="notsubmit" type="button" class="wide-button btn btn-secondary">
           Not Suspicous
           </button>
         </div>
@@ -458,6 +458,7 @@
   <script type="text/javascript">
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     const suspiciousEntitiesURL = "{% url 'suspicious_entities' object.PanjivaRecordID %}";
+    const notSuspiciousRecordURL = "{% url 'not_suspicious_record' object.PanjivaRecordID %}";
     console.log({suspiciousEntitiesURL});
   </script>        
 {% endblock scripts %}

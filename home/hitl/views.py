@@ -25,6 +25,22 @@ class EpochListView(ListView):
         return context
 
 
+class NotSuspiciousRecordView(SingleObjectMixin, View):
+    model = Record
+    slug_field = 'PanjivaRecordID'
+    slug_url_kwarg = 'panjivarecordid'
+
+    def post(self, request, *args, **kwargs):
+        app = apps.get_app_config('hitl')
+
+        logger.error("Updating onlineObj -1")
+        app.onlineObj.register_feedback_input(
+            recordID = self.object.PanjivaRecordID, 
+            label=-1, 
+        )
+        logger.error("Updated onlineObj")
+
+
 class SuspiciousEntitiesView(SingleObjectMixin, View):
     model = Record
     slug_field = 'PanjivaRecordID'
@@ -91,7 +107,7 @@ class RecordDetailView(DetailView):
         #     self.object.PanjivaRecordID,
         #     return_type=2
         # )
-        entity_pairs = fetchRecord_details(_id=self.object.PanjivaRecordID, subDIR="01_2016")
+        entity_pairs = fetchRecord_details(record_id=self.object.PanjivaRecordID)
         sorted_pairs = sorted(entity_pairs, key=lambda y: y[2], reverse=True)
         pairs = [[
             list(y[0].keys())[0],

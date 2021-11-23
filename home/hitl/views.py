@@ -35,7 +35,7 @@ class NotSuspiciousRecordView(SingleObjectMixin, View):
 
         logger.error("Updating onlineObj -1")
         app.onlineObj.register_feedback_input(
-            recordID = self.kwargs['panjivarecordid'], 
+            recordID=int(self.kwargs['panjivarecordid']),
             label=-1, 
         )
         logger.error("Updated onlineObj")
@@ -54,12 +54,18 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
             (x.split(";")[0], x.split(";")[1]) for x in request.POST.getlist("entities[]")
         ]
 
+        entity_list = []
+        if "shipper" in request.POST:
+            entity_list.append("ShipperPanjivaID")
+        if "consignee" in request.POST:
+            entity_list.append("ConsigneePanjivaID")
+
         logger.error("Updating onlineObj {}".format(entity_pair_list))
         app.onlineObj.register_feedback_input(
-            recordID = self.kwargs['panjivarecordid'], 
+            recordID=int(self.kwargs['panjivarecordid']),
             label=1, 
-            entity_pair_list = entity_pair_list,
-            entity_list = []
+            entity_pair_list=entity_pair_list,
+            entity_list=entity_list
         )
         logger.error("Updated onlineObj")
 

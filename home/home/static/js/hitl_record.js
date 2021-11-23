@@ -24,9 +24,14 @@ $(document).ready(function () {
       entities.push($(this).attr("data-entities"));
     });
 
+    const consignee = $("#consignee-sus").prop("checked");
+    const shipper = $("#shipper-sus").prop("checked");
+
     console.log({entities});
     $.post(suspiciousEntitiesURL, {
-      entities
+      entities,
+      consignee,
+      shipper,
     });
 
     // const request = new Request(

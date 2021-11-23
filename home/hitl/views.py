@@ -55,9 +55,9 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
         ]
 
         entity_list = []
-        if "shipper" in request.POST:
+        if "shipper" in request.POST and request.POST["shipper"]:
             entity_list.append("ShipperPanjivaID")
-        if "consignee" in request.POST:
+        if "consignee" in request.POST and request.POST["consignee"]:
             entity_list.append("ConsigneePanjivaID")
 
         logger.error("Updating onlineObj {}".format(entity_pair_list))

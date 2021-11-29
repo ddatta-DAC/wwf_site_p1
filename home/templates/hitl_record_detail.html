@@ -6,6 +6,13 @@
     <link href="{% static 'css/hitl_table.css' %}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <style>
+      .scatters > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
 {% endblock head %}
 
 {% block content %}
@@ -411,19 +418,19 @@
     <div class="row">
        <div class="col-lg-6 border">
          <div class="row ">
-            <div class="col-lg-12 gx-2 border text-container">
+            <div class="scatters col-lg-12 gx-2 border text-container">
                <span class="text-center h5"> Carrier </span>
                 {# <iframe class="figure_box" src="./sc_Carrier.html"> </iframe> #}
                 {{ carrier_fig.Carrier|safe }}
             </div>
-            <div class="col-lg-12 gx-2 border text-container">
+            <div class="scatters col-lg-12 gx-2 border text-container">
                 <span class="text-center h5"> ShipmentOrigin </span>
 
                 {# <iframe  class="flex-d figure_box" src="./sc_ShipmentOrigin.html"> </iframe> #}
                 {{ carrier_fig.ShipmentOrigin|safe }}
             </div>
 
-            <div class="col-lg-12 gx-2 border text-container">
+            <div class="scatters col-lg-12 gx-2 border text-container">
                 <span class="text-center h5"> PortOfLading </span>
                 {# <iframe class="figure_box" src="./sc_PortOfLading.html"> </iframe> #}
                 {{ carrier_fig.PortOfLading|safe }}
@@ -435,19 +442,19 @@
 
        <div class="col-lg-6 border">
          <div class="row ">
-          <div class="col-lg-12 gx-2 border text-container">
+          <div class="scatters col-lg-12 gx-2 border text-container">
               <span class="text-center h5"> HSCode </span>
               {# <iframe class="figure_box" src="./sc_HSCode.html"> </iframe> #}
               {{ carrier_fig.HSCode|safe }}
           </div>
 
-          <div class="col-lg-12 gx-2 border text-container">
+          <div class="scatters col-lg-12 gx-2 border text-container">
               <span  class="text-center h5"> ShipmentDestination </span>
 
               {# <iframe class="figure_box"  src="./sc_ShipmentDestination.html"> </iframe> #}
               {{ carrier_fig.ShipmentDestination|safe }}
           </div>
-          <div class="col-lg-12 gx-2 border text-container">
+          <div class="scatters col-lg-12 gx-2 border text-container">
             <span class="text-center h5"> PortOfUnlading </span>
 
             {# <iframe class="flex-d figure_box" src="./sc_PortOfUnlading.html"> </iframe> #}

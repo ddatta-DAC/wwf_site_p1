@@ -152,6 +152,8 @@ class RecordDetailView(DetailView):
         #         use_cache=True
         # )
         sankey1 = result["sankeyDiagram"]
+        sankey1["type2"] = sankey1["Sankey Diagram Type 2"]
+        sankey1["type1"] = sankey1["Sankey Diagram Type 1"]
 
         # html_path = visualize( 
         #     PanjivaRecordID =self.object.PanjivaRecordID,

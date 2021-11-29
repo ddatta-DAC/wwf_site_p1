@@ -318,10 +318,10 @@
 
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="fig1" role="tabpanel" aria-labelledby="fig1-tab">
-        {{ fig1|safe }}
+        {{ fig1.Consignee|safe }}
       </div>
       <div class="tab-pane fade" id="fig2" role="tabpanel" aria-labelledby="fig2-tab">
-        {{ fig2|safe }}
+        {{ fig1.Shipper|safe }}
       </div>
     </div>
   </div>
@@ -335,10 +335,10 @@
   <div id ="HSCode" class="row">
     <h3>HS Code Distributions or Consignee and Shipper of current Record</h3>
     <div class="col-6">
-      {{ hsfig1|safe }}
+      {{ hsfig1.Consignee|safe }}
     </div>
     <div class="col-6">
-      {{ hsfig2|safe }}
+      {{ hsfig1.Shipper|safe }}
     </div>
   </div>
 
@@ -357,11 +357,11 @@
       <div class="tab-content" id="sankeyTabs">
         <div class="tab-pane fade show active" id="sankey1" role="tabpanel" aria-labelledby="sankey1-tab">
           <h3>ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination</h3>
-          {{ sankey1|safe }}
+          {{ sankey1.type1|safe }}
         </div>
         <div class="tab-pane fade" id="sankey2" role="tabpanel" aria-labelledby="sankey2-tab">
           <h3>ConsigneeName - HSCode - ShipperName</h3>
-          {{ sankey2|safe }}
+          {{ sankey1.type2|safe }}
         </div>
       </div>
 
@@ -412,12 +412,12 @@
             <div class="col-lg-12 gx-2 border text-container">
                <span class="text-center h5"> Carrier </span>
                 {# <iframe class="figure_box" src="./sc_Carrier.html"> </iframe> #}
-                {{ carrier_fig|safe }}
+                {{ carrier_fig.Carrier|safe }}
             </div>
             <div class="col-lg-12 gx-2 border text-container">
                 <span class="text-center h5"> HSCode </span>
                 {# <iframe class="figure_box" src="./sc_HSCode.html"> </iframe> #}
-                {{ hscode_fig|safe }}
+                {{ carrier_fig.HSCode|safe }}
             </div>
 
          </div>
@@ -430,13 +430,13 @@
               <span class="text-center h5"> ShipmentOrigin </span>
 
               {# <iframe  class="flex-d figure_box" src="./sc_ShipmentOrigin.html"> </iframe> #}
-              {{ shipmentorigin_fig|safe }}
+              {{ carrier_fig.ShipmentOrigin|safe }}
           </div>
           <div class="col-lg-12 gx-2 border text-container">
               <span  class="text-center h5"> ShipmentDestination </span>
 
               {# <iframe class="figure_box"  src="./sc_ShipmentDestination.html"> </iframe> #}
-              {{ shipmentdestination_fig|safe }}
+              {{ carrier_fig.ShipmentDestination|safe }}
           </div>
          </div>
        </div>
@@ -445,12 +445,12 @@
            <span class="text-center h5"> PortOfUnlading </span>
 
            {# <iframe class="flex-d figure_box" src="./sc_PortOfUnlading.html"> </iframe> #}
-           {{ portofunlading_fig|safe }}
+           {{ carrier_fig.PortOfUnlading|safe }}
          </div>
          <div class="col-lg-12 gx-2 border text-container">
              <span class="text-center h5"> PortOfLading </span>
              {# <iframe class="figure_box" src="./sc_PortOfLading.html"> </iframe> #}
-             {{ portoflading_fig|safe }}
+             {{ carrier_fig.PortOfLading|safe }}
          </div>
        </div>
      </div>

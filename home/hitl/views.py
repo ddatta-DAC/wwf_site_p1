@@ -295,7 +295,7 @@ class EpochDetailView(DetailView):
             ] + [
                 table_format(instance, field) for field in show_fields
             ] + [
-                table_format(instance, field) for field in hidden_fields
+                field for field in hidden_fields
             ])
 
 

@@ -5,6 +5,9 @@ from django.apps import AppConfig
 from django.conf import settings
 import logging
 
+from sklearn.preprocessing import MinMaxScaler
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -76,6 +79,15 @@ class HitlConfig(AppConfig):
 
         df = self.onlineObj.obtain_current_unlabelled_output()
         df = df[df["PanjivaRecordID"].isin([r[0] for r in epoch])].head(50)
+
+        scaler = MinMaxScaler()
+        scaler.fit(data_df.cur_score)
+
+        df = pd.DataFrame.from_records([
+            df["PanjivaRecordID"],
+            scaler.transform(data_df.cur_score)
+        ])
+
         return [[
             row.PanjivaRecordID,
             row.cur_score

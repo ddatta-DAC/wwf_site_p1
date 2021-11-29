@@ -72,7 +72,10 @@ class HitlConfig(AppConfig):
         return output
 
     def get_epoch(self, path):
-        df = self.onlineObj.obtain_current_unlabelled_output().head(50)
+        epoch = self.load_csv("HITL_System_v0/AD_model/combined_output/01_2016/AD_output.csv")
+
+        df = self.onlineObj.obtain_current_unlabelled_output()
+        df = df[df["PanjivaRecordID"].isin([r[0] for r in epoch])].head(50)
         return [[
             row.PanjivaRecordID,
             row.cur_score

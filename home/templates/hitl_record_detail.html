@@ -415,42 +415,43 @@
                 {{ carrier_fig.Carrier|safe }}
             </div>
             <div class="col-lg-12 gx-2 border text-container">
-                <span class="text-center h5"> HSCode </span>
-                {# <iframe class="figure_box" src="./sc_HSCode.html"> </iframe> #}
-                {{ carrier_fig.HSCode|safe }}
+                <span class="text-center h5"> ShipmentOrigin </span>
+
+                {# <iframe  class="flex-d figure_box" src="./sc_ShipmentOrigin.html"> </iframe> #}
+                {{ carrier_fig.ShipmentOrigin|safe }}
             </div>
+
+            <div class="col-lg-12 gx-2 border text-container">
+                <span class="text-center h5"> PortOfLading </span>
+                {# <iframe class="figure_box" src="./sc_PortOfLading.html"> </iframe> #}
+                {{ carrier_fig.PortOfLading|safe }}
+            </div>
+
 
          </div>
        </div>
 
        <div class="col-lg-3 border">
          <div class="row ">
-
           <div class="col-lg-12 gx-2 border text-container">
-              <span class="text-center h5"> ShipmentOrigin </span>
-
-              {# <iframe  class="flex-d figure_box" src="./sc_ShipmentOrigin.html"> </iframe> #}
-              {{ carrier_fig.ShipmentOrigin|safe }}
+              <span class="text-center h5"> HSCode </span>
+              {# <iframe class="figure_box" src="./sc_HSCode.html"> </iframe> #}
+              {{ carrier_fig.HSCode|safe }}
           </div>
+
           <div class="col-lg-12 gx-2 border text-container">
               <span  class="text-center h5"> ShipmentDestination </span>
 
               {# <iframe class="figure_box"  src="./sc_ShipmentDestination.html"> </iframe> #}
               {{ carrier_fig.ShipmentDestination|safe }}
           </div>
-         </div>
-       </div>
-       <div class="col-lg-3 border">
-         <div class="col-lg-12 gx-2 border text-container">
-           <span class="text-center h5"> PortOfUnlading </span>
+          <div class="col-lg-12 gx-2 border text-container">
+            <span class="text-center h5"> PortOfUnlading </span>
 
-           {# <iframe class="flex-d figure_box" src="./sc_PortOfUnlading.html"> </iframe> #}
-           {{ carrier_fig.PortOfUnlading|safe }}
-         </div>
-         <div class="col-lg-12 gx-2 border text-container">
-             <span class="text-center h5"> PortOfLading </span>
-             {# <iframe class="figure_box" src="./sc_PortOfLading.html"> </iframe> #}
-             {{ carrier_fig.PortOfLading|safe }}
+            {# <iframe class="flex-d figure_box" src="./sc_PortOfUnlading.html"> </iframe> #}
+            {{ carrier_fig.PortOfUnlading|safe }}
+          </div>
+
          </div>
        </div>
      </div>

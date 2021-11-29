@@ -6,7 +6,7 @@ from django.conf import settings
 import logging
 
 from sklearn.preprocessing import MinMaxScaler
-
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 

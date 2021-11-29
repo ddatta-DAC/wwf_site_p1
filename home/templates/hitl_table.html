@@ -11,9 +11,7 @@
 <div>
   <label for="epochs">Epochs</label>
   <select id="epochs">
-    {% for epoch in object_list %}
-      <option value="{{ epoch.date|date:"Y-m-d" }}">{{ epoch.name }}</option>
-    {% endfor %}
+      <option value="2016-01-01">January 2016</option>
   </select>
 
   <table class="table table-striped table-sm projections" id="main_table" class="display" width="100%"></table>

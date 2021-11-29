@@ -202,7 +202,7 @@ class RecordDetailView(DetailView):
 
 show_fields = [
     'ArrivalDate', #'shipmentmonth',
-    'ShipmentOrigin', #'consigneecountry',
+    'ShipmentDestination', #'consigneecountry',
     'ConsigneePanjivaID',
     'ShipmentOrigin',
     'PlaceOfReceipt', #'countryofsale',

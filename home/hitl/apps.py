@@ -72,6 +72,8 @@ class HitlConfig(AppConfig):
         return output
 
     def get_epoch(self, path):
-        if path not in self.epochs:
-            self.epochs[path] = self.load_csv(path)
-        return self.epochs[path]
+        df = self.onlineObj.obtain_current_unlabelled_output().head(50)
+        return [[
+            row.PanjivaRecordID,
+            row.cur_score
+        ] for _, row in df.iterrows()]

@@ -348,7 +348,7 @@
       {{ hsfig1.Shipper|safe }}
     </div>
   </div>
-
+  <hr/>
   <div class="row" id="Sankey">
     <div class="col">
 
@@ -374,11 +374,16 @@
 
     </div>
   </div>
-
+   <hr/>
   <div class="row" id="network">
     <div class="col">
-      <h3>Network</h3>
+        <h3>Network of Consignees and Shippers that trade with <i>Consignee</i> and <i>Shipper</i> of the current record.</h3>
       {{ networkfig|safe }}
+        </br>
+        Potential connections also shown. Edge weight denotes strength of connection. 
+        </br> Key :
+        Consignee: <span class="dot" style="background-color: #ff7600fa !important"></span>   
+        Shipper: <span class="dot" style="background-color: #731bff !important"></span>
     </div>
   </div>
 
@@ -467,7 +472,7 @@
 
 </div>
 </div>
-
+<hr/>
 {% csrf_token %}
 
 {% endblock content %}

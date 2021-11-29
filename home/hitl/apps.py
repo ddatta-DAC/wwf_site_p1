@@ -81,11 +81,11 @@ class HitlConfig(AppConfig):
         df = df[df["PanjivaRecordID"].isin([r[0] for r in epoch])].head(50)
 
         scaler = MinMaxScaler()
-        scaler.fit(data_df.cur_score)
+        scaler.fit(df.cur_score)
 
         df = pd.DataFrame.from_records([
             df["PanjivaRecordID"],
-            scaler.transform(data_df.cur_score)
+            scaler.transform(df.cur_score)
         ])
 
         return [[

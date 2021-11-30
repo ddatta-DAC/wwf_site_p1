@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   $("#update-model").on("click", function () {
     $.ajax({
-      url: "/api/update_model", 
+      url: "/models/update_model", 
       method: 'GET',
       success: function (data) {
         console.log(data);

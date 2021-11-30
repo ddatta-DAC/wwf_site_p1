@@ -335,6 +335,9 @@ class UpdateModelView(View):
         logger.error("Updating internal model")
         app.onlineObj.__update_internal_model__()
         logger.error("Updated internal model")
+        return JsonResponse({
+            "success": True
+        })
 
 
 class HitlExpandRowView(DetailView):

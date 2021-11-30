@@ -429,8 +429,6 @@
                 {# <iframe class="figure_box" src="./sc_PortOfLading.html"> </iframe> #}
                 {{ carrier_fig.PortOfLading|safe }}
             </div>
-
-
          </div>
        </div>
 
@@ -484,20 +482,20 @@
 
       <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="sankey1-tab" data-bs-toggle="tab" data-bs-target="#sankey1" type="button" role="tab" aria-controls="sankey1" aria-selected="true">Consignee Activity</button>
+          <button class="nav-link active" id="sankey1-tab" data-bs-toggle="tab" data-bs-target="#sankey1" type="button" role="tab" aria-controls="sankey1" aria-selected="true">Flow Analysis Diagram 1</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="sankey2-tab" data-bs-toggle="tab" data-bs-target="#sankey2" type="button" role="tab" aria-controls="sankey2" aria-selected="false">Shipper Activity</button>
+          <button class="nav-link" id="sankey2-tab" data-bs-toggle="tab" data-bs-target="#sankey2" type="button" role="tab" aria-controls="sankey2" aria-selected="false">Flow Analysis Diagram 2</button>
         </li>
       </ul>
 
       <div class="tab-content" id="sankeyTabs">
         <div class="tab-pane fade show active" id="sankey1" role="tabpanel" aria-labelledby="sankey1-tab">
-          <h3>ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination</h3>
+          <h5>ShipmentOrigin - PortOfLading - HSCode - PortOfUnlading - ShipmentDestination</h5>
           {{ sankey1.type1|safe }}
         </div>
         <div class="tab-pane fade" id="sankey2" role="tabpanel" aria-labelledby="sankey2-tab">
-          <h3>ConsigneeName - HSCode - ShipperName</h3>
+          <h5>ConsigneeName - HSCode - ShipperName</h5>
           {{ sankey1.type2|safe }}
         </div>
       </div>
@@ -510,6 +508,10 @@
       <div class="collapse" id="collapseDesc_sankey" style="">
       <div class="card card-body">
        The sankey diagrams show the aggregated flow of trade (in count) with respect to the HS Code:{{record.HSCode}}. 
+       <br>
+       The first diagram shows the flow of goods with HS Code({{record.HSCode}}) between `ShipmentOrigin` and `ShipmentDestination`. It tracks the flow through `PortOfLading`(where goods are laden on to the carrier vessel/transport) from the origin to the `PortOfUnlading`, from where the goods reach the destination.
+       <br>
+       The second diagram traces the flow of goods with the HS Code {{record.HSCode}} between different consignees and shippers.
       </div>
       </div> 
     </div>

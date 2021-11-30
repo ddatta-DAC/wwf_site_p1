@@ -294,7 +294,7 @@ class EpochDetailView(DetailView):
         data = []
         for instance in records:
             data.append([
-                scores[instance.PanjivaRecordID]
+                round(scores[instance.PanjivaRecordID], 4)
             ] + [
                 table_format(instance, field) for field in show_fields
             ] + [

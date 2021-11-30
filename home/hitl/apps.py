@@ -83,7 +83,7 @@ class HitlConfig(AppConfig):
         scaler = MinMaxScaler()
         scaler.fit(df['cur_score'].values.reshape([-1,1]))
 
-        return zip(
+        return list(zip(
             df["PanjivaRecordID"],
             scaler.transform(df['cur_score'].values.reshape([-1,1])).reshape(-1)
-        )
+        ))

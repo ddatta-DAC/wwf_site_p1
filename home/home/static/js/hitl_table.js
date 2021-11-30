@@ -62,7 +62,7 @@ $(document).ready(function () {
             // data.selector = "#main_table";
             // buildTable(data);
             table.rows().remove();
-            table.rows.add(data.data).draw();
+            table.rows.add(data.data.data).draw();
           },
           error: function (error) {
             console.error(error);

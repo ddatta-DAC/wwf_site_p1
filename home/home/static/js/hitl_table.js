@@ -46,4 +46,17 @@ $(document).ready(function () {
     }
     fetchEpoch(this.value);
   });
+
+  $("#update-model").on("click", function () {
+    $.ajax({
+      url: "/api/update_model", 
+      method: 'GET',
+      success: function (data) {
+        console.log(data);
+        fetchEpoch("2016_01");
+      },
+      error: function (error) {
+        console.error(error)
+      }
+  });
 });

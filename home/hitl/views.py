@@ -39,6 +39,9 @@ class NotSuspiciousRecordView(SingleObjectMixin, View):
             label=-1, 
         )
         logger.error("Updated onlineObj")
+        return JsonResponse({
+            "success": True
+        })
 
 
 class SuspiciousEntitiesView(SingleObjectMixin, View):
@@ -68,6 +71,9 @@ class SuspiciousEntitiesView(SingleObjectMixin, View):
             entity_list=entity_list
         )
         logger.error("Updated onlineObj")
+        return JsonResponse({
+            "success": True
+        })
 
 
 class RecordDetailView(DetailView):

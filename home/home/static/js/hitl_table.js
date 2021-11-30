@@ -53,7 +53,21 @@ $(document).ready(function () {
       method: 'GET',
       success: function (data) {
         console.log(data);
-        fetchEpoch("2016-01-01");
+        $.ajax({
+          url: "/api/epoch/2016-01-01", 
+          method: 'GET',
+          success: function (data) {
+            console.log(data);
+            // buildEpochTable(data);
+            // data.selector = "#main_table";
+            // buildTable(data);
+            table.rows.add(data.data).draw();
+          },
+          error: function (error) {
+            console.error(error);
+          }
+        });
+
       },
       error: function (error) {
         console.error(error)

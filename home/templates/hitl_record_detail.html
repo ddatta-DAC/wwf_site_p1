@@ -332,6 +332,19 @@
         {{ fig1.Shipper|safe }}
       </div>
     </div>
+      
+     <div>
+     <br>
+      <button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseDesc_ts" aria-expanded="false" aria-controls="collapseDesc_ts">
+        Description/User-Help
+      </button>
+      <div class="collapse" id="collapseDesc_ts" style="">
+      <div class="card card-body">
+       The above chart shows the activity of the Consignee and the Shipper, aggregated per month. The slider can be used to focus on a specific period of time. 
+      </div>
+      </div> 
+    </div>
+        
   </div>
   <hr/>
   <div class="row">
@@ -369,8 +382,17 @@
     <div class="col">
         <h3>Network of Consignees and Shippers that trade with <i>Consignee</i> and <i>Shipper</i> of the current record.</h3>
       {{ networkfig|safe }}
-        <br>
-        Potential connections also shown. Edge weight denotes strength of connection. 
+         
+    </div>
+     <div>
+     <br>
+      <button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseDesc_network" aria-expanded="false" aria-controls="collapseDesc_network">
+        Description/User-Help
+      </button>
+      <div class="collapse" id="collapseDesc_network" style="">
+      <div class="card card-body">
+       <br>
+        Potential connections also shown. Edge weight denotes strength of connection. Hover to show the details associated with each node. Zoom in and out functionality is also supported.
         <br> 
         Key :
         Consignee: 
@@ -382,7 +404,8 @@
         <svg height="2em" width="2em">
             <circle cx="1em" cy="1em" r="0.75em" stroke="white" stroke-width="1" fill="#731bff"></circle>
         </svg>
-        
+      </div>
+      </div> 
     </div>
   </div>
   <hr/>

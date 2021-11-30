@@ -312,7 +312,7 @@
       </div>
     </div>
   </div>
-
+  <hr/>
   <div class="row" id="TS">
     <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
       <li class="nav-item" role="presentation">
@@ -332,7 +332,7 @@
       </div>
     </div>
   </div>
-
+  <hr/>
   <div class="row">
     <div class="col">
       {{ fig3|safe }}
@@ -463,9 +463,18 @@
 <div class="row" id="EmbViz">
   <div class="col">
         <h3> Embedding of all entities in same 2D space </h3>
-      {{ embvizfig|safe }}
-        <br>
-        All the <i>entities</i> of the current record are represented in the same 2-dimensional space. Relative proximity between entities indicate co-occurrence probaility.
+         {{ embvizfig|safe }}
+   </div>
+    <div>
+    <br>
+      <button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseDesc_embviz" aria-expanded="false" aria-controls="collapseDesc_embviz">
+        Description/User-Help
+      </button>
+      <div class="collapse" id="collapseDesc_embviz" style="">
+      <div class="card card-body">
+        All the entities of the current record are represented in the same 2-dimensional space. Relative proximity between entities indicate co-occurrence probaility.
+      </div>
+      </div> 
     </div>
 </div>
 <hr/>
@@ -492,7 +501,18 @@
           {{ sankey1.type2|safe }}
         </div>
       </div>
-  </div>      
+  </div>  
+    <div>
+    <br>
+      <button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseDesc_sankey" aria-expanded="false" aria-controls="collapseDesc_sankey">
+        Description/User-Help
+      </button>
+      <div class="collapse" id="collapseDesc_sankey" style="">
+      <div class="card card-body">
+       The sankey diagrams show the aggregated flow of trade (in count) with respect to the HS Code:{{record.HSCode}}. 
+      </div>
+      </div> 
+    </div>
   </div>
   <hr/>
 </div> <!-- end container -->

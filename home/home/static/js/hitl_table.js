@@ -53,7 +53,7 @@ $(document).ready(function () {
       method: 'GET',
       success: function (data) {
         console.log(data);
-        fetchEpoch("2016_01");
+        fetchEpoch("2016-01-01");
       },
       error: function (error) {
         console.error(error)

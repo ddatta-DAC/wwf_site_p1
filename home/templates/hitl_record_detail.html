@@ -314,6 +314,7 @@
   </div>
   <hr/>
   <div class="row" id="TS">
+    <h5> Temporal patterns of activity (trade instance count) for Shipper and Consignee</h5> 
     <ul class="nav nav-tabs" id="time-series-tabs" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="fig1-tab" data-bs-toggle="tab" data-bs-target="#fig1" type="button" role="tab" aria-controls="fig1" aria-selected="true">Consignee Activity</button>
@@ -340,13 +341,26 @@
   </div>
 
   <div id ="HSCode" class="row">
-    <h3>HS Code Distributions for Consignee and Shipper of current Record</h3>
+    <h5>HS Code Distributions for Consignee and Shipper of current Record</h5>
     <div class="col-6">
       {{ hsfig1.Consignee|safe }}
     </div>
     <div class="col-6">
       {{ hsfig1.Shipper|safe }}
     </div>
+
+    <div>
+     <br>
+      <button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseDesc_hsc" aria-expanded="false" aria-controls="collapseDesc_hsc">
+        Description/User-Help
+      </button>
+      <div class="collapse" id="collapseDesc_hsc" style="">
+      <div class="card card-body">
+       The breakdown of the  goods traded in by the Consignee and Shipper in terms of the HS Code. The HS Code is a 10 digit code, with staggered granularity of 2,4 and 6 digits. The first 6 digits are standardized across the globe. The last four digits are however subject to periodic revisions and can be country specific.  
+      </div>
+      </div> 
+    </div>
+      
   </div>
   <hr/>
   
@@ -452,9 +466,20 @@
             {# <iframe class="flex-d figure_box" src="./sc_PortOfUnlading.html"> </iframe> #}
             {{ carrier_fig.PortOfUnlading|safe }}
           </div>
-
          </div>
        </div>
+        
+     <div>
+     <br>
+      <button class="btn btn-info collapsed" type="button" data-toggle="collapse" data-target="#collapseDesc_stackedComp" aria-expanded="false" aria-controls="collapseDesc_stackedComp">
+        Description/User-Help
+      </button>
+      <div class="collapse" id="collapseDesc_stackedComp" style="">
+      <div class="card card-body">
+       The stacked comaprison compares entity-wise `density` of records simsilar to the current record. If an entity lies in a low-density region, it might be an indicator that it occurs out of context, and may indicate a possible cause of anomaly.
+      </div>
+      </div> 
+    </div>   
      </div>
      
 <hr/>

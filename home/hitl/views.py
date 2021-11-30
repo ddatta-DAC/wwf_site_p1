@@ -328,5 +328,17 @@ class EpochDetailView(DetailView):
         })
 
 
+class UpdateModelView(View):
+    def get(self, request, *args, **kwargs):
+        app = apps.get_app_config('hitl')
+
+        logger.error("Updating internal model")
+        app.onlineObj.__update_internal_model__()
+        logger.error("Updated internal model")
+        return JsonResponse({
+            "success": True
+        })
+
+
 class HitlExpandRowView(DetailView):
     pass

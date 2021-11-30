@@ -19,7 +19,7 @@ from django.urls import path, include
 
 from . import views
 from trade.views import get_results, AnomalyView, AnomalyApiView, SubmitThumbsView, SubmitCommentView, ChinaImportExpandRowView, ChinaExportExpandRowView, PeruExportExpandRowView, UsImportExpandRowView, DefaultExpandRowView
-from hitl.views import EpochListView, EpochDetailView, RecordDetailView, HitlExpandRowView, SuspiciousEntitiesView, NotSuspiciousRecordView
+from hitl.views import EpochListView, EpochDetailView, RecordDetailView, HitlExpandRowView, SuspiciousEntitiesView, NotSuspiciousRecordView, UpdateModelView
 
 urlpatterns = [
     path('home', views.home, name='data_home'),
@@ -44,6 +44,7 @@ urlpatterns = [
     path('api/expand_row/us_import/<slug:panjivarecordid>', UsImportExpandRowView.as_view()),
     path('api/expand_row/<slug:track_name>', DefaultExpandRowView.as_view(), name='expand_row'),
     path('api/epoch/<slug:month>', EpochDetailView.as_view(), name='epoch_detail'),
+    path('models/update_model', UpdateModelView.as_view()),
 ]
 
 urlpatterns += [

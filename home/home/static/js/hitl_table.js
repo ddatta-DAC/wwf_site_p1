@@ -29,7 +29,7 @@ function fetchEpoch(epoch) {
       console.log(data);
       // buildEpochTable(data);
       data.selector = "#main_table";
-      buildTable(data);
+      table = buildTable(data);
     },
     error: function (error) {
       console.error(error);
@@ -61,6 +61,7 @@ $(document).ready(function () {
             // buildEpochTable(data);
             // data.selector = "#main_table";
             // buildTable(data);
+            table.rows.remove();
             table.rows.add(data.data).draw();
           },
           error: function (error) {

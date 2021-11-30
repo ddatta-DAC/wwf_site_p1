@@ -86,6 +86,7 @@ class RecordDetailView(DetailView):
         from VisualComponents_backend.cachedDataFetcher import static_data_fetcher
         obj = static_data_fetcher(base_path="/home/django/html_data_cache/")
         result = obj.fetch_saved_html(self.object.PanjivaRecordID)
+        context['embvizfig'] = result["EmbViz_all"]
 
         #from VisualComponents_backend.TimeSeries import fetchTimeSeries as TS
         #from VisualComponents_backend.EmbViz_all import main as embTSNE

@@ -85,7 +85,7 @@ class HitlConfig(AppConfig):
 
         df = pd.DataFrame.from_records([
             df["PanjivaRecordID"],
-            scaler.transform(df.cur_score.reshape([-1,1]).reshape(-1))
+            scaler.transform(df.cur_score.values.reshape([-1,1]).reshape(-1))
         ])
 
         return [[

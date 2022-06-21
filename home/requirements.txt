@@ -8,7 +8,7 @@ django-debug-toolbar
 django-environ
 django-invitations
 idna
-numpy==1.16.2
+numpy==1.22.0
 oauthlib
 pandas
 python-dateutil

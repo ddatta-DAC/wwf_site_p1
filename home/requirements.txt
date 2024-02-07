@@ -1,7 +1,7 @@
 certifi
 chardet
 defusedxml
-Django==2.2.10
+Django==3.2.24
 django-allauth
 django-crispy-forms
 django-debug-toolbar
